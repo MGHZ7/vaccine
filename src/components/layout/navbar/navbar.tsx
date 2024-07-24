@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { VaccineLink } from "../link/vaccineLink"
+import { VaccineButtonLink } from "../link/vaccineButtonLink"
 
 export function Navbar() {
 
@@ -36,6 +37,11 @@ export function Navbar() {
 
             <div className={`flex justify-center items-center gap-6`}>
                 {links.map(link => <VaccineLink key={link.link} size="sm" href={link.link}>{link.title}</VaccineLink>)}
+            </div>
+
+            <div className="ms-auto inline-flex items-center gap-4">
+                <VaccineButtonLink buttonType="light" href={'/register'}>Register</VaccineButtonLink>
+                <VaccineButtonLink buttonType="dark" href={'/sign-in'}>Sign In</VaccineButtonLink>
             </div>
         </div>
     </nav>

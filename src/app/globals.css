@@ -13,6 +13,12 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 5, 2, 35;
     --background-end-rgb: 76, 34, 177;
+
+    --light-btn-start-color: #6ee3fa;
+    --light-btn-end-color: #266db0;
+
+    --light-btn-hover-start-color: #18dbd5;
+    --light-btn-hover-end-color: #a6d6ed;
   }
 }
 
@@ -32,5 +38,21 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .btn-light {
+    background: linear-gradient(
+      -45deg,
+      var(--light-btn-start-color),
+      var(--light-btn-end-color)
+    );
+
+    &:hover {
+      background: linear-gradient(
+        -45deg,
+        var(--light-btn-hover-start-color),
+        var(--light-btn-hover-end-color)
+      );
+    }
   }
 }
