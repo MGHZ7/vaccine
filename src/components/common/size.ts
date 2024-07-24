@@ -1,1 +1,1 @@
-export type ComponentSize = "xs" | "sm" | "lg" | "xl";
+export type ComponentSize = "xs" | "sm" | "md" | "lg" | "xl";

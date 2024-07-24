@@ -1,16 +1,42 @@
+import Image from "next/image"
+import { VaccineLink } from "../link/vaccineLink"
+
 export function Navbar() {
 
+    const links = [{
+        title: 'Home',
+        link: '/'
+    },
+    {
+        title: 'Project',
+        link: '/project'
+    },
+    {
+        title: 'Tokenomics',
+        link: '/tokenomics'
+    },
+    {
+        title: 'Litepaper',
+        link: '/litepaper'
+    },
+    {
+        title: 'Career',
+        link: '/career'
+    },
+    {
+        title: 'Help',
+        link: '/help'
+    }]
+
     return <nav>
-        <div>
+        <div className="container mx-auto p-8 flex gap-12">
+            <div>
+                <Image alt="Vaccine Logo" src={'/logo.png'} width={120} height={64} />
+            </div>
 
-        </div>
-
-        <div>
-
+            <div className={`flex justify-center items-center gap-6`}>
+                {links.map(link => <VaccineLink key={link.link} size="sm" href={link.link}>{link.title}</VaccineLink>)}
+            </div>
         </div>
     </nav>
-}
-
-function navbarLogo() {
-    return
 }
