@@ -14,7 +14,7 @@ export function HomeHeroSection() {
                 </p>
 
                 <div className="mt-10">
-                    <VaccineButtonLink size="lg" buttonType="light" href={'/lightpaper'}>
+                    <VaccineButtonLink size="md" buttonType="light" href={'/lightpaper'}>
                         Litepaper
                     </VaccineButtonLink>
                 </div>
