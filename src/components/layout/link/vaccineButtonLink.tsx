@@ -6,9 +6,9 @@ export interface VaccineButtonLinkProps extends VaccineLinkProps {
 
 export function VaccineButtonLink({ buttonType, ...props }: VaccineButtonLinkProps) {
 
-    return <VaccineLink size="sm"
+    return <VaccineLink
         {...props}
         className={`transition-all 
             ${buttonType == 'light' ? 'btn-light shadow-2xl shadow-primary' : 'border border-primary hover:border-primaryVariant'} 
-            px-4 py-2 rounded hover:!text-white ${props.className ?? ''}`} />
+            px-4 py-2 rounded-lg hover:!text-white ${props.className ?? ''}`} />
 }

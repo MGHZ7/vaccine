@@ -1,9 +1,11 @@
 import { HomeHeroSection } from "@/components/pages/home/homeHeroSection";
+import { PrivateSaleCounter } from "@/components/pages/home/privateSaleCounter";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-24 py-28">
+    <main className="flex min-h-screen flex-col items-center justify-between px-24 py-28 space-y-24">
       <HomeHeroSection />
+      <PrivateSaleCounter />
     </main>
   );
 }
