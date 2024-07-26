@@ -1,4 +1,5 @@
 import { HomeHeroSection } from "@/components/pages/home/homeHeroSection";
+import { OverviewSection } from "@/components/pages/home/overview";
 import { PrivateSaleCounter } from "@/components/pages/home/privateSaleCounter";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between px-24 py-28 space-y-24">
       <HomeHeroSection />
       <PrivateSaleCounter />
+      <OverviewSection />
     </main>
   );
 }
