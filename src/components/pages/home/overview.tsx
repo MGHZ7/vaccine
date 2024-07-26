@@ -3,9 +3,11 @@ import Image from "next/image";
 import image from "../../../app/assets/pages/home/overview.png"
 
 export function OverviewSection() {
-    return <section className="grid md:grid-cols-2 gap-8 items-center">
+    return <section className="grid lg:grid-cols-2 gap-8 justify-center items-center">
         <article>
-            <Image alt="Vaccine overview" {...image} />
+            <div className="max-w-lg mx-auto">
+                <Image alt="Vaccine overview" {...image} />
+            </div>
         </article>
         <article className="p-8">
             <p className="text-xs text-primary">About the project</p>
