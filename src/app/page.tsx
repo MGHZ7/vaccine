@@ -1,6 +1,7 @@
 import { HomeHeroSection } from "@/components/pages/home/homeHeroSection";
 import { OverviewSection } from "@/components/pages/home/overview";
 import { PrivateSaleCounter } from "@/components/pages/home/privateSaleCounter";
+import { SolutionsSection } from "@/components/pages/home/solutionsSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HomeHeroSection />
       <PrivateSaleCounter />
       <OverviewSection />
+      <SolutionsSection />
     </main>
   );
 }

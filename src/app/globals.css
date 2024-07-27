@@ -64,4 +64,8 @@ body {
   .main-header {
     line-height: 4.7rem !important;
   }
+
+  .divider-gradient {
+    background: linear-gradient(0, #18dbd5ff, #18dbd500);
+  }
 }
