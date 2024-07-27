@@ -1,5 +1,6 @@
 import { EasyToUseSolutionSection } from "@/components/pages/home/easyToUseSolution";
 import { HomeHeroSection } from "@/components/pages/home/homeHeroSection";
+import { OurTeamSection } from "@/components/pages/home/ourTeamSection";
 import { OverviewSection } from "@/components/pages/home/overviewSection";
 import { PrivateSaleCounter } from "@/components/pages/home/privateSaleCounter";
 import { RoadMapSection } from "@/components/pages/home/roadMapSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <SolutionsSection />
       <EasyToUseSolutionSection />
       <RoadMapSection />
+      <OurTeamSection />
     </main>
   );
 }

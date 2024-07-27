@@ -10,7 +10,7 @@ export function RoadMapSection() {
     const quarters = ['Q2 2021', 'Q3 2021', 'Q4 2021', 'Q1 2022', 'Q3 2022', 'Q3 2022', 'Q4 2022']
 
     return <section className="w-full space-y-16">
-        <article className="max-w-lg space-y-4 self-start">
+        <article className="max-w-lg space-y-4 self-start p-8">
             <div className="flex items-center gap-4">
                 <h2 className="text-3xl text-on-primary font-bold">Roadmap</h2>
                 <Divider className="flex-1 max-w-lg" />

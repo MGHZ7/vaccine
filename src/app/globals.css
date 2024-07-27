@@ -72,4 +72,8 @@ body {
   .divider-gradient-ltr {
     background: linear-gradient(-90deg, #18dbd5ff, #18dbd500);
   }
+
+  .team-member-white-gradient {
+    background: linear-gradient(-180deg, #ffffff00, #ffffff22);
+  }
 }
