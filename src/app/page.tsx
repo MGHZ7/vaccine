@@ -1,3 +1,4 @@
+import { EasyToUseSolutionSection } from "@/components/pages/home/easyToUseSolution";
 import { HomeHeroSection } from "@/components/pages/home/homeHeroSection";
 import { OverviewSection } from "@/components/pages/home/overview";
 import { PrivateSaleCounter } from "@/components/pages/home/privateSaleCounter";
@@ -10,6 +11,7 @@ export default function Home() {
       <PrivateSaleCounter />
       <OverviewSection />
       <SolutionsSection />
+      <EasyToUseSolutionSection />
     </main>
   );
 }
