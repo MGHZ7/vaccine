@@ -66,6 +66,6 @@ body {
   }
 
   .divider-gradient {
-    background: linear-gradient(0, #18dbd5ff, #18dbd500);
+    background: linear-gradient(90deg, #18dbd5ff, #18dbd500);
   }
 }
