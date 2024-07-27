@@ -1,7 +1,8 @@
 import { EasyToUseSolutionSection } from "@/components/pages/home/easyToUseSolution";
 import { HomeHeroSection } from "@/components/pages/home/homeHeroSection";
-import { OverviewSection } from "@/components/pages/home/overview";
+import { OverviewSection } from "@/components/pages/home/overviewSection";
 import { PrivateSaleCounter } from "@/components/pages/home/privateSaleCounter";
+import { RoadMapSection } from "@/components/pages/home/roadMapSection";
 import { SolutionsSection } from "@/components/pages/home/solutionsSection";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <OverviewSection />
       <SolutionsSection />
       <EasyToUseSolutionSection />
+      <RoadMapSection />
     </main>
   );
 }

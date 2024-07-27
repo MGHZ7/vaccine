@@ -11,11 +11,11 @@ import supplyChainIcon from "../../../app/assets/pages/home/solutions/vac-supply
 export function SolutionsSection() {
 
     return <section className="w-full p-8">
-        <div className="max-w-lg self-start space-y-4">
+        <article className="max-w-lg self-start space-y-4">
             <h2 className="text-3xl text-on-primary font-bold">Solutions</h2>
             <p className="text-xs text-primary">Vaccine is a decentralized ecosystem that empowers</p>
             <Divider />
-        </div>
+        </article>
 
         <section className="grid gap-8  grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-end mt-16">
             <Solution title="VAC Blockgain" image={blockchainIcon} />
@@ -31,9 +31,9 @@ export function SolutionsSection() {
 export function Solution({ title, image }: { title: string, image: any }) {
 
     return <article>
-        <div className="w-full lg:px-8 inline-flex justify-center">
+        <div className="w-full lg:px-3 xl:px-8 inline-flex justify-center">
             <Image alt={title} {...image} />
         </div>
-        <h4 className="text-xs font-extralight text-center mt-2">{title}</h4>
+        <h4 className="text-xs font-extralight text-center mt-2 h-2">{title}</h4>
     </article>
 }
