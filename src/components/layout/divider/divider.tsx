@@ -1,4 +1,8 @@
-export function Divider() {
+export interface DividerProps {
+    type?: 'rtl' | 'ltr';
+}
 
-    return <div className="w-full divider-gradient h-1 rounded-full"></div>
+export function Divider({ type = 'rtl' }: DividerProps) {
+
+    return <div className={`w-full h-1 rounded-full ${type === 'rtl' ? 'divider-gradient-rtl' : 'divider-gradient-ltr'}`}></div>
 }

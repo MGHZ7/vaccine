@@ -65,7 +65,11 @@ body {
     line-height: 4.7rem !important;
   }
 
-  .divider-gradient {
+  .divider-gradient-rtl {
     background: linear-gradient(90deg, #18dbd5ff, #18dbd500);
+  }
+
+  .divider-gradient-ltr {
+    background: linear-gradient(-90deg, #18dbd5ff, #18dbd500);
   }
 }
