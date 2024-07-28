@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { VaccineLink } from "../link/vaccineLink";
 
 export interface FooterColumnsProps {
@@ -14,15 +15,19 @@ export function FooterColumn({ items }: FooterColumnsProps) {
 interface FooterLinkProps {
     title: string;
     link: string;
-    type?: 'sm' | 'lg'
+    type?: 'sm' | 'lg' | 'xl'
+    prefix?: ReactNode
 }
 
-function FooterLink({ title, link, type = 'sm' }: FooterLinkProps) {
+function FooterLink({ title, link, type = 'sm', prefix }: FooterLinkProps) {
 
     return <>
-        <VaccineLink size={type}
-            className={`!p-0 ${type === 'lg' ? 'font-normal' : ''}`}
-            href={link}>{title}</VaccineLink>
+        <div className="flex gap-2">
+            {prefix}
+            <VaccineLink size={type}
+                className={`!p-0 ${type === 'lg' || type === 'xl' ? 'font-normal text-sm' : 'text-xs'}`}
+                href={link}>{title}</VaccineLink>
+        </div>
         {type === 'lg' ? <div className="w-4 h-0.5 bg-primary"></div> : null}
     </>
 }
