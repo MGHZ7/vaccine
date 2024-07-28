@@ -1,4 +1,5 @@
 import { EasyToUseSolutionSection } from "@/components/pages/home/easyToUseSolution";
+import { FeaturedInSection } from "@/components/pages/home/featuredInSection";
 import { HomeHeroSection } from "@/components/pages/home/homeHeroSection";
 import { OurAdvisorSection } from "@/components/pages/home/ourAdvisorSection";
 import { OurTeamSection } from "@/components/pages/home/ourTeamSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <RoadMapSection />
       <OurTeamSection />
       <OurAdvisorSection />
+      <FeaturedInSection />
     </main>
   );
 }

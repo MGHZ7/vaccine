@@ -10,7 +10,7 @@ import { Navigation, EffectCoverflow } from 'swiper/modules'
 import "swiper/css";
 import 'swiper/css/navigation';
 
-import "./styles.css";
+import "./styles.scss";
 import { AdvisorCard, AdvisorCardProps } from "../card/advisorCard";
 
 export interface AdvisorsSliderProps {
@@ -26,7 +26,7 @@ export function AdvisorsSlider({ advisors, onActiveCardChange }: AdvisorsSliderP
     }, []);
 
     return (
-        mounted ? <>
+        mounted ? <div className="advisor-slider">
             <Swiper
                 watchSlidesProgress={true}
                 slidesPerView={3}
@@ -47,6 +47,6 @@ export function AdvisorsSlider({ advisors, onActiveCardChange }: AdvisorsSliderP
                 onSlideChange={e => onActiveCardChange?.(e.realIndex)}>
                 {advisors.map((advisor, i) => <SwiperSlide key={i}><AdvisorCard {...advisor} /></SwiperSlide>)}
             </Swiper>
-        </> : null
+        </div> : null
     );
 }
