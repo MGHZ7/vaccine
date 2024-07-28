@@ -7,8 +7,11 @@ import Hamburger from 'hamburger-react'
 import { useState } from "react"
 import { navLinks } from "./navLinks";
 import { SmallScreenMenu } from "./smallScreenMenu";
+import { usePathname } from "next/navigation";
 
 export function Navbar() {
+
+    const pathName = usePathname();
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -19,7 +22,14 @@ export function Navbar() {
             </div>
 
             <div className={`hidden lg:flex justify-center items-center gap-6`}>
-                {navLinks.map(link => <VaccineLink key={link.link} size="sm" href={link.link}>{link.title}</VaccineLink>)}
+                {navLinks.map(link => {
+                    const className = link.link === pathName ? 'text-primary' : ''
+
+                    return <VaccineLink key={link.link}
+                        className={className}
+                        size="sm"
+                        href={link.link}>{link.title}</VaccineLink>
+                })}
             </div>
 
             <div className="hidden ms-auto lg:inline-flex items-center gap-4">

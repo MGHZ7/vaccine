@@ -87,4 +87,8 @@ body {
       rgb(var(--background-end-rgb))
     );
   }
+
+  .footer-gradient {
+    background-image: linear-gradient(to bottom, #331a73, #2a1a51);
+  }
 }
