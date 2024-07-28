@@ -5,9 +5,9 @@ import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
 export function HomeHeroSection() {
     return <section id="home-hero-section" className="relative">
         <article className="grid lg:grid-cols-2">
-            <div className="max-w-lg leading-10">
-                <p className={"text-primary text-sm font-light wide-letter-spacing"}>Always Caring . Always Here</p>
-                <h1 className="md:text-6xl font-bold text-balance text-on-primary main-header mb-4 mt-2">Vaccine is a
+            <div className="max-w-lg lg:leading-10">
+                <p className={"text-primary text-sm font-light md:wide-letter-spacing"}>Always Caring . Always Here</p>
+                <h1 className="md:text-6xl font-bold text-balance text-on-primary main-header md:mb-4 md:mt-2">Vaccine is a
                     Decentralized Medical Ecosystem</h1>
                 <p className="text-xs font-extralight max-w-72">
                     VAC is the revolution in the medical industry and will lead the digital transformation
@@ -21,7 +21,7 @@ export function HomeHeroSection() {
             </div>
         </article>
 
-        <div className="absolute -top-[30%] -right-[10%] w-[70%] aspect-square">
+        <div className="absolute hidden lg:block lg:-top-[30%] lg:-right-[10%] w-[70%] aspect-square">
             <Image className="mix-blend-lighten" alt={'Vaccine globe'} src={globeImage.src} fill />
         </div>
     </section>

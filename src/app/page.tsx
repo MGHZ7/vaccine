@@ -10,7 +10,7 @@ import { SolutionsSection } from "@/components/pages/home/solutionsSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-24 py-28 space-y-24">
+    <main className="flex min-h-screen flex-col items-center justify-between px-8 md:px-24 py-28 space-y-24">
       <HomeHeroSection />
       <PrivateSaleCounter />
       <OverviewSection />

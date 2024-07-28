@@ -9,9 +9,9 @@ export function PrivateSaleCounter() {
 
     return <div className="relative">
         <TransparentCard className="relative p-8 w-full z-10">
-            <TransparentCard className="absolute -top-12 -right-5 h-28 w-20" />
+            <TransparentCard className="hidden md:block absolute -top-12 -right-5 h-28 w-20" />
             <h2 className="text-on-primary text-xl font-bold">PRIVATE SALE WILL BE LAUNCHED AFTER:</h2>
-            <div className="relative grid grid-cols-2 gap-12 py-4 z-10">
+            <div className="relative grid md:grid-cols-2 gap-12 py-4 z-10">
                 <div>
                     <p className="text-xs font-extralight">Discount for early investors</p>
                     <Counter className="mt-6" targetedDate={DateTime.fromSQL('2024-12-12')} />
@@ -27,6 +27,6 @@ export function PrivateSaleCounter() {
                 </div>
             </div>
         </TransparentCard>
-        <TransparentCard className="absolute -bottom-12 -left-5 h-40 w-56 -z-10" />
+        <TransparentCard className="hidden block absolute -bottom-12 -left-5 h-40 w-56 -z-10" />
     </div>
 }

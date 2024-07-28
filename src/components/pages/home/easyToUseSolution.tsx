@@ -5,7 +5,7 @@ import { Divider } from "@/components/layout/divider/divider";
 
 export function EasyToUseSolutionSection() {
 
-    return <section className="grid lg:grid-cols-2 gap-8 justify-center items-center">
+    return <section className="grid lg:grid-cols-2 lg:gap-8 justify-center items-center">
         <article className="p-8">
             <div className="space-y-4">
                 <h2 className="text-3xl text-on-primary font-bold">Our easy to use Solution</h2>
