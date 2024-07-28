@@ -1,5 +1,6 @@
 import { EasyToUseSolutionSection } from "@/components/pages/home/easyToUseSolution";
 import { HomeHeroSection } from "@/components/pages/home/homeHeroSection";
+import { OurAdvisorSection } from "@/components/pages/home/ourAdvisorSection";
 import { OurTeamSection } from "@/components/pages/home/ourTeamSection";
 import { OverviewSection } from "@/components/pages/home/overviewSection";
 import { PrivateSaleCounter } from "@/components/pages/home/privateSaleCounter";
@@ -16,6 +17,7 @@ export default function Home() {
       <EasyToUseSolutionSection />
       <RoadMapSection />
       <OurTeamSection />
+      <OurAdvisorSection />
     </main>
   );
 }

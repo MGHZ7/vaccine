@@ -19,6 +19,9 @@
 
     --light-btn-hover-start-color: #18dbd5;
     --light-btn-hover-end-color: #a6d6ed;
+
+    --primary: #18dbd5;
+    --primary-variant: #a6d6ed;
   }
 }
 

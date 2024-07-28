@@ -16,8 +16,6 @@ export function Counter({ targetedDate, children, className = '' }: CounterProps
     useEffect(() => {
         const interval = setInterval(() => {
             const diff = targetedDate.diff(DateTime.now());
-            console.log("🚀 ~ interval ~ diff:", diff);
-
 
             setCurrentCount(diff);
         }, 1000);
