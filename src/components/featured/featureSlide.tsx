@@ -9,7 +9,8 @@ export interface FeaturedSlideProps {
 export function FeaturedSlide({ name, imageSrc }: FeaturedSlideProps) {
 
     return <article className="inline-flex justify-center items-center w-full">
-        <Image className="hidden md:block self-start me-auto separator" alt={'Seperator'} {...featuredSeparator} width={15} height={20} />
+        <Image className="hidden md:block self-start me-auto separator"
+            alt={'Seperator'} {...featuredSeparator} width={15} height={20} />
         <Image className="md:me-auto" alt={name} src={imageSrc} width={120} height={100} />
     </article>
 }
