@@ -20,7 +20,9 @@ export function TeamMemberCard({ imageSrc, name, title }: TeamMemberCardProps) {
             <Image alt={name} src={imageSrc} fill />
         </div>
 
-        <h4 className="text-primary font-bold">{name}</h4>
-        <h6 className="text-xs font-extralight">{title}</h6>
+        <div className="text-center">
+            <h4 className="text-primary font-bold">{name}</h4>
+            <h6 className="text-xs font-extralight">{title}</h6>
+        </div>
     </article>
 }
