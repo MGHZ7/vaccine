@@ -79,4 +79,12 @@ body {
   .team-member-white-gradient {
     background: linear-gradient(-180deg, #ffffff00, #ffffff22);
   }
+
+  .secondary-gradient {
+    background-image: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    );
+  }
 }

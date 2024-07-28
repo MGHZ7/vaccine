@@ -16,6 +16,36 @@ const config: Config = {
       fontFamily: {
         sans: ["Helvetica", "Arial", "sans-serif"],
       },
+      keyframes: {
+        menu: {
+          "0%": {
+            transform: "scale(0) translateX(-50%)",
+            opacity: "0",
+            borderRadius: "100%",
+          },
+          "100%": {
+            transform: "scale(1) translateX(0)",
+            opacity: "1",
+            borderRadius: "0",
+          },
+        },
+        menuReverse: {
+          "0%": {
+            transform: "scale(1) translateX(0)",
+            opacity: "1",
+            borderRadius: "0",
+          },
+          "100%": {
+            transform: "scale(0) translateX(-50%)",
+            opacity: "0",
+            borderRadius: "100%",
+          },
+        },
+      },
+      animation: {
+        menu: "menu 0.3s ease forwards",
+        "menu-reverse": "menuReverse 0.3s ease forwards",
+      },
     },
   },
   plugins: [],
