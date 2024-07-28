@@ -14,13 +14,24 @@
 }
 
 .swiper-slide-fully-visible,
-.swiper-slide-visible.swiper-slide-active {
+.swiper-slide-visible {
+  transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
+.swiper-slide-fully-visible:not(.swiper-slide-next),
+.swiper-slide-visible:not(.swiper-slide-next) {
+  opacity: 0.5;
+}
+
+.swiper-slide-fully-visible:not(.swiper-slide-next) .advisor-image,
+.swiper-slide-visible:not(.swiper-slide-next) .advisor-image {
+  opacity: 0;
+}
+
 .swiper-slide-next.swiper-slide-fully-visible {
+  transition: all 0.1s linear;
   z-index: 1;
-  margin: 0 -20px;
 }
 
 .swiper-button-next,
