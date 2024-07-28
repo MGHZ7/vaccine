@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -21,7 +21,7 @@ export interface AdvisorsSliderProps {
 export function AdvisorsSlider({ advisors, onActiveCardChange }: AdvisorsSliderProps) {
     const [mounted, setMounted] = useState(false);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         setMounted(true);
     }, []);
 
@@ -30,7 +30,7 @@ export function AdvisorsSlider({ advisors, onActiveCardChange }: AdvisorsSliderP
             <Swiper
                 watchSlidesProgress={true}
                 slidesPerView={3}
-                spaceBetween={10}
+                spaceBetween={0}
                 loop
                 navigation
                 modules={[Navigation, EffectCoverflow]}
@@ -38,11 +38,11 @@ export function AdvisorsSlider({ advisors, onActiveCardChange }: AdvisorsSliderP
                 className="w-full max-w-xl"
                 coverflowEffect={{
                     rotate: -5,
-                    stretch: 10,
-                    depth: 250,
-                    modifier: 1,
+                    stretch: 1,
+                    depth: 500,
+                    modifier: 2,
                     slideShadows: false,
-                    scale: 0.9
+                    scale: 1.3
                 }}
                 onSlideChange={e => onActiveCardChange?.(e.realIndex)}>
                 {advisors.map((advisor, i) => <SwiperSlide key={i}><AdvisorCard {...advisor} /></SwiperSlide>)}
