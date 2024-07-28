@@ -12,6 +12,7 @@ const config: Config = {
         primary: "#18DBD5",
         primaryVariant: "#A6D6ED",
         "on-primary": "#fff",
+        secondary: "#2A1A51",
       },
       fontFamily: {
         sans: ["Helvetica", "Arial", "sans-serif"],

@@ -7,11 +7,12 @@ import locationLogo from "./assets/location.svg";
 import { Divider } from "../divider/divider";
 import { FooterColumn, FooterColumnsProps } from "./footerColumn";
 import { NewsLetterFooterSection } from "./newsLetterFooterSection";
+import { SocialMedia } from "./socialMedia";
 
 export function Footer() {
 
-    return <footer className={`px-12 py-8 footer-gradient`}>
-        <div className="container mx-auto">
+    return <footer className={`footer-gradient`}>
+        <div className="container mx-auto px-12 py-8 ">
             <section>
                 <div>
                     <Image alt="Vaccine Logo" {...logo} />
@@ -30,6 +31,29 @@ export function Footer() {
                 </section>
             </div>
         </div>
+
+        <div className="bg-secondary text-xs font-extralight">
+            <div className="container mx-auto p-12 flex flex-col gap-4 lg:flex-row justify-between items-center">
+                <div className="">
+                    <p>All right reserved © 2021 VAC Labs Inc.</p>
+                </div>
+
+                <ul className="inline-flex gap-4 justify-center">
+                    <li>
+                        Terms & Conditions
+                    </li>
+                    <li>
+                        Privacy Policy
+                    </li>
+                    <li>
+                        Cookies Policy
+                    </li>
+                </ul>
+
+                <SocialMedia />
+            </div>
+        </div>
+
     </footer>
 }
 
