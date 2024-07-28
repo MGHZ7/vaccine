@@ -92,3 +92,8 @@ body {
     background-image: linear-gradient(to bottom, #331a73, #2a1a51);
   }
 }
+
+input {
+  height: 44px;
+  border-radius: 0.5rem;
+}

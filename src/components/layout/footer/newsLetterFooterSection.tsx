@@ -6,7 +6,7 @@ export function NewsLetterFooterSection() {
         <h4 className="text-xl">
             Newsletter
         </h4>
-        <input placeholder="Enter your email" />
+        <input className="placeholder:text-center border border-primary outline-primaryVariant" placeholder="Enter your email" />
         <VaccineButtonLink href={'/'} buttonType="dark">Subscribe Now</VaccineButtonLink>
     </article>
 }
