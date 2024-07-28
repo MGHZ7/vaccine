@@ -17,7 +17,7 @@ export function RoadMapSection() {
             </div>
         </article>
 
-        <article className="flex items-center justify-center gap-8 w-full">
+        <article className="flex items-center flex-wrap justify-center gap-8 w-full">
             {quarters.map((quarter) => <Badge key={quarter} className="whitespace-nowrap">{quarter}</Badge>)}
         </article>
 

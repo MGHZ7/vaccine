@@ -10,7 +10,7 @@ export interface TeamMemberCardProps {
 export function TeamMemberCard({ imageSrc, name, title }: TeamMemberCardProps) {
 
     return <article className="">
-        <div className="relative aspect-square h-52">
+        <div className="relative aspect-square h-40 md:h-52">
             <div className="absolute top-0 -bottom-[24%] left-0 right-0">
                 <Image alt="border" src={borderImage.src} fill />
             </div>

@@ -44,6 +44,14 @@ export function AdvisorsSlider({ advisors, onActiveCardChange }: AdvisorsSliderP
                     slideShadows: false,
                     scale: 1.3
                 }}
+                breakpoints={{
+                    0: {
+                        slidesPerView: 0
+                    },
+                    600: {
+                        slidesPerView: 3
+                    }
+                }}
                 onSlideChange={e => onActiveCardChange?.(e.realIndex)}>
                 {advisors.map((advisor, i) => <SwiperSlide key={i}><AdvisorCard {...advisor} /></SwiperSlide>)}
             </Swiper>

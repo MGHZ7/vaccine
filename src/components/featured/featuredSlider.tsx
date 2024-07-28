@@ -28,6 +28,17 @@ export default function FeaturedSlider({ featuredList }: FeaturedSliderProps) {
                 loop
                 navigation
                 modules={[Navigation]}
+                breakpoints={{
+                    0: {
+                        slidesPerView: 1
+                    },
+                    600: {
+                        slidesPerView: 2
+                    },
+                    900: {
+                        slidesPerView: 3
+                    }
+                }}
                 className="mySwiper"
             >
                 {featuredList.map((slide, i) => <>

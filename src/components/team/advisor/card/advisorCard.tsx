@@ -10,7 +10,7 @@ export interface AdvisorCardProps {
 
 export function AdvisorCard({ name, imageSrc, className = '' }: AdvisorCardProps) {
 
-    return <article className={`relative p-1 rounded-full aspect-square h-64 ${className}`}>
+    return <article className={`relative p-1 rounded-full aspect-square lg:h-64 sm:h-40 h-32 ${className}`}>
         <div className="advisor-image pt-1">
             <Image className="rounded-full" alt={name} src={imageSrc} fill />
         </div>
