@@ -1,11 +1,14 @@
+'use client';
+
 import Image from "next/image";
 
 import image from "../../../app/assets/pages/home/solutions/easy-to-use-solution.svg"
 import { Divider } from "@/components/layout/divider/divider";
+import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 
-export function EasyToUseSolutionSection() {
+export function EasyToUseSolutionSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
-    return <section className="grid lg:grid-cols-2 lg:gap-8 justify-center items-center">
+    return <section className={`grid lg:grid-cols-2 lg:gap-8 justify-center items-center ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="p-8">
             <div className="space-y-4">
                 <h2 className="text-3xl text-on-primary font-bold">Our easy to use Solution</h2>

@@ -1,9 +1,12 @@
+'use client';
+
 import Image from "next/image";
 
 import image from "../../../app/assets/pages/home/overview.png"
+import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 
-export function OverviewSection() {
-    return <section className="grid lg:grid-cols-2 gap-8 justify-center items-center">
+export function OverviewSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
+    return <section className={`grid lg:grid-cols-2 gap-8 justify-center items-center ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article>
             <div className="max-w-lg mx-auto">
                 <Image alt="Vaccine overview" {...image} />

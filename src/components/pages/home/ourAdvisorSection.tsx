@@ -1,15 +1,15 @@
 'use client';
 
+import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Divider } from "@/components/layout/divider/divider";
-import { AdvisorCardProps } from "@/components/team/advisor/card/advisorCard";
 import { AdvisorsSlider } from "@/components/team/advisor/slider/advisorsSlider";
 import { useState } from "react";
 
-export function OurAdvisorSection() {
+export function OurAdvisorSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
     const [advisorIndex, setAdvisorIndex] = useState(0);
 
-    return <section className="w-full space-y-16 p-8">
+    return <section className={`w-full space-y-16 p-8 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="max-w-lg space-y-4 self-start">
             <div className="flex items-center gap-4">
                 <h2 className="text-3xl text-on-primary font-bold">Our Advisors</h2>

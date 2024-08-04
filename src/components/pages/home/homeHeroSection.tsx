@@ -1,9 +1,13 @@
+'use client';
+
 import Image from "next/image";
 import globeImage from "../../../app/assets/pages/home/globe.png";
 import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
+import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 
-export function HomeHeroSection() {
-    return <section id="home-hero-section" className="relative">
+export function HomeHeroSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
+
+    return <section id="home-hero-section" className={`relative opacity-0 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="grid lg:grid-cols-2">
             <div className="max-w-lg lg:leading-10">
                 <p className={"text-primary text-sm font-light md:wide-letter-spacing"}>Always Caring . Always Here</p>

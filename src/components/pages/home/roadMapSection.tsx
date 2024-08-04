@@ -1,15 +1,18 @@
+'use client'
+
 import { Badge } from "@/components/layout/badg/badge";
 import { Divider } from "@/components/layout/divider/divider";
 
 import Image from "next/image";
 
 import roadmapImage from "./assets/roadmap/roadmap.svg";
+import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 
-export function RoadMapSection() {
+export function RoadMapSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
     const quarters = ['Q2 2021', 'Q3 2021', 'Q4 2021', 'Q1 2022', 'Q3 2022', 'Q3 2022', 'Q4 2022']
 
-    return <section className="w-full space-y-16">
+    return <section className={`w-full space-y-16 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="max-w-lg space-y-4 self-start p-8">
             <div className="flex items-center gap-4">
                 <h2 className="text-3xl text-on-primary font-bold">Roadmap</h2>

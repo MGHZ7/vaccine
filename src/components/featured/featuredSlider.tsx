@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -19,9 +19,15 @@ export interface FeaturedSliderProps {
 }
 
 export default function FeaturedSlider({ featuredList }: FeaturedSliderProps) {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
     return (
         <div className='featured-slider'>
-            <Swiper
+            {mounted && <Swiper
                 slidesPerView={3}
                 spaceBetween={0}
                 autoplay
@@ -47,7 +53,7 @@ export default function FeaturedSlider({ featuredList }: FeaturedSliderProps) {
                     </SwiperSlide>
                 </>
                 )}
-            </Swiper>
+            </Swiper>}
         </div>
     );
 }

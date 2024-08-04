@@ -1,13 +1,14 @@
 'use client';
 
+import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Counter } from "@/components/counter/counter";
 import { TransparentCard } from "@/components/layout/card/transparentCard";
 import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
 import { DateTime } from "luxon";
 
-export function PrivateSaleCounter() {
+export function PrivateSaleCounter({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
-    return <div className="relative">
+    return <div className={`relative ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <TransparentCard className="relative p-8 w-full z-10">
             <TransparentCard className="hidden md:block absolute -top-12 -right-5 h-28 w-20" />
             <h2 className="text-on-primary text-xl font-bold">PRIVATE SALE WILL BE LAUNCHED AFTER:</h2>
@@ -27,6 +28,6 @@ export function PrivateSaleCounter() {
                 </div>
             </div>
         </TransparentCard>
-        <TransparentCard className="hidden block absolute -bottom-12 -left-5 h-40 w-56 -z-10" />
+        <TransparentCard className="hidden md:block absolute -bottom-12 -left-5 h-40 w-56 -z-20" />
     </div>
 }

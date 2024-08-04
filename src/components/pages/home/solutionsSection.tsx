@@ -1,3 +1,5 @@
+'use client';
+
 import { Divider } from "@/components/layout/divider/divider";
 import Image from "next/image";
 
@@ -7,10 +9,11 @@ import metahealthIcon from "../../../app/assets/pages/home/solutions/vac-metahea
 import nftIcon from "../../../app/assets/pages/home/solutions/vac-nft.svg";
 import insuranceIcon from "../../../app/assets/pages/home/solutions/vac-insurance.svg";
 import supplyChainIcon from "../../../app/assets/pages/home/solutions/vac-supply-chain.svg";
+import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 
-export function SolutionsSection() {
+export function SolutionsSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
-    return <section className="w-full p-8">
+    return <section className={`w-full p-8 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="max-w-lg self-start space-y-4">
             <h2 className="text-3xl text-on-primary font-bold">Solutions</h2>
             <p className="text-xs text-primary">Vaccine is a decentralized ecosystem that empowers</p>

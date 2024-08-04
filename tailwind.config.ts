@@ -42,10 +42,28 @@ const config: Config = {
             borderRadius: "100%",
           },
         },
+        fadeIn: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
+        fadeOut: {
+          "0%": {
+            opacity: "1",
+          },
+          "100%": {
+            opacity: "0",
+          },
+        },
       },
       animation: {
         menu: "menu 0.3s ease forwards",
         "menu-reverse": "menuReverse 0.3s ease forwards",
+        "fade-in": "fadeIn 0.5s ease-in forwards",
+        "fade-out": "fadeOut 0.5s ease-out forwards",
       },
     },
   },
