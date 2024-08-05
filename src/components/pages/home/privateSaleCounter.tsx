@@ -8,10 +8,10 @@ import { DateTime } from "luxon";
 
 export function PrivateSaleCounter({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
-    return <div className={`relative ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+    return <div className={`relative ${isVisible ? 'animate-fade-in' : 'animate-fade-out'} mt-8`}>
         <TransparentCard className="hidden md:block !absolute -top-12 -right-5 h-28 w-20 animate-moving-around " />
         <TransparentCard className="hidden md:block !absolute -bottom-12 -left-5 h-40 w-56 -z-20 animate-moving-around" />
-        <TransparentCard showLightingPoint className="transition-all relative w-full z-10 hover:scale-105 hover:bg-opacity-60 bg-opacity-30">
+        <TransparentCard showLightingPoint className="transition-all relative w-full z-10 hover:scale-105 hover:bg-opacity-40 bg-opacity-30">
             <div className="p-8">
                 <h2 className="text-on-primary text-xl font-bold">PRIVATE SALE WILL BE LAUNCHED AFTER:</h2>
                 <div className="relative grid md:grid-cols-2 gap-12 py-4 z-10">
