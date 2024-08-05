@@ -40,7 +40,7 @@ export interface CounterBoxProps {
 
 export function CounterBox({ count, title }: CounterBoxProps) {
 
-    return <div className="border rounded-md flex-1 px-1 py-2 text-center border-primary">
+    return <div className="border rounded-md flex-1 px-1 py-2 text-center border-primary bg-black bg-opacity-50">
         <div className="text-2xl font-bold mb-4">
             {count}
         </div>

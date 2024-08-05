@@ -7,7 +7,7 @@ export interface TransparentCardProps {
 
 export function TransparentCard({ children, className = '' }: TransparentCardProps) {
 
-    return <article className={`border border-primary rounded-lg bg-black bg-opacity-10 backdrop-blur-sm ${className}`}>
+    return <article className={`border border-primary rounded-lg bg-black bg-opacity-10 backdrop-blur-xl ${className}`}>
         {children}
     </article>
 }
