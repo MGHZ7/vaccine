@@ -2,6 +2,7 @@
 
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Divider } from "@/components/layout/divider/divider";
+import { Paragraph } from "@/components/layout/typography/paragraph";
 import { TeamMemberCard } from "@/components/team/teamMemberCard";
 
 export function OurTeamSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
@@ -12,8 +13,8 @@ export function OurTeamSection({ isVisible }: ElementVisibilityCheckerComponentP
                 <h2 className="text-3xl text-on-primary font-bold">Our Team</h2>
                 <Divider className="flex-1 max-w-lg" />
             </div>
-            <p className="text-xs text-on-primary font-extralight">The team behind Stratos have built enterprise-level data infrastructure and implemented a number of complex blockchain systems.
-            </p>
+            <Paragraph className="text-on-primary">The team behind Stratos have built enterprise-level data infrastructure and implemented a number of complex blockchain systems.
+            </Paragraph>
         </article>
 
         <article className="flex gap-4 justify-center flex-wrap">

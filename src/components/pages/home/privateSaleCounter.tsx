@@ -4,6 +4,7 @@ import { ElementVisibilityCheckerComponentProps } from "@/components/common/elem
 import { Counter } from "@/components/counter/counter";
 import { TransparentCard } from "@/components/layout/card/transparentCard";
 import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
+import { Paragraph } from "@/components/layout/typography/paragraph";
 import { DateTime } from "luxon";
 
 export function PrivateSaleCounter({ isVisible }: ElementVisibilityCheckerComponentProps) {
@@ -20,7 +21,7 @@ export function PrivateSaleCounter({ isVisible }: ElementVisibilityCheckerCompon
                         <Counter className="mt-6" targetedDate={DateTime.fromSQL('2024-12-12')} />
                     </div>
                     <div className="ms-auto max-w-sm flex flex-col justify-between gap-4">
-                        <p className="text-xs font-extralight">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor</p>
+                        <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor</Paragraph>
 
                         <div>
                             <VaccineButtonLink className="!w-full block text-center border border-primary" size="xl" buttonType="light" href={'/lightpaper'}>

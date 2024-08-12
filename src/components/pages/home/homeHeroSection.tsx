@@ -4,6 +4,7 @@ import Image from "next/image";
 import globeImage from "../../../app/assets/pages/home/globe.png";
 import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
+import { Paragraph } from "@/components/layout/typography/paragraph";
 
 export function HomeHeroSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
@@ -13,9 +14,9 @@ export function HomeHeroSection({ isVisible }: ElementVisibilityCheckerComponent
                 <p className={"text-primary text-sm font-light md:wide-letter-spacing"}>Always Caring . Always Here</p>
                 <h1 className="md:text-6xl font-bold text-balance text-on-primary main-header md:mb-4 md:mt-2">Vaccine is a
                     Decentralized Medical Ecosystem</h1>
-                <p className="text-xs font-extralight max-w-72">
+                <Paragraph className="max-w-72">
                     VAC is the revolution in the medical industry and will lead the digital transformation
-                </p>
+                </Paragraph>
 
                 <div className="mt-10">
                     <VaccineButtonLink size="md" buttonType="light" href={'/lightpaper'}>
