@@ -9,9 +9,10 @@ export interface ElementVisibilityCheckerComponentProps {
 export interface ElementVisibilityCheckerProps<T extends ElementVisibilityCheckerComponentProps> {
     ComponentToShow: FC<T>
     props: T
+    className?: string
 }
 
-const ElementVisibilityChecker = <T extends ElementVisibilityCheckerComponentProps>({ ComponentToShow, props }: ElementVisibilityCheckerProps<T>) => {
+const ElementVisibilityChecker = <T extends ElementVisibilityCheckerComponentProps>({ ComponentToShow, props, className = '' }: ElementVisibilityCheckerProps<T>) => {
     const [isVisible, setIsVisible] = useState(false);
     const targetRef = useRef(null);
 
@@ -41,7 +42,7 @@ const ElementVisibilityChecker = <T extends ElementVisibilityCheckerComponentPro
         };
     }, []);
 
-    return <div ref={targetRef}>
+    return <div className={`${className}`} ref={targetRef}>
         <ComponentToShow isVisible={isVisible} {...props} />
     </div>
 };

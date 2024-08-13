@@ -27,12 +27,11 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: url("/home/bg.jpg"),
-    linear-gradient(
-      to bottom,
-      rgb(var(--background-start-rgb)),
-      rgb(var(--background-end-rgb))
-    );
+  background-image: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
   background-position: center;
   background-size: cover;
   background-repeat: space;
@@ -42,6 +41,24 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .bg-body {
+    background-image: url("/home/bg.jpg"),
+      linear-gradient(
+        to bottom,
+        rgb(var(--background-start-rgb)),
+        rgb(var(--background-end-rgb))
+      );
+  }
+
+  .bg-project {
+    background-image: url("/project/bg.jpg"),
+      linear-gradient(
+        to bottom,
+        rgb(var(--background-start-rgb)),
+        rgb(var(--background-end-rgb))
+      );
   }
 
   .wide-letter-spacing {
