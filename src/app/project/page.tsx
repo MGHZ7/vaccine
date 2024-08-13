@@ -5,6 +5,7 @@ import { BlockchainSpecificationsSection } from "@/components/pages/project/bloc
 import { BlockchainTechnologySection } from "@/components/pages/project/blockchainTechnologySection";
 import { BlockChainTrustBetweenPartiesSection } from "@/components/pages/project/blockChainTrustBetweenPartiesSection";
 import { PrivacyAndSecuritySection } from "@/components/pages/project/privacyAndSecuritySection";
+import { VacNodesSection } from "@/components/pages/project/vacNodesSection";
 import { useEffect } from "react";
 
 
@@ -24,6 +25,7 @@ export default function ProjectPage() {
       <ElementVisibilityChecker ComponentToShow={PrivacyAndSecuritySection} props={{}} />
       <ElementVisibilityChecker ComponentToShow={BlockChainTrustBetweenPartiesSection} props={{}} />
       <ElementVisibilityChecker ComponentToShow={BlockchainSpecificationsSection} props={{}} className="w-full" />
+      <ElementVisibilityChecker ComponentToShow={VacNodesSection} props={{}} className="w-full" />
     </main>
   );
 }
