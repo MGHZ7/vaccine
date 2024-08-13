@@ -6,7 +6,7 @@ import reliability from "./assets/reliability.svg";
 import costSaving from "./assets/cost-saving.svg";
 
 export function BlockchainSpecificationsSection() {
-    return <section className="grid grid-cols-2 gap-16 justify-between items-stretch w-full">
+    return <section className="grid md:grid-cols-2 gap-16 lg:justify-between items-stretch w-full">
         <article className="flex flex-col justify-between items-center">
             <Image className="w-56" alt="Decentralized structure" {...decentralizedStructure} />
 

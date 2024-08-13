@@ -11,7 +11,7 @@ export function VacNodesSection() {
             <Divider className="max-w-md mt-2" />
         </div>
 
-        <article className="grid lg:grid-cols-2 gap-8 px-28 mt-8">
+        <article className="grid lg:grid-cols-2 gap-8 sm:px-28 mt-8">
             <Image alt="VAC Nodes" {...image} />
             <div>
                 <h3 className="text-3xl mb-8">How It Works</h3>
