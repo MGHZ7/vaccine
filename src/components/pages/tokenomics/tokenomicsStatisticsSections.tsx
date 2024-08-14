@@ -1,5 +1,7 @@
 import Image from "next/image";
 import bg from "./assets/statistics-bg.svg";
+import logo from "../../../app/logo.png";
+
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { ReactNode } from "react";
 import { DoughnutChart } from "@/components/common/charts/doughnutChart";
@@ -32,7 +34,7 @@ const data = [{
 export function TokenomicsStatisticsSections() {
 
     return <section className="relative">
-        <div className="absolute bottom-0">
+        <div className="hidden md:absolute bottom-0">
             <Image alt="Background" {...bg} />
         </div>
 
@@ -44,11 +46,14 @@ export function TokenomicsStatisticsSections() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </Paragraph>
                 </div>
-                <div className="mt-8 -me-16">
-                    <DoughnutChart data={data} />
+                <div className="relative mt-8 lg:-me-16 flex justify-center">
+                    <DoughnutChart className="min-w-0 sm:min-w-full" data={data} />
+                    <div className="absolute top-1/4 right-1/4 bottom-1/4 left-1/4">
+                        <Image alt="VAC Logo" src={logo.src} fill />
+                    </div>
                 </div>
             </article>
-            <article className="ps-20 pe-4 space-y-4">
+            <article className="pb-10 ps-4 lg:ps-20 pe-4 space-y-4 w-full min-w-0">
                 {data.sort((a, b) => b.value - a.value).map(data => <BadgedCard color={data.color}><div>
                     <h2 className="text-lg font-light">
                         <span className="me-2" style={{ color: data.color }}>{data.value}%</span>
@@ -68,7 +73,7 @@ export interface BadgedCardProps {
 
 export function BadgedCard({ color = '#fff', children }: BadgedCardProps) {
 
-    return <article className="border rounded-xl px-4 py-1" style={{ borderLeftColor: color, borderLeftWidth: 10 }}>
+    return <article className="border rounded-xl px-4 py-1 w-full" style={{ borderLeftColor: color, borderLeftWidth: 10 }}>
         {children}
     </article>
 }

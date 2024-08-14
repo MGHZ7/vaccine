@@ -5,10 +5,11 @@ import { useEffect, useId, useRef } from "react";
 Chart.register(ChartDatalables);
 
 export interface DoughnutChartProps {
+    className?: string;
     data: { label: string, value: number, color: string }[];
 }
 
-export function DoughnutChart({ data }: DoughnutChartProps) {
+export function DoughnutChart({ data, className = '' }: DoughnutChartProps) {
 
     const id = useId();
 
@@ -53,9 +54,9 @@ export function DoughnutChart({ data }: DoughnutChartProps) {
                 },
                 layout: {
                     padding: {
-                        top: 50,
-                        right: 50,
-                        bottom: 50,
+                        top: 75,
+                        right: 75,
+                        bottom: 75,
                         left: 75,
                     }
                 }
@@ -67,5 +68,5 @@ export function DoughnutChart({ data }: DoughnutChartProps) {
         }
     }, [data]);
 
-    return <canvas className="overflow-visible" ref={ref} id={id}> </canvas>;
+    return <canvas className={`overflow-visible ${className}`} ref={ref} id={id}> </canvas>;
 }

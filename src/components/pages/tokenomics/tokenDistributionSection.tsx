@@ -3,8 +3,8 @@ import { TransparentCard } from "@/components/layout/card/transparentCard";
 
 export function TokenDistributionSection() {
 
-    return <TransparentCard className="p-4">
-        <h2 className="text-3xl font-bold">TOKEN DISTRIBUTION</h2>
+    return <TransparentCard className="p-4 overflow-visible">
+        <h2 className="text-xl ms:text-3xl font-bold">TOKEN DISTRIBUTION</h2>
 
         <PercentageLine points={[{
             percentage: 15,
