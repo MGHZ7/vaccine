@@ -84,6 +84,9 @@ const config: Config = {
         "fade-out": "fadeOut 0.5s ease-out forwards",
         "moving-around": "movingAround 10s linear forwards infinite",
       },
+      boxShadow: {
+        contrast: "0 0 10px 5px rgba(0, 0, 0, 0.5)",
+      },
     },
   },
   plugins: [],

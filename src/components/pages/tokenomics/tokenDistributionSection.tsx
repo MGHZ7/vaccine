@@ -1,6 +1,34 @@
+import { PercentageLine } from "@/components/common/percentageLine";
+import { TransparentCard } from "@/components/layout/card/transparentCard";
+
 export function TokenDistributionSection() {
 
-    return <section>
+    return <TransparentCard className="p-4">
         <h2 className="text-3xl font-bold">TOKEN DISTRIBUTION</h2>
-    </section>
+
+        <PercentageLine points={[{
+            percentage: 15,
+            title: 'Private Sale'
+        },
+        {
+            percentage: 40,
+            title: 'Public Sale'
+        },
+        {
+            percentage: 25,
+            title: 'Team'
+        },
+        {
+            percentage: 5,
+            title: 'Advisors'
+        },
+        {
+            percentage: 5,
+            title: ''
+        },
+        {
+            percentage: 5,
+            title: 'Partners & Ecosystem'
+        }]} />
+    </TransparentCard>
 }
