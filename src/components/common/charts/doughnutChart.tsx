@@ -5,7 +5,7 @@ import { useEffect, useId, useRef } from "react";
 Chart.register(ChartDatalables);
 
 export interface DoughnutChartProps {
-    data: any;
+    data: { label: string, value: number, color: string }[];
 }
 
 export function DoughnutChart({ data }: DoughnutChartProps) {
@@ -17,7 +17,15 @@ export function DoughnutChart({ data }: DoughnutChartProps) {
     useEffect(() => {
         const chart = new Chart(ref.current!, {
             type: 'doughnut',
-            data: data,
+            data: {
+                labels: data.map(d => d.label),
+                datasets: [{
+                    data: data.map(d => d.value),
+                    backgroundColor: data.map(d => d.color),
+                    hoverOffset: 4,
+                    borderWidth: 0,
+                }]
+            },
             options: {
                 cutout: '98%',
                 responsive: true,
