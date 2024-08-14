@@ -34,7 +34,7 @@ const data = [{
 export function TokenomicsStatisticsSections() {
 
     return <section className="relative">
-        <div className="hidden md:absolute bottom-0">
+        <div className="absolute hidden md:block bottom-0">
             <Image alt="Background" {...bg} />
         </div>
 
