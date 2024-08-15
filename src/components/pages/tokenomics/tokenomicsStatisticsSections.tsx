@@ -54,7 +54,7 @@ export function TokenomicsStatisticsSections() {
                 </div>
             </article>
             <article className="pb-10 ps-4 lg:ps-20 pe-4 space-y-4 w-full min-w-0">
-                {data.sort((a, b) => b.value - a.value).map(data => <BadgedCard color={data.color}><div>
+                {data.sort((a, b) => b.value - a.value).map(data => <BadgedCard key={data.label} color={data.color}><div>
                     <h2 className="text-lg font-light">
                         <span className="me-2" style={{ color: data.color }}>{data.value}%</span>
                         {data.label}
