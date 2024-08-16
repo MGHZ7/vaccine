@@ -1,6 +1,7 @@
 'use client';
 
 import ElementVisibilityChecker from "@/components/common/elementInViewPort";
+import { JoinComunity } from "@/components/common/socialMedia/joinCommunity";
 import { TokenDistributionSection } from "@/components/pages/tokenomics/tokenDistributionSection";
 import { TokenomicsSection } from "@/components/pages/tokenomics/tokenomicsSection";
 import { TokenomicsStatisticsSections } from "@/components/pages/tokenomics/tokenomicsStatisticsSections";
@@ -23,6 +24,7 @@ export default function TokenomicsPage() {
             <ElementVisibilityChecker ComponentToShow={TokenomicsVideo} props={{}} />
             <ElementVisibilityChecker ComponentToShow={TokenDistributionSection} props={{}} className="w-full overflow-hidden" />
             <ElementVisibilityChecker ComponentToShow={TokenomicsStatisticsSections} props={{}} className="w-full" />
+            <ElementVisibilityChecker ComponentToShow={JoinComunity} props={{}} className="w-full" />
         </main>
     );
 }
