@@ -1,8 +1,8 @@
 'use client';
 
 import Image from "next/image";
-
 import image from "../assets/supply-chain.png";
+
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { Divider } from "@/components/layout/divider/divider";
