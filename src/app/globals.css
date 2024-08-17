@@ -61,7 +61,7 @@ body {
       );
   }
 
-  .bg-project {
+  .bg-tokenomics {
     background-image: url("/tokenomics/bg.jpg"),
       linear-gradient(
         to bottom,
