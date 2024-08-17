@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import image from "../assets/webplatform.png";
+import image from "../assets/web-platform.png";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 
