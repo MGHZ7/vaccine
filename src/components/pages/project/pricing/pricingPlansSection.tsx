@@ -1,8 +1,5 @@
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { TransparentCard } from "@/components/layout/card/transparentCard";
-import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
-import { Paragraph } from "@/components/layout/typography/paragraph";
-import { title } from "process";
 import { PricingPlan, PricingPlanProps } from "./pricingPlan";
 
 export function PricingPlansSection({ isVisible }: ElementVisibilityCheckerComponentProps) {

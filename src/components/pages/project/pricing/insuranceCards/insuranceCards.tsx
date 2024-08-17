@@ -7,10 +7,11 @@ import silver from "../assets/cards/silver-card.png";
 import bronze from "../assets/cards/bronze-card.png";
 import Image from "next/image";
 import { Paragraph } from "@/components/layout/typography/paragraph";
+import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 
-export function InsuranceCardsSection() {
+export function InsuranceCardsSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
-    return <section className="space-y-8">
+    return <section className={`space-y-8 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <PlatinumCardSection />
         <SilverCardSection />
 

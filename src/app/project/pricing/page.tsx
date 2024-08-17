@@ -1,6 +1,7 @@
 'use client';
 
 import ElementVisibilityChecker from "@/components/common/elementInViewPort";
+import { BillsSettlemnetSection } from "@/components/pages/project/pricing/billsSettlementSection";
 import { InsuranceCardsSection } from "@/components/pages/project/pricing/insuranceCards/insuranceCards";
 import { PricingPlansSection } from "@/components/pages/project/pricing/pricingPlansSection";
 import { VacTokenUtility } from "@/components/pages/project/pricing/vacTokenSection";
@@ -22,6 +23,7 @@ export default function ProjectPricingPage() {
       <ElementVisibilityChecker ComponentToShow={VacTokenUtility} props={{}} />
       <ElementVisibilityChecker ComponentToShow={PricingPlansSection} props={{}} />
       <ElementVisibilityChecker ComponentToShow={InsuranceCardsSection} props={{}} />
+      <ElementVisibilityChecker ComponentToShow={BillsSettlemnetSection} props={{}} />
     </main>
   );
 }
