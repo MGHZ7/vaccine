@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import image from "../../../app/project/assets/blockchain-image.svg";
+import image from "../../../app/project/assets/public-cube.png";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 
