@@ -16,11 +16,41 @@ export function OverviewSection({ isVisible }: ElementVisibilityCheckerComponent
         <article className="p-8">
             <p className="text-xs text-primary">About the project</p>
             <h2 className="text-3xl text-on-primary font-bold">Overview</h2>
-            <Paragraph className="mt-8">
-                In recent decades, advances in technology and medicine have increased the life expectancy and general health of people around the world. However, the aggregate health information on long-run cross-country data is still limited, as the world works to enhance the medical health care of the population. Here is the benets of blockchain technologies that could make it an integral tool and correlated. Blockchain technologies can act as a single reference point to share and distribute the large amount of data that is identified every moment.
-            </Paragraph>
-            <Paragraph className="mt-4">
-                With blockchain, developers, doctors, researchers, health minitries, and health organizations from around the world can collaborate on the path toward an effective authenticity as a ledger of truth in global scale.
+            <Paragraph className="mt-8 lg:max-h-96 overflow-auto scroll-indicator-hide">
+                Welcome to VAC
+                <br />
+                <br />
+                At VAC, we stand at the forefront of medical evolution, leveraging cutting-edge technologies to combat diseases and pandemics. Our platform is dedicated to exploring the intersection of medical advancements, vaccine distribution, and blockchain innovation, offering insights and solutions to address the most pressing challenges in global health.
+                <br />
+                <br />
+                Pioneering Medical Solutions with Blockchain
+                <br />
+                <br />
+                In the ever-evolving landscape of healthcare, innovation is key to overcoming obstacles and improving patient outcomes. [Website Name] harnesses the power of decentralized blockchain technology to revolutionize medical solutions, ensuring secure, transparent, and efficient healthcare delivery worldwide.
+                <br />
+                <br />
+                Empowering Healthcare Through Decentralization
+                <br />
+                <br />
+                Decentralized blockchain solutions hold immense potential in reshaping the healthcare industry. By decentralizing data storage and management, we enhance security, privacy, and accessibility, laying the foundation for a more resilient and inclusive healthcare ecosystem.
+                <br />
+                <br />
+                Driving Change in Vaccine Distribution
+                <br />
+                <br />
+                Vaccine distribution is a critical aspect of public health, with the potential to save millions of lives and prevent widespread disease outbreaks. Through blockchain-powered platforms, we streamline vaccine supply chains, optimize distribution networks, and ensure equitable access to life-saving vaccines, particularly in underserved regions.
+                <br />
+                <br />
+                Advancing Global Health Equity
+                <br />
+                <br />
+                At Vaccine, we believe that every individual deserves access to quality healthcare, regardless of their geographic location or socioeconomic status. By leveraging decentralized blockchain technology, we strive to bridge the gap in global health equity, empowering communities and saving lives around the world.
+                <br />
+                <br />
+                Join Us in Shaping the Future of Healthcare
+                <br />
+                <br />
+                Join us on our mission to revolutionize healthcare through innovation, collaboration, and compassion. Whether you&apos;re a healthcare professional, technology enthusiast, or advocate for global health equity, [Website Name] is your platform to drive meaningful change and shape the future of healthcare for generations to come.
             </Paragraph>
         </article>
     </section>
