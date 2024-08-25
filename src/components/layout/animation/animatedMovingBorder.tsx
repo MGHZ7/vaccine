@@ -27,7 +27,7 @@ export function AnimatedMovingBorder({ width = 200, height = 100, className = ''
             if (r.lastChild) r.removeChild(r.lastChild);
             const animation = animateMotion.cloneNode() as SVGAnimateMotionElement;
             r.setAttribute("x", (-wormHead.r.baseVal.value - i).toString());
-            r.setAttribute("y", (padding - 12).toString());
+            r.setAttribute("y", (padding - 13).toString());
             animation.setAttribute("begin", `0.${0.01 * i + 1}s`);
             r.append(animation);
             animation.beginElement();
