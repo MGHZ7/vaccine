@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import { Divider } from "../divider/divider";
+import { ReactNode, useRef } from "react";
+import { AnimatedMovingBorder } from "../animation/animatedMovingBorder";
 
 export interface TransparentCardProps {
     className?: string;
@@ -9,11 +9,16 @@ export interface TransparentCardProps {
 
 export function TransparentCard({ children, showLightingPoint = false, className = '' }: TransparentCardProps) {
 
-    return <>
-        <article className={`transition-all border border-primary rounded-lg bg-black bg-opacity-10 backdrop-blur-xl box-border group ${className}`}>
-            {children}
-            {showLightingPoint && <Divider className="transition-all absolute -bottom-0.5 left-1/4 right-1/4 !w-1/2 z-10 
-            group-hover:-translate-x-1/4" />}
-        </article>
-    </>
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    return <article
+        ref={containerRef}
+        className={`relative transition-all border border-primary rounded-lg 
+        bg-black bg-opacity-10 backdrop-blur-xl box-border group ${className}`}>
+        {children}
+        {showLightingPoint && <AnimatedMovingBorder
+            width={containerRef.current?.offsetWidth}
+            height={containerRef.current?.offsetHeight}
+            className="absolute -top-1 -right-1 -bottom-1 -left-1" />}
+    </article>
 }
