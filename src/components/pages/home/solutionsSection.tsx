@@ -33,10 +33,11 @@ export function SolutionsSection({ isVisible }: ElementVisibilityCheckerComponen
 
 export function Solution({ title, image }: { title: string, image: any }) {
 
-    return <article>
-        <div className="w-full lg:px-3 xl:px-8 inline-flex justify-center">
+    return <article className="group cursor-pointer">
+        <div className="transition w-full lg:px-3 xl:px-8 inline-flex justify-center 
+        group-hover:scale-110 group-hover:-hue-rotate-15 group-hover:skew-y-1">
             <Image alt={title} {...image} />
         </div>
-        <h4 className="text-xs font-extralight text-center mt-2 h-2">{title}</h4>
+        <h4 className="transition text-xs font-extralight text-center mt-2 h-2 group-hover:font-bold">{title}</h4>
     </article>
 }

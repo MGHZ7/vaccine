@@ -1,5 +1,7 @@
+'use client';
+
 import { PlatinumCardSection } from "./platinumCard";
-import { SilverCardSection } from "./silverCardSection";
+import { SelectedCardSection } from "./silverCardSection";
 
 import platinum from "../assets/cards/platinum-card.png";
 import gold from "../assets/cards/golden-card.png";
@@ -8,18 +10,21 @@ import bronze from "../assets/cards/bronze-card.png";
 import Image from "next/image";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
+import { useState } from "react";
 
 export function InsuranceCardsSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
+    const [selectedCard, setSelectedCard] = useState(cards[0]);
+
+
+
     return <section className={`space-y-8 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <PlatinumCardSection />
-        <SilverCardSection />
+        <SelectedCardSection {...selectedCard} />
 
         <section className="grid sm:grid-cols-2 lg:grid-cols-4">
-            <Image alt="Vac Platinum Card" {...platinum} />
-            <Image alt="Vac Gold Card" {...gold} />
-            <Image alt="Vac Silver Card" {...silver} />
-            <Image alt="Vac Bronze Card" {...bronze} />
+            {cards.map((card, i) =>
+                <Image key={i} onMouseEnter={() => setSelectedCard(cards[i])} alt={card.title} {...card.image} />)}
         </section>
 
         <article className="max-w-md space-y-4">
@@ -38,3 +43,24 @@ export function InsuranceCardsSection({ isVisible }: ElementVisibilityCheckerCom
         </article>
     </section>
 }
+
+const cards = [{
+    title: 'Platinum Card',
+    description: 'Unfortunate incidences don’t come planned, and costs can quickly rise up due to various tests involved, leading to Financial stress. Having a medical card will provide one less thing to worry about, ensuring that one is able to focus on recovery.Having insurance plan associated with your medical health will provide you with the ultimate benets that provides the convenience of seamlessly checking into healthcare facilities when seeking for medical and hospitalisation treatments.',
+    image: platinum
+},
+{
+    title: 'Gold Card',
+    description: 'Unfortunate incidences don’t come planned, and costs can quickly rise up due to various tests involved, leading to Financial stress. Having a medical card will provide one less thing to worry about, ensuring that one is able to focus on recovery.Having insurance plan associated with your medical health will provide you with the ultimate benets that provides the convenience of seamlessly checking into healthcare facilities when seeking for medical and hospitalisation treatments.',
+    image: gold
+},
+{
+    title: 'Silver Card',
+    description: 'Unfortunate incidences don’t come planned, and costs can quickly rise up due to various tests involved, leading to Financial stress. Having a medical card will provide one less thing to worry about, ensuring that one is able to focus on recovery.Having insurance plan associated with your medical health will provide you with the ultimate benets that provides the convenience of seamlessly checking into healthcare facilities when seeking for medical and hospitalisation treatments.',
+    image: silver
+},
+{
+    title: 'Bronze Card',
+    description: 'Unfortunate incidences don’t come planned, and costs can quickly rise up due to various tests involved, leading to Financial stress. Having a medical card will provide one less thing to worry about, ensuring that one is able to focus on recovery.Having insurance plan associated with your medical health will provide you with the ultimate benets that provides the convenience of seamlessly checking into healthcare facilities when seeking for medical and hospitalisation treatments.',
+    image: bronze
+}]
