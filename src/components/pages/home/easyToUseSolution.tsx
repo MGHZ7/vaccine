@@ -16,7 +16,7 @@ export function EasyToUseSolutionSection({ isVisible }: ElementVisibilityChecker
                 <p className="text-xs text-primary">Lorem ipsum dolor sit amet consectetur adipiscing</p>
                 <Divider type="ltr" />
             </div>
-            <Paragraph className="mt-8">
+            <Paragraph className="mt-8 lg:h-52 overflow-auto scroll-indicator-hide">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ocia deserunt mollit anim id est laborum.
             </Paragraph>
