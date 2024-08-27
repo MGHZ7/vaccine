@@ -33,8 +33,7 @@ export function Navbar() {
             </div>
 
             <div className="hidden ms-auto lg:inline-flex items-center gap-4">
-                <VaccineButtonLink size="sm" buttonType="light" href={'/register'}>Register</VaccineButtonLink>
-                <VaccineButtonLink size="sm" buttonType="dark" href={'/sign-in'}>Sign In</VaccineButtonLink>
+                <VaccineButtonLink size="sm" buttonType="dark" href={'/sign-in'}>Connect Wallet</VaccineButtonLink>
             </div>
 
             <div className="lg:hidden ms-auto">
