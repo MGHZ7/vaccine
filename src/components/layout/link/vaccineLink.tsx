@@ -2,10 +2,9 @@
 
 import { ComponentSize } from "@/components/common";
 import Link, { LinkProps } from "next/link";
-import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 
-export type VaccineLinkProps = LinkProps & { size?: ComponentSize, className?: string, children?: ReactNode }
+export type VaccineLinkProps = LinkProps & { size?: ComponentSize, className?: string, children?: ReactNode, target?: string }
 
 export function VaccineLink({ className = '', size, ...props }: VaccineLinkProps) {
 
