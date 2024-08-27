@@ -74,12 +74,9 @@ body {
     letter-spacing: 0.5rem;
   }
 
-  .scroll-indicator-hide::-webkit-scrollbar {
-    width: 20px;
-  }
-
   .scroll-indicator-hide {
-    scrollbar-width: 1;
+    scrollbar-color: var(--primary) var(--primary-variant);
+    scroll-margin-inline-start: 4rem;
   }
 
   .btn-light {

@@ -1,0 +1,33 @@
+.scroll-animation-container {
+  width: 20px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 40px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-animation-container div {
+  width: 4px;
+  height: 5px;
+  background-color: white;
+  border-radius: 40px;
+  animation: ScrollAnimation 1s infinite ease-out;
+}
+
+@keyframes ScrollAnimation {
+  0% {
+    transform: translateY(-5px);
+    height: 10px;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10px);
+    height: 0px;
+    opacity: 0;
+  }
+}
