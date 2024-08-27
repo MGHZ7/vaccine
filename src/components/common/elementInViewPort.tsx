@@ -19,8 +19,6 @@ const ElementVisibilityChecker = <T extends ElementVisibilityCheckerComponentPro
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
-                console.log("🚀 ~ useEffect ~ entries:", entries);
-
                 entries.map((entry) => setIsVisible(entry.isIntersecting));
             },
             {

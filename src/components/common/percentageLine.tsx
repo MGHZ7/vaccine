@@ -13,8 +13,6 @@ export function PercentageLine({ points }: PercentageLineProps) {
 
         return [...accumulated, accumulation];
     }, []);
-    console.log("🚀 ~ pointesAccumulated ~ pointesAccumulated:", pointesAccumulated);
-
 
     return <div className="w-full p-4">
         <div className="relative bg-primary h-3 mb-16 mt-8 rounded-lg">
