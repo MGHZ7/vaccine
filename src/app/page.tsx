@@ -23,16 +23,19 @@ export default function Home() {
   });
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-8 md:px-24 py-28 space-y-24 bg-home-img">
+    <main className=" min-h-screen  py-28 bg-home-img">
       <ElementVisibilityChecker ComponentToShow={HomeHeroSection} props={{}} />
-      <ElementVisibilityChecker ComponentToShow={PrivateSaleCounter} props={{}} />
-      <ElementVisibilityChecker ComponentToShow={OverviewSection} props={{}} />
-      <ElementVisibilityChecker ComponentToShow={SolutionsSection} props={{}} />
-      <ElementVisibilityChecker ComponentToShow={EasyToUseSolutionSection} props={{}} />
-      <ElementVisibilityChecker ComponentToShow={RoadMapSection} props={{}} />
-      <ElementVisibilityChecker ComponentToShow={OurTeamSection} props={{}} />
-      <ElementVisibilityChecker ComponentToShow={OurAdvisorSection} props={{}} />
-      <FeaturedInSection />
+
+      <div className="px-8 md:px-24 flex flex-col items-center justify-between space-y-24 mt-24">
+        <ElementVisibilityChecker ComponentToShow={PrivateSaleCounter} props={{}} />
+        <ElementVisibilityChecker ComponentToShow={OverviewSection} props={{}} />
+        <ElementVisibilityChecker ComponentToShow={SolutionsSection} props={{}} />
+        <ElementVisibilityChecker ComponentToShow={EasyToUseSolutionSection} props={{}} />
+        <ElementVisibilityChecker ComponentToShow={RoadMapSection} props={{}} />
+        <ElementVisibilityChecker ComponentToShow={OurTeamSection} props={{}} />
+        <ElementVisibilityChecker ComponentToShow={OurAdvisorSection} props={{}} />
+        <FeaturedInSection />
+      </div>
     </main>
   );
 }
