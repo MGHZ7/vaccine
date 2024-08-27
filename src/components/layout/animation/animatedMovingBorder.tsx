@@ -74,7 +74,7 @@ export function AnimatedMovingBorder({ width = 200, height = 100, className = ''
     return <div className={`rounded-lg ${className}`} ref={container} onMouseOver={handleContainerMouseover}>
         <svg id="wormSvg" className="" viewBox={`0 0 ${containerWidth} ${containerHeight}`}>
             <path id="wormPath" d="" fill="none" stroke="none" stroke-width="4" ref={path} />
-            <g id="svg-group" ref={svgGroup}>
+            <g className="pointer-events-none" id="svg-group" ref={svgGroup}>
                 <circle
                     ref={wormHead}
                     id="wormHead"
