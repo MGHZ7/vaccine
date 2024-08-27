@@ -75,7 +75,7 @@ body {
   }
 
   .scroll-indicator-hide {
-    scrollbar-color: var(--primary) var(--primary-variant);
+    scrollbar-color: var(--primary) transparent;
     scroll-margin-inline-start: 4rem;
   }
 
