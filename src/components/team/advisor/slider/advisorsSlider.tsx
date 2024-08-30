@@ -16,9 +16,11 @@ import { AdvisorCard, AdvisorCardProps } from "../card/advisorCard";
 export interface AdvisorsSliderProps {
     advisors: AdvisorCardProps[]
     onActiveCardChange?: (index: number) => void
+    onAdvisorHover?: (index: number) => void
+    onAdvisorLeave?: (index: number) => void
 }
 
-export function AdvisorsSlider({ advisors, onActiveCardChange }: AdvisorsSliderProps) {
+export function AdvisorsSlider({ advisors, onActiveCardChange, onAdvisorHover, onAdvisorLeave }: AdvisorsSliderProps) {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -53,7 +55,13 @@ export function AdvisorsSlider({ advisors, onActiveCardChange }: AdvisorsSliderP
                     }
                 }}
                 onSlideChange={e => onActiveCardChange?.(e.realIndex)}>
-                {advisors.map((advisor, i) => <SwiperSlide key={i}><AdvisorCard {...advisor} /></SwiperSlide>)}
+                {advisors.map((advisor, i) =>
+                    <SwiperSlide
+                        key={i}
+                        onMouseEnter={() => onAdvisorHover?.(i)}
+                        onMouseOut={() => onAdvisorLeave?.(i)}>
+                        <AdvisorCard {...advisor} />
+                    </SwiperSlide>)}
             </Swiper>
         </div> : null
     );

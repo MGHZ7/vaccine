@@ -36,7 +36,9 @@ export default function Home() {
         <ElementVisibilityChecker ComponentToShow={OurAdvisorSection} props={{}} />
       </div>
 
-      <FeaturedInSection />
+      <div className="mt-16">
+        <FeaturedInSection />
+      </div>
     </main>
   );
 }
