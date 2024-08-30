@@ -1,16 +1,19 @@
 'use client'
 
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
+import { Marquee } from "@/components/common/marquee";
 import FeaturedSlider from "@/components/featured/featuredSlider";
-import { FeaturedSlideProps } from "@/components/featured/featureSlide";
+import { FeaturedSlide, FeaturedSlideProps } from "@/components/featured/featureSlide";
 
 export function FeaturedInSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
     return <section className={`w-full ${isVisible ? 'animate-fade-in' : 'animate-fade-in'}`}>
         <h2 className="text-3xl text-on-primary font-bold text-center">Featured In</h2>
 
-        <div className="mt-8 p-8">
-            <FeaturedSlider featuredList={featured} />
+        <div className="mt-8 p-8 w-full overflow-hidden">
+            <Marquee>
+                {featured.map(featured => <FeaturedSlide key={featured.name} {...featured} />)}
+            </Marquee>
         </div>
     </section>
 }

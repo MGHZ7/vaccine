@@ -34,8 +34,9 @@ export default function Home() {
         <ElementVisibilityChecker ComponentToShow={RoadMapSection} props={{}} />
         <ElementVisibilityChecker ComponentToShow={OurTeamSection} props={{}} />
         <ElementVisibilityChecker ComponentToShow={OurAdvisorSection} props={{}} />
-        <FeaturedInSection />
       </div>
+
+      <FeaturedInSection />
     </main>
   );
 }
