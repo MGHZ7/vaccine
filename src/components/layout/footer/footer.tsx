@@ -7,7 +7,7 @@ import locationLogo from "./assets/location.svg";
 import { Divider } from "../divider/divider";
 import { FooterColumn, FooterColumnsProps } from "./footerColumn";
 import { NewsLetterFooterSection } from "./newsLetterFooterSection";
-import { SocialMedia } from "./socialMedia";
+import { SocialMedia } from "../../common/socialMedia/socialMedia";
 
 export function Footer() {
 

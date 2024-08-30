@@ -1,8 +1,8 @@
-import { DiscordIcon } from "./icons/discordIcon";
-import { FacebookIcon } from "./icons/facebookIcon";
-import { InstagramIcon } from "./icons/instagramIcon";
-import { TelegramIcon } from "./icons/telegramIcon";
-import { TwitterIcon } from "./icons/twitterIcon";
+import { DiscordLink } from "./discordLink";
+import { FacebookLink } from "./facebookLink";
+import { InstagramLink } from "./instagramLink";
+import { TelegramLink } from "./telegramLink";
+import { XLink } from "./xLink";
 
 export function JoinComunity() {
 
@@ -11,19 +11,19 @@ export function JoinComunity() {
 
         <div className="flex gap-4 mt-12 [&>div]:max-w-12">
             <div>
-                <TwitterIcon />
+                <XLink />
             </div>
             <div>
-                <FacebookIcon />
+                <FacebookLink />
             </div>
             <div>
-                <TelegramIcon />
+                <TelegramLink />
             </div>
             <div>
-                <InstagramIcon />
+                <InstagramLink />
             </div>
             <div>
-                <DiscordIcon />
+                <DiscordLink />
             </div>
         </div>
     </section>

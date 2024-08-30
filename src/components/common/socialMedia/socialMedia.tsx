@@ -5,6 +5,11 @@ import instagramIcon from "@/app/assets/social-media/instagram.svg";
 import discordIcon from "@/app/assets/social-media/discord.svg";
 
 import Image from "next/image";
+import { XLink } from "./xLink";
+import { FacebookLink } from "./facebookLink";
+import { TelegramLink } from "./telegramLink";
+import { InstagramLink } from "./instagramLink";
+import { DiscordLink } from "./discordLink";
 
 export interface SocialMediaProps {
     className?: string;
@@ -14,19 +19,19 @@ export function SocialMedia({ className = '' }: SocialMediaProps) {
 
     return <ul className={`flex gap-2 ${className}`}>
         <li>
-            <Image alt="twitter" {...twitterIcon} />
+            <XLink />
         </li>
         <li>
-            <Image alt="facebook" {...facebookIcon} />
+            <FacebookLink />
         </li>
         <li>
-            <Image alt="telegram" {...telegramIcon} />
+            <TelegramLink />
         </li>
         <li>
-            <Image alt="instagram" {...instagramIcon} />
+            <InstagramLink />
         </li>
         <li>
-            <Image alt="discord" {...discordIcon} />
+            <DiscordLink />
         </li>
     </ul>
 }
