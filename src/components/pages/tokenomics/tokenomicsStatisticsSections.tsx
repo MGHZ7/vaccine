@@ -48,7 +48,7 @@ export function TokenomicsStatisticsSections() {
                 </div>
                 <div className="relative mt-8 lg:-me-16 flex justify-center">
                     <DoughnutChart className="min-w-0 sm:min-w-full" data={data} />
-                    <div className="absolute top-1/4 right-1/4 bottom-1/4 left-1/4">
+                    <div className="absolute top-1/4 right-1/4 bottom-1/4 left-1/4 animate-glow">
                         <Image alt="VAC Logo" src={logo.src} fill />
                     </div>
                 </div>

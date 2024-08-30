@@ -76,6 +76,20 @@ const config: Config = {
             transform: "translateX(0) translateY(0)",
           },
         },
+        glow: {
+          "0%": {
+            filter: "brightness(1)",
+            "-webkit-filter": "brightness(1)",
+          },
+          "50%": {
+            filter: "brightness(1.3)",
+            "-webkit-filter": "brightness(1.3)",
+          },
+          "100%": {
+            filter: "brightness(1)",
+            "-webkit-filter": "brightness(1)",
+          },
+        },
       },
       animation: {
         menu: "menu 0.3s ease forwards",
@@ -83,6 +97,7 @@ const config: Config = {
         "fade-in": "fadeIn 0.5s ease-in forwards",
         "fade-out": "fadeOut 0.5s ease-out forwards",
         "moving-around": "movingAround 10s linear forwards infinite",
+        glow: "glow 5s linear forwards infinite",
       },
       boxShadow: {
         contrast: "0 0 10px 5px rgba(0, 0, 0, 0.5)",
