@@ -10,7 +10,7 @@ export function HomeHeroSection({ isVisible }: ElementVisibilityCheckerComponent
     return <section id="home-hero-section" className={`relative opacity-0 aspect-video 
     flex flex-col justify-center
     ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
-        <div className="absolute top-0 right-0 bottom-0 left-0 -z-10">
+        <div className="mb-16 lg:mb-0 lg:absolute top-0 right-0 bottom-0 left-0 -z-10">
             <VideoPlayer url={'/home/earth_entro.webm'} playing muted width={'100%'} height={'100%'} />
         </div>
 
