@@ -12,6 +12,7 @@ import 'swiper/css/navigation';
 
 import "./styles.scss";
 import { AdvisorCard, AdvisorCardProps } from "../card/advisorCard";
+import { useScreenSize } from "@/hooks/screen/screenSize.hook";
 
 export interface AdvisorsSliderProps {
     advisors: AdvisorCardProps[]
@@ -23,6 +24,8 @@ export interface AdvisorsSliderProps {
 export function AdvisorsSlider({ advisors, onActiveCardChange, onAdvisorHover, onAdvisorLeave }: AdvisorsSliderProps) {
     const [mounted, setMounted] = useState(false);
 
+    const screenSize = useScreenSize();
+
     useEffect(() => {
         setMounted(true);
     }, []);
@@ -31,25 +34,25 @@ export function AdvisorsSlider({ advisors, onActiveCardChange, onAdvisorHover, o
         mounted ? <div className="advisor-slider">
             <Swiper
                 watchSlidesProgress={true}
-                slidesPerView={3}
                 spaceBetween={0}
                 loop
                 navigation
                 modules={[Navigation, EffectCoverflow]}
                 effect='coverflow'
-                className="w-full max-w-xl"
-                coverflowEffect={{
+                className="w-full max-w-28 sm:max-w-sm lg:max-w-xl"
+                coverflowEffect={screenSize >= 600 ? {
                     rotate: -5,
                     stretch: 1,
                     depth: 500,
                     modifier: 2,
                     slideShadows: false,
                     scale: 1.3
-                }}
+                } : undefined}
                 breakpoints={{
                     0: {
-                        slidesPerView: 0
+                        slidesPerView: 1
                     },
+
                     600: {
                         slidesPerView: 3
                     }
