@@ -2,9 +2,16 @@
 
 import { ComponentSize } from "@/components/common";
 import Link, { LinkProps } from "next/link";
-import { ReactNode } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 
-export type VaccineLinkProps = LinkProps & { size?: ComponentSize, className?: string, children?: ReactNode, target?: string }
+export type VaccineLinkProps = LinkProps & {
+    size?: ComponentSize,
+    className?: string,
+    children?: ReactNode,
+    target?: string,
+    onMouseEnter?: MouseEventHandler<HTMLAnchorElement>,
+    onMouseLeave?: MouseEventHandler<HTMLAnchorElement>,
+}
 
 export function VaccineLink({ className = '', size, ...props }: VaccineLinkProps) {
 
@@ -12,5 +19,6 @@ export function VaccineLink({ className = '', size, ...props }: VaccineLinkProps
 
     return <Link className={`font-extralight hover:text-primaryVariant 
         ${sizeClassName} 
-        ${className}`}  {...props} />
+        ${className}`}
+        {...props} />
 }

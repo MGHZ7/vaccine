@@ -13,7 +13,8 @@ import { ElementVisibilityCheckerComponentProps } from "@/components/common/elem
 
 export function SolutionsSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
-    return <section className={`w-full p-8 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+    return <section
+        className={`w-full p-8 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="max-w-lg self-start space-y-4">
             <h2 className="text-3xl text-on-primary font-bold">Solutions</h2>
             <p className="text-xs text-primary">Vaccine is a decentralized ecosystem that empowers</p>

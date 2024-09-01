@@ -26,6 +26,7 @@
 }
 
 body {
+  scroll-behavior: smooth;
   color: rgb(var(--foreground-rgb));
   background-image: linear-gradient(
     to bottom,

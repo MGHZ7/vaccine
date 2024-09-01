@@ -12,7 +12,9 @@ export function RoadMapSection({ isVisible }: ElementVisibilityCheckerComponentP
 
     const quarters = ['Q2 2021', 'Q3 2021', 'Q4 2021', 'Q1 2022', 'Q3 2022', 'Q3 2022', 'Q4 2022']
 
-    return <section className={`w-full space-y-16 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+    return <section
+        id="road-map"
+        className={`w-full space-y-16 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="max-w-lg space-y-4 self-start p-8">
             <div className="flex items-center gap-4">
                 <h2 className="text-3xl text-on-primary font-bold">Roadmap</h2>

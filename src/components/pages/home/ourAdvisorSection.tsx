@@ -22,7 +22,9 @@ export function OurAdvisorSection({ isVisible }: ElementVisibilityCheckerCompone
         })
     }
 
-    return <section className={`w-full space-y-16 p-4 md:p-8 pb-16 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+    return <section
+        id="our-advisors"
+        className={`w-full space-y-16 p-4 md:p-8 pb-16 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="max-w-lg space-y-4 self-start">
             <div className="flex items-center gap-4">
                 <h2 className="text-3xl text-on-primary font-bold">Our Advisors</h2>

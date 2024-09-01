@@ -4,32 +4,41 @@ import Image from "next/image"
 import { VaccineLink } from "../link/vaccineLink"
 import { VaccineButtonLink } from "../link/vaccineButtonLink"
 import Hamburger from 'hamburger-react'
-import { useState } from "react"
-import { navLinks } from "./navLinks";
+import { MouseEventHandler, useState } from "react"
+import { NavbarLinkProps, navLinks } from "./navLinks";
 import { SmallScreenMenu } from "./smallScreenMenu";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export function Navbar() {
 
-    const pathName = usePathname();
-
     const [isOpen, setIsOpen] = useState(false);
+    const [show, setShow] = useState(navLinks.map(e => false));
 
-    return <nav className={``}>
+    const setNavLinkPanelShowable = (index: number) => {
+        setShow(prevValue => {
+            const newValue = prevValue.map(e => false);
+            newValue[index] = true;
+            return newValue;
+        })
+    }
+
+    const hideAllNavLinkPanels = () => {
+        setShow(prevValue => prevValue.map(e => false))
+    }
+
+    return <nav className={`relative`} onMouseLeave={hideAllNavLinkPanels}>
         <div className="container mx-auto p-8 flex gap-12">
             <div>
                 <Image alt="Vaccine Logo" src={'/logo.png'} width={120} height={64} />
             </div>
 
             <div className={`hidden lg:flex justify-center items-center gap-6`}>
-                {navLinks.map(link => {
-                    const className = link.link === pathName ? 'text-primary' : ''
-
-                    return <VaccineLink key={link.link}
-                        className={className}
-                        size="sm"
-                        href={link.link}>{link.title}</VaccineLink>
-                })}
+                {navLinks.map((link, i) => <NavbarLgScreenLink
+                    key={i}
+                    {...link}
+                    show={show[i]}
+                    onMouseEnter={() => setNavLinkPanelShowable(i)} />)}
             </div>
 
             <div className="hidden ms-auto lg:inline-flex items-center gap-4">
@@ -43,4 +52,34 @@ export function Navbar() {
 
         {isOpen && <SmallScreenMenu onClose={() => setIsOpen(false)} />}
     </nav >
+}
+
+function NavbarLgScreenLink({ link, title, columns, show, onMouseEnter }:
+    NavbarLinkProps & { onMouseEnter?: MouseEventHandler<HTMLDivElement>, show: boolean }) {
+
+    const pathName = usePathname();
+    const className = link === pathName ? 'text-primary' : ''
+
+    return <div
+        onMouseEnter={onMouseEnter}>
+        <VaccineLink
+            key={link}
+            className={className}
+            size="sm"
+            href={link}>{title}
+        </VaccineLink>
+        {columns.length && show
+            ? <div className="absolute left-0 top-20 right-0 bg-secondary bg-opacity-20 
+                flex justify-center gap-8 p-4 animate-fade-in">
+                {columns.map((col, i) => <div key={i}>
+                    <Link href={col.head.link}>{col.head.title}</Link>
+
+                    <ul className="mt-2 text-sm space-y-1">
+                        {col.sublinks.map((sublink, i) => <li key={i}>
+                            <Link href={sublink.link}>{sublink.title}</Link>
+                        </li>)}
+                    </ul>
+                </div>)}
+            </div> : null}
+    </div>
 }
