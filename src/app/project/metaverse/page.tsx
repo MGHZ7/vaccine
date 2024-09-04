@@ -5,6 +5,7 @@ import { MetaverseDescriptionSection } from "@/components/pages/project/metavers
 import { MetaverseGallery } from "@/components/pages/project/metaverse/metaverseGallary";
 import { MetaverseHealth } from "@/components/pages/project/metaverse/metaverseHealth";
 import { MetaverseLandingSection } from "@/components/pages/project/metaverse/metaverseHeroSection";
+import { MetaverseNFTSection } from "@/components/pages/project/metaverse/metaverseNFT";
 import { MetaverseVac } from "@/components/pages/project/metaverse/metaverseVac";
 import { useEffect } from "react";
 
@@ -28,6 +29,7 @@ export default function ProjectMetaversePage() {
         <ElementVisibilityChecker ComponentToShow={MetaverseHealth} props={{}} />
         <ElementVisibilityChecker ComponentToShow={MetaverseVac} props={{}} />
         <ElementVisibilityChecker ComponentToShow={MetaverseGallery} props={{}} />
+        <ElementVisibilityChecker ComponentToShow={MetaverseNFTSection} props={{}} />
       </section>
     </main>
   );
