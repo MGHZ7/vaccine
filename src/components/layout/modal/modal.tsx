@@ -68,12 +68,12 @@ export const Modal = ({
     >
       <section
         onClick={(e) => e.stopPropagation()}
-        className={`relative w-full bg-surface ${size ? `max-w-${size}` : ""
+        className={`relative w-full bg-surface animate-fade-in ${size ? componentSizeClasses[size] : ""
           } ${className}`}
       >
         {hasCloseButton && (
           <button
-            className={`absolute top-1 right-1 !p-0 flex items-center text-xs`}
+            className={`absolute top-2 right-4 !p-0 flex items-center text-sm text-primary z-10`}
             onClick={onClose}
           >X</button>
         )}
@@ -83,3 +83,16 @@ export const Modal = ({
     element ?? document.body
   );
 };
+
+const componentSizeClasses = {
+  xs: 'max-w-xs',
+  sm: 'max-w-sm',
+  md: 'max-w-md',
+  lg: 'max-w-lg',
+  xl: 'max-w-xl',
+  "2xl": 'max-w-2xl',
+  "3xl": 'max-w-3xl',
+  "4xl": 'max-w-4xl',
+  "5xl": 'max-w-5xl',
+  "full": 'max-w-full'
+}
