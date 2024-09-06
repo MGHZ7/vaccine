@@ -15,7 +15,7 @@ export function MetaverseGallery() {
                 alt: 'VAC building'
             }} />
         </article>
-        <div className="space-y-2">
+        <div className="flex flex-col md:flex-row lg:flex-col col-span-full lg:col-span-1 gap-4">
             <article>
                 <ExpandableImage image={{ ...image1, alt: "VAC building 1" }} />
             </article>
@@ -23,7 +23,7 @@ export function MetaverseGallery() {
                 <ExpandableImage image={{ ...image2, alt: "VAC building 2" }} />
             </article>
         </div>
-        <article className="col-span-full grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <article className="col-span-full grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div>
                 <ExpandableImage image={{ ...image3, alt: "VAC building 3" }} />
             </div>

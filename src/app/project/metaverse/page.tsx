@@ -29,7 +29,7 @@ export default function ProjectMetaversePage() {
         <ElementVisibilityChecker ComponentToShow={MetaverseHealth} props={{}} />
         <ElementVisibilityChecker ComponentToShow={MetaverseVac} props={{}} />
         <ElementVisibilityChecker ComponentToShow={MetaverseGallery} props={{}} />
-        <ElementVisibilityChecker ComponentToShow={MetaverseNFTSection} props={{}} />
+        <MetaverseNFTSection />
       </section>
     </main>
   );
