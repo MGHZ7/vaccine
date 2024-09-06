@@ -12,12 +12,12 @@ export function CareerAboutUsSection({ isVisible }: ElementVisibilityCheckerComp
         className={`grid lg:grid-cols-2 gap-8 justify-center items-center ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article>
             <div className="max-w-lg mx-auto">
-                <Image alt="Vaccine overview" {...image} />
+                <Image className="animate-glow" alt="Vaccine overview" {...image} />
             </div>
         </article>
         <article className="p-8">
-            <p className="text-xs text-primary">About the project</p>
-            <h2 className="text-3xl text-on-primary font-bold">Overview</h2>
+            <p className="text-xs text-primary">VACCINE</p>
+            <h2 className="text-3xl text-on-primary font-bold">About Us</h2>
             <Paragraph className="mt-8 lg:max-h-96 overflow-auto scroll-indicator-hide">
                 Welcome to VAC,
                 <br /><br />
