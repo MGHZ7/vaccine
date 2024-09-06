@@ -23,7 +23,7 @@ export function CareerAboutUsSection({ isVisible }: ElementVisibilityCheckerComp
                 <br /><br />
                 where innovation meets integrity in healthcare. We are pioneering a new era of medical technology, leveraging artificial intelligence, virtual reality, and blockchain to revolutionize patient care and medical solutions.
                 <br /><br />
-                At VAC, we recognize the importance of trust and transparency in healthcare. That's why we have embraced blockchain technology, harnessing its decentralized nature to ensure the security, privacy, and integrity of patient data and financial transactions.
+                At VAC, we recognize the importance of trust and transparency in healthcare. That&apos;s why we have embraced blockchain technology, harnessing its decentralized nature to ensure the security, privacy, and integrity of patient data and financial transactions.
                 <br /><br />
                 Our flagship offering is our cutting-edge virtual reality platform, which facilitates seamless doctor-patient interactions regardless of geographic distance. Through immersive VR appointments, we bridge the gap between patients and healthcare providers, delivering personalized care experiences that prioritize patient comfort and convenience.
                 <br /><br />
