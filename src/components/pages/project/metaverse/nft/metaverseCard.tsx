@@ -1,14 +1,12 @@
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 
-import image from "../assets/cards/platinum-card.png";
+import card from "../../assets/cards/platinum-card.png";
 import Image from "next/image";
 
-export function MetaverseVirusesSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
-    return <section
-        id="about-the-project"
-        className={`grid lg:grid-cols-2 gap-8 justify-center items-center ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
-        <article className="p-8">
+export function MetaverseCardSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
+    return <div className={`grid lg:grid-cols-2 gap-8 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+        <article className={`p-8`}>
             <h2 className="text-3xl text-on-primary font-bold">VAC NFT</h2>
             <p className="text-xs text-primary">Unlocking Health&apos;s Future: Your Medical Journey, Now NFT-Enabled</p>
             <Paragraph className="mt-8 lg:max-h-56 overflow-auto scroll-indicator-hide">
@@ -18,9 +16,9 @@ export function MetaverseVirusesSection({ isVisible }: ElementVisibilityCheckerC
             </Paragraph>
         </article>
         <article>
-            <div className="max-w-lg mx-auto mix-blend-multiply">
-                <Image className="scale-110" alt="Vaccine overview" {...image} />
+            <div className={`max-w-lg mx-auto mix-blend-multiply`}>
+                <Image className="lg:scale-110" alt="Vaccine overview" {...card} />
             </div>
         </article>
-    </section>
+    </div>
 }

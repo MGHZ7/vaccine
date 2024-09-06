@@ -5,7 +5,7 @@ import { MetaverseDescriptionSection } from "@/components/pages/project/metavers
 import { MetaverseGallery } from "@/components/pages/project/metaverse/metaverseGallary";
 import { MetaverseHealth } from "@/components/pages/project/metaverse/metaverseHealth";
 import { MetaverseLandingSection } from "@/components/pages/project/metaverse/metaverseHeroSection";
-import { MetaverseNFTSection } from "@/components/pages/project/metaverse/metaverseNFT";
+import { MetaverseNFTSection } from "@/components/pages/project/metaverse/nft/metaverseNFT";
 import { MetaverseVac } from "@/components/pages/project/metaverse/metaverseVac";
 import { useEffect } from "react";
 
