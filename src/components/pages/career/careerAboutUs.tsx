@@ -7,7 +7,7 @@ import { ElementVisibilityCheckerComponentProps } from "@/components/common/elem
 import { Paragraph } from "@/components/layout/typography/paragraph";
 
 export function CareerAboutUsSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
-    return <section
+    return <article
         id="about-the-project"
         className={`grid lg:grid-cols-2 gap-8 justify-center items-center ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article>
@@ -36,5 +36,5 @@ export function CareerAboutUsSection({ isVisible }: ElementVisibilityCheckerComp
                 At VAC, we believe in a future where healthcare is accessible, transparent, and patient-centric. By harnessing the power of AI, VR, and blockchain, we are paving the way for a healthier, more connected world. Join us on our journey to revolutionize healthcare for generations to come.
             </Paragraph>
         </article>
-    </section>
+    </article>
 }
