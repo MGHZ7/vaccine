@@ -148,4 +148,18 @@ body {
 input {
   height: 44px;
   border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+input:hover {
+  outline-color: var(--primary);
+}
+
+textarea {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+textarea {
+  outline-color: var(--primary);
 }
