@@ -188,9 +188,10 @@ input[type="checkbox"] {
 
 input[type="checkbox"]::before {
   position: relative;
-  top: -6px;
+  top: -3px;
   left: -1px;
   color: var(--primary);
+  font-size: medium;
   content: "\2713";
   width: 0.65em;
   height: 0.65em;

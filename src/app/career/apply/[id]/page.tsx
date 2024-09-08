@@ -19,7 +19,7 @@ export default function CareerPage(props: any) {
     });
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between px-8 md:px-24 py-28 space-y-24">
+        <main className="flex min-h-screen flex-col items-center justify-between px-8 md:px-24 py-28 space-y-24 overflow-x-hidden">
             <ElementVisibilityChecker ComponentToShow={CareerApplicationForm} props={{}} />
         </main>
     );

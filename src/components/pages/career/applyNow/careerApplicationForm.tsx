@@ -2,9 +2,12 @@ import { TransparentCard } from "@/components/layout/card/transparentCard";
 import { FileInput } from "@/components/layout/form/fileInput";
 import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
 
+import image from "./assets/apply.png";
+import Image from "next/image";
+
 export function CareerApplicationForm() {
 
-    return <TransparentCard className="px-8 py-16">
+    return <TransparentCard className="relative px-8 py-16">
         <form className="space-y-8">
             <fieldset>
                 <h4 className="text-xs text-primary">* Required Fields</h4>
@@ -34,7 +37,7 @@ export function CareerApplicationForm() {
             </fieldset>
 
             <fieldset>
-                <label className="flex gap-2 items-center">
+                <label className="flex gap-2 items-center text-xs">
                     <input type="checkbox" />
                     I have read and accepted the Terms and Conditions and Privacy Policy
                 </label>
@@ -46,5 +49,7 @@ export function CareerApplicationForm() {
                 </VaccineButtonLink>
             </div>
         </form>
+
+        <Image className="hidden md:block absolute left-[60%] top-[20%] scale-150" alt="Application Form" {...image} />
     </TransparentCard>
 }
