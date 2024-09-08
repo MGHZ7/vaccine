@@ -1,4 +1,5 @@
 import { TransparentCard } from "@/components/layout/card/transparentCard";
+import { FileInput } from "@/components/layout/form/fileInput";
 import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
 
 export function CareerApplicationForm() {
@@ -28,10 +29,8 @@ export function CareerApplicationForm() {
             <fieldset>
                 <h4 className="text-lg font-bold text-primary">Upload CV</h4>
 
-                <label>
-                    PDF or DOC files only
-                    <input type="file" placeholder="Choose File" />
-                </label>
+                <h6 className="font-normal text-on-primary mt-6 mb-2">PDF or DOC files only</h6>
+                <FileInput label="Choose File" fileInputProps={{}} />
             </fieldset>
 
             <fieldset>

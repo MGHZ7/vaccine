@@ -148,6 +148,7 @@ body {
 input {
   height: 44px;
   border-radius: 0.5rem;
+  border: 1px solid var(--primary);
   padding: 1rem;
 }
 
@@ -158,8 +159,46 @@ input:hover {
 textarea {
   border-radius: 0.5rem;
   padding: 1rem;
+  border: 1px solid var(--primary);
 }
 
-textarea {
+textarea:hover {
   outline-color: var(--primary);
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: transparent;
+  /* Not removed via appearance */
+  margin: 0;
+  padding: 0.75rem;
+
+  width: 1rem;
+  height: 1rem;
+
+  cursor: pointer;
+
+  border: 1px solid var(--primary);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  position: relative;
+  top: -6px;
+  left: -1px;
+  color: var(--primary);
+  content: "\2713";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
