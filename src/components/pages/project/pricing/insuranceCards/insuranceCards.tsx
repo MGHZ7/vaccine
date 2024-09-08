@@ -3,10 +3,10 @@
 import { PlatinumCardSection } from "./platinumCard";
 import { SelectedCardSection } from "./silverCardSection";
 
-import platinum from "../assets/cards/platinum-card.png";
-import gold from "../assets/cards/golden-card.png";
-import silver from "../assets/cards/silver-card.png";
-import bronze from "../assets/cards/bronze-card.png";
+import platinum from "../../assets/cards/platinum-card.png";
+import gold from "../../assets/cards/golden-card.png";
+import silver from "../../assets/cards/silver-card.png";
+import bronze from "../../assets/cards/bronze-card.png";
 import Image from "next/image";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";

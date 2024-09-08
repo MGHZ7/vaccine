@@ -1,6 +1,6 @@
 import { Paragraph } from "@/components/layout/typography/paragraph";
 
-import cardImage from "../assets/cards/platinum-card.png";
+import cardImage from "../../assets/cards/platinum-card.png";
 import Image from "next/image";
 
 export function PlatinumCardSection() {
