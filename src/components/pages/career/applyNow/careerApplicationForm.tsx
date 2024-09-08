@@ -50,7 +50,7 @@ export function CareerApplicationForm() {
             </div>
         </form>
 
-        <Image className="hidden md:block absolute left-[55%] top-[20%] scale-150 animate-bottom-up"
+        <Image className="hidden md:block absolute left-[60%] top-[20%] animate-bottom-up"
             alt="Application Form" {...image} />
     </TransparentCard>
 }

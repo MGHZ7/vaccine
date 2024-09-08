@@ -36,7 +36,7 @@ export function CareerCard({ career, isVisible }: CareerCard) {
                 </div>
             </div>
             <div className="min-w-36 p-2">
-                <VaccineButtonLink buttonType="light" size="md" className="whitespace-nowrap text-sm px-8" href={''}>
+                <VaccineButtonLink buttonType="light" size="md" className="whitespace-nowrap text-sm px-8" href={'/career/apply/x'}>
                     Apply Now
                 </VaccineButtonLink>
             </div>
