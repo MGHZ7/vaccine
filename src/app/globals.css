@@ -104,15 +104,13 @@ body {
     background: linear-gradient(
       -45deg,
       var(--light-btn-start-color),
-      var(--light-btn-end-color)
+      var(--light-btn-end-color) 50%,
+      var(--light-btn-start-color)
     );
+    background-size: 200%;
 
     &:hover {
-      background: linear-gradient(
-        -45deg,
-        var(--light-btn-hover-start-color),
-        var(--light-btn-hover-end-color)
-      );
+      background-position: 100%;
     }
   }
 
