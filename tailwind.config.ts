@@ -111,7 +111,7 @@ const config: Config = {
         "fade-in": "fadeIn 0.5s ease-in forwards",
         "fade-out": "fadeOut 0.5s ease-out forwards",
         "moving-around": "movingAround 10s linear forwards infinite",
-        glow: "glow 5s linear forwards infinite",
+        glow: "glow 2s linear forwards infinite",
         "bottom-up": "bottomUp 60s linear forwards infinite",
       },
       boxShadow: {
