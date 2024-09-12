@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import vickyImage from "../../assets/vicky/vicky-faqs.png";
 import { FAQQuestions } from "@/components/pages/help/faq/faqQuestion";
-import ElementVisibilityChecker from "@/components/common/elementInViewPort";
+import ElementVisibilityChecker, { ElementVisibilityCheckerComponentProps, ElementVisibilityCheckerProps } from "@/components/common/elementInViewPort";
 
 
 export default function FAQsPage() {
@@ -24,7 +24,8 @@ export default function FAQsPage() {
             <h1 className="text-3xl font-bold text-on-primary self-start lg:px-[40%]">FAQs</h1>
 
             <section className="relative grid lg:grid-cols-2">
-                <Image className="sticky top-10" alt="Vicky FAQs" {...vickyImage} />
+                <ElementVisibilityChecker ComponentToShow={VickyImage} props={{}} />
+
 
                 <div className="space-y-4">
                     {faqs.map(faq => <ElementVisibilityChecker key={faq.question}
@@ -38,6 +39,10 @@ export default function FAQsPage() {
         </main>
     );
 }
+
+const VickyImage = ({ isVisible }: ElementVisibilityCheckerComponentProps) => <Image
+    className={`${isVisible ? 'animate-fade-in' : 'animate-fade-out'} sticky top-10`}
+    alt="Vicky FAQs" {...vickyImage} />
 
 const faqs = [
     {
