@@ -8,8 +8,6 @@ import { CareerApplicationForm } from "@/components/pages/career/applyNow/career
 
 export default function CareerPage(props: any) {
 
-    console.log(props);
-
     useEffect(() => {
         document.body.classList.add('bg-career');
 

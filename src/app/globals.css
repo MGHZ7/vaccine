@@ -91,6 +91,15 @@ body {
       );
   }
 
+  .bg-help {
+    background-image: url("/help/bg.jpg"),
+      linear-gradient(
+        to bottom,
+        rgb(var(--background-start-rgb)),
+        rgb(var(--background-end-rgb))
+      );
+  }
+
   .wide-letter-spacing {
     letter-spacing: 0.5rem;
   }
