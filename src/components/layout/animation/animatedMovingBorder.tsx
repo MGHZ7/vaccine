@@ -1,4 +1,4 @@
-import { MouseEvent, useEffect, useRef } from "react";
+import { forwardRef, MouseEvent, useEffect, useImperativeHandle, useRef } from "react";
 import { constructPathOfRoundedDiv } from "./utils";
 
 export interface AnimatedMovingBorderProps {
@@ -7,7 +7,11 @@ export interface AnimatedMovingBorderProps {
     height?: number;
 }
 
-export function AnimatedMovingBorder({ width = 200, height = 100, className = '' }: AnimatedMovingBorderProps) {
+export interface AnimatedMovingBorderRef {
+    run: () => void;
+}
+
+export const AnimatedMovingBorder = forwardRef<AnimatedMovingBorderRef, AnimatedMovingBorderProps>(({ width = 200, height = 100, className = '' }, ref) => {
 
     const container = useRef<HTMLDivElement>(null);
     const path = useRef<SVGPathElement>(null);
@@ -43,7 +47,7 @@ export function AnimatedMovingBorder({ width = 200, height = 100, className = ''
         animateMotion.beginElement();
     }
 
-    const handleContainerMouseover = (e: MouseEvent) => {
+    const handleContainerMouseover = () => {
         const pathCommands = path.current?.getAttribute('d') ?? '';
         const animationMotion = createAnimationMotionElement(pathCommands);
 
@@ -70,8 +74,13 @@ export function AnimatedMovingBorder({ width = 200, height = 100, className = ''
         }
     })
 
+    useImperativeHandle(ref, () => ({
+        run() {
+            handleContainerMouseover();
+        }
+    }));
 
-    return <div className={`rounded-lg ${className}`} ref={container} onMouseOver={handleContainerMouseover}>
+    return <div className={`rounded-lg pointer-events-none ${className}`} ref={container}>
         <svg id="wormSvg" className="" viewBox={`0 0 ${containerWidth} ${containerHeight}`}>
             <path id="wormPath" d="" fill="none" stroke="none" stroke-width="4" ref={path} />
             <g className="pointer-events-none" id="svg-group" ref={svgGroup}>
@@ -86,8 +95,9 @@ export function AnimatedMovingBorder({ width = 200, height = 100, className = ''
             </g>
         </svg>
     </div>
-}
+})
 
+AnimatedMovingBorder.displayName = 'AnimatedMovingBorder';
 
 function createAnimationMotionElement(path: string) {
     const animateMotion = document.createElementNS(
