@@ -1,15 +1,16 @@
+import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { AnimatedPlusMinusButton } from "@/components/layout/animation/plusMinus/animatedPlusMinusButton";
 import { TransparentCard } from "@/components/layout/card/transparentCard";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { useLayoutEffect, useRef, useState } from "react";
 
-export interface FAQQuestionsProps {
+export interface FAQQuestionsProps extends ElementVisibilityCheckerComponentProps {
     question?: string;
     answer?: string;
     onOpen?: () => void;
 }
 
-export function FAQQuestions({ question, answer }: FAQQuestionsProps) {
+export function FAQQuestions({ question, answer, isVisible }: FAQQuestionsProps) {
 
     const headerRef = useRef<HTMLHeadingElement>(null)
 
@@ -26,7 +27,7 @@ export function FAQQuestions({ question, answer }: FAQQuestionsProps) {
     }, []);
 
     return <TransparentCard
-        className={`transition p-2 pe-10 overflow-hidden`}
+        className={`transition duration-500 p-2 pe-10 overflow-hidden ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}
         style={{
             maxHeight: isOpen ? 1000 : minHeight
         }}
@@ -34,6 +35,6 @@ export function FAQQuestions({ question, answer }: FAQQuestionsProps) {
         <h3 ref={headerRef} className={`mb-6`}>{question}</h3>
         <AnimatedPlusMinusButton isOpen={isOpen} className="absolute top-1 right-1" />
 
-        <Paragraph className={`transition ${isOpen ? 'opacity-100' : 'opacity-0'}`}>{answer}</Paragraph>
+        <Paragraph className={`transition duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>{answer}</Paragraph>
     </TransparentCard>
 }

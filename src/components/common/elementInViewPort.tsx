@@ -10,9 +10,10 @@ export interface ElementVisibilityCheckerProps<T extends ElementVisibilityChecke
     ComponentToShow: FC<T>
     props: T
     className?: string
+    threshold?: number
 }
 
-const ElementVisibilityChecker = <T extends ElementVisibilityCheckerComponentProps>({ ComponentToShow, props, className = '' }: ElementVisibilityCheckerProps<T>) => {
+const ElementVisibilityChecker = <T extends ElementVisibilityCheckerComponentProps>({ ComponentToShow, threshold = 0.3, props, className = '' }: ElementVisibilityCheckerProps<T>) => {
     const [isVisible, setIsVisible] = useState(false);
     const targetRef = useRef(null);
 
@@ -24,7 +25,7 @@ const ElementVisibilityChecker = <T extends ElementVisibilityCheckerComponentPro
             {
                 root: window.document, // viewport
                 rootMargin: '0px', // no margin
-                threshold: 0.3, // 50% of target visible
+                threshold // 50% of target visible
             }
         );
 
