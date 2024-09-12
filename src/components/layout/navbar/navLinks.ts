@@ -111,7 +111,7 @@ export const navLinks: NavbarLinkProps[] = [
   },
   {
     title: "Help",
-    link: "/help",
+    link: "/help/faq",
     columns: [],
   },
 ];
