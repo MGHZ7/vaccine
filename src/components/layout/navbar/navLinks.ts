@@ -111,8 +111,16 @@ export const navLinks: NavbarLinkProps[] = [
   },
   {
     title: "Help",
-    link: "/help/faq",
-    columns: [],
+    link: "/help",
+    columns: [
+      {
+        head: {
+          title: "FAQs",
+          link: "/help#FAQs",
+        },
+        sublinks: [{ title: "Get In Touch", link: "/help#get-in-touch" }],
+      },
+    ],
   },
 ];
 

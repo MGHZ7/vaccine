@@ -11,7 +11,7 @@ export interface GetInTouchFormSectionProps extends ElementVisibilityCheckerComp
 
 export function GetInTouchFormSection({ isVisible }: GetInTouchFormSectionProps) {
 
-    return <section className={`max-w-xl ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+    return <section id="get-in-touch" className={`max-w-xl ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
 
         <div className="px-8">
             <h2 className="text-3xl text-on-primary font-bold">GET IN TOUCH!</h2>

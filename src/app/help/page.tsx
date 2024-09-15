@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 import Image from "next/image";
-import vickyImage from "../../assets/vicky/vicky-faqs.png";
+import vickyImage from "../assets/vicky/vicky-faqs.png";
 import { FAQQuestions } from "@/components/pages/help/faq/faqQuestion";
 import ElementVisibilityChecker, { ElementVisibilityCheckerComponentProps, ElementVisibilityCheckerProps } from "@/components/common/elementInViewPort";
 import { GetInTouchFormSection } from "@/components/pages/help/getInTouchFormSection";
@@ -22,20 +22,22 @@ export default function FAQsPage() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between 
             px-8 md:px-24 py-16 space-y-24 overflow-x-clip">
-            <h1 className="text-3xl font-bold text-on-primary self-start lg:px-[40%]">FAQs</h1>
+            <section id="FAQs">
+                <h1 className="text-3xl font-bold text-on-primary self-start lg:px-[40%]">FAQs</h1>
 
-            <section className="relative grid lg:grid-cols-2">
-                <ElementVisibilityChecker ComponentToShow={VickyImage} props={{}} />
+                <div className="relative grid lg:grid-cols-2">
+                    <ElementVisibilityChecker ComponentToShow={VickyImage} props={{}} />
 
 
-                <div className="space-y-4">
-                    {faqs.map(faq => <ElementVisibilityChecker key={faq.question}
-                        threshold={0.2}
-                        ComponentToShow={FAQQuestions} props={{
-                            ...faq
-                        }} />)}
+                    <div className="space-y-4">
+                        {faqs.map(faq => <ElementVisibilityChecker key={faq.question}
+                            threshold={0.2}
+                            ComponentToShow={FAQQuestions} props={{
+                                ...faq
+                            }} />)}
+                    </div>
+
                 </div>
-
             </section>
 
             <ElementVisibilityChecker ComponentToShow={GetInTouchFormSection} props={{}} />
