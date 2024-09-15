@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/navbar/navbar";
 import { Footer } from "@/components/layout/footer/footer";
 import { RootProvider } from "@/components/layout/providers/rootProvider";
+import { TokenInfo } from "@/components/wallet/tokenInfo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,8 +49,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>\
+      <body className={`${inter.className} relative overflow-x-clip`}>
         <RootProvider>
+          <TokenInfo />
+
           <Navbar />
           {children}
           <Footer />
