@@ -44,7 +44,7 @@ export function CareerApplicationForm() {
             </fieldset>
 
             <div className="mt-4">
-                <VaccineButtonLink className="block w-full text-center" buttonType="light" size="xl" href={''}>
+                <VaccineButtonLink className="block w-full text-center" styleType="light" size="xl" href={''}>
                     Submit
                 </VaccineButtonLink>
             </div>

@@ -26,7 +26,8 @@ export function PrivateSaleCounter({ isVisible }: ElementVisibilityCheckerCompon
                         <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor</Paragraph>
 
                         <div>
-                            <VaccineButtonLink className="!w-full block text-center border border-primary" size="xl" buttonType="light" href={'/lightpaper'}>
+                            <VaccineButtonLink className="!w-full block text-center border border-primary"
+                                size="xl" styleType="light" href={'/lightpaper'}>
                                 Join Now
                             </VaccineButtonLink>
                         </div>

@@ -24,7 +24,7 @@ export function HomeHeroSection({ isVisible }: ElementVisibilityCheckerComponent
                 </Paragraph>
 
                 <div className="mt-10">
-                    <VaccineButtonLink size="md" buttonType="light" href={'/vaccine cmnts web.pdf'} target="_blank">
+                    <VaccineButtonLink size="md" styleType="light" href={'/vaccine cmnts web.pdf'} target="_blank">
                         Whitepaper
                     </VaccineButtonLink>
                 </div>

@@ -1,19 +1,27 @@
 'use client';
 
 import { ComponentSize } from "@/components/common";
+import { Loading } from "@/components/common/loader/loading";
 import Link, { LinkProps } from "next/link";
-import { MouseEventHandler, ReactNode } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps, MouseEventHandler, ReactNode } from "react";
 
-export type VaccineLinkProps = LinkProps & {
+type SharedProps = {
     size?: ComponentSize,
     className?: string,
     children?: ReactNode,
-    target?: string,
-    onMouseEnter?: MouseEventHandler<HTMLAnchorElement>,
-    onMouseLeave?: MouseEventHandler<HTMLAnchorElement>,
-}
+    onMouseEnter?: MouseEventHandler<HTMLElement>, // Make onMouseEnter and onMouseLeave generic
+    onMouseLeave?: MouseEventHandler<HTMLElement>,
+    elementType?: 'link' | 'button';
+    isLoading?: boolean
+};
 
-export function VaccineLink({ className = '', size, ...props }: VaccineLinkProps) {
+type ButtonProps = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+type VaccLinkProps = LinkProps & { target?: string }
+
+export type VaccineLinkProps = SharedProps & (ButtonProps | VaccLinkProps)
+
+
+export function VaccineLink({ className = '', size, elementType = 'link', ...props }: VaccineLinkProps) {
 
     const sizeClassName = size == 'xs'
         ? 'text-xs' : size == 'sm'
@@ -22,8 +30,16 @@ export function VaccineLink({ className = '', size, ...props }: VaccineLinkProps
                     ? 'text-lg px-20' : size === 'xl'
                         ? 'text-xl px-28 py-4' : 'text-md';
 
-    return <Link className={`font-extralight hover:text-primaryVariant 
+    const elementClassName = `font-extralight hover:text-primaryVariant 
         ${sizeClassName} 
-        ${className}`}
-        {...props} />
+        ${className}`;
+
+    return elementType == 'link'
+        ? <Link className={`${elementClassName}`} {...props as VaccLinkProps} >
+            {props.isLoading ? <Loading /> : null}
+            {props.children}</Link>
+        : <button className={`${elementClassName}`} {...props as ButtonProps}>
+            {props.isLoading ? <Loading /> : null}
+            {props.children}
+        </button>
 }

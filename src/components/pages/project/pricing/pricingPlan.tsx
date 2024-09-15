@@ -28,7 +28,10 @@ export function PricingPlan({ title, price, per, features, notes }: PricingPlanP
             <p className="text-gray-400 text-xs mt-4">{notes}</p>
         </div>
 
-        <VaccineButtonLink className="text-center mt-auto" buttonType={"dark"} href={""}>
+        <VaccineButtonLink
+            className="text-center mt-auto"
+            styleType={"dark"}
+            href={""}>
             Buy Now
         </VaccineButtonLink>
     </article>

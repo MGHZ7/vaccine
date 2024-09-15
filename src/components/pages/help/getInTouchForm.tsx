@@ -29,7 +29,7 @@ export function GetInTouchForm({ }: GetInTouchFormProps) {
             <span className="text-xs">I have read and accepted the Terms and Conditions and Privacy Policy</span>
         </label>
 
-        <VaccineButtonLink className="block !mt-8 text-center" buttonType="light" size="xl" href={''}>
+        <VaccineButtonLink className="block !mt-8 text-center" styleType="light" size="xl" href={''}>
             Submit
         </VaccineButtonLink>
     </form>

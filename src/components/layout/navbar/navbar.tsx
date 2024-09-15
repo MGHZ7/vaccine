@@ -9,6 +9,7 @@ import { NavbarLinkProps, navLinks } from "./navLinks";
 import { SmallScreenMenu } from "./smallScreenMenu";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { ConnectWalletButton } from "@/components/wallet/connectWalletButton";
 
 export function Navbar() {
 
@@ -42,7 +43,7 @@ export function Navbar() {
             </div>
 
             <div className="hidden ms-auto lg:inline-flex items-center gap-4">
-                <VaccineButtonLink size="sm" buttonType="dark" href={'/sign-in'}>Connect Wallet</VaccineButtonLink>
+                <ConnectWalletButton />
             </div>
 
             <div className="lg:hidden ms-auto">

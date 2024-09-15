@@ -29,8 +29,8 @@ export function SmallScreenMenu({ onClose }: SmallScreenMenuProps) {
         </div>
 
         <div className="inline-flex justify-center items-center gap-4">
-            <VaccineButtonLink size="lg" buttonType="light" href={'/register'}>Register</VaccineButtonLink>
-            <VaccineButtonLink size="lg" buttonType="dark" href={'/sign-in'}>Sign In</VaccineButtonLink>
+            <VaccineButtonLink size="lg" styleType="light" href={'/register'}>Register</VaccineButtonLink>
+            <VaccineButtonLink size="lg" styleType="dark" href={'/sign-in'}>Sign In</VaccineButtonLink>
         </div>
 
         <button className="absolute top-0 right-20 font-bold text-xl text-on-primary" onClick={handleClose}>X</button>
