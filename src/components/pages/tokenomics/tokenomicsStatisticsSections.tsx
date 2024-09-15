@@ -5,6 +5,7 @@ import logo from "../../../app/logo.png";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { ReactNode } from "react";
 import { DoughnutChart } from "@/components/common/charts/doughnutChart";
+import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 
 const data = [{
     label: 'Research\n and development',
@@ -31,9 +32,9 @@ const data = [{
     color: 'rgb(49, 180, 220)',
 },]
 
-export function TokenomicsStatisticsSections() {
+export function TokenomicsStatisticsSections({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
-    return <section className="relative">
+    return <section className={`relative ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <div className="absolute hidden md:block bottom-0">
             <Image alt="Background" {...bg} />
         </div>
@@ -46,8 +47,8 @@ export function TokenomicsStatisticsSections() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </Paragraph>
                 </div>
-                <div className="relative mt-8 lg:-me-16 flex justify-center">
-                    <DoughnutChart className="min-w-0 sm:min-w-full" data={data} />
+                <div className="relative mt-8 lg:-me-16 flex justify-center h-[600px]">
+                    {isVisible && <DoughnutChart className="min-w-0 sm:min-w-full" data={data} />}
                     <div className="absolute top-1/4 right-1/4 bottom-1/4 left-1/4 animate-glow">
                         <Image alt="VAC Logo" src={logo.src} fill />
                     </div>
