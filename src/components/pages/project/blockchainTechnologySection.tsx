@@ -16,12 +16,14 @@ export function BlockchainTechnologySection({ isVisible }: ElementVisibilityChec
         <article className="p-8">
             <p className="text-xs text-primary">VAC Blockchain</p>
             <h2 className="text-3xl text-on-primary font-bold">VAC Blockchain Technology</h2>
-            <Paragraph className="mt-8">
+            <Paragraph className="mt-8 max-h-60 overflow-auto">
                 The VAC blockchain is a network with a hybrid Architecture that incorporates the benefits of both private and public blockchains. It alternates between a private and a public state.
-            </Paragraph>
-            <Paragraph className="mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </Paragraph>
+                <br />
+                <br />
+                In a blockchain-based medical system, patient records, treatment histories, diagnostic results, and other healthcare data are stored in encrypted blocks. These blocks are linked together in a chronological chain, creating a transparent and tamper-proof record of every interaction.
+                <br />
+                <br />
+                One of the key features of blockchain in healthcare is its ability to enhance data security and privacy. By distributing data across multiple nodes in the network and encrypting each block, blockchain technology minimizes the risk of unauthorized access, data breaches, and tampering. Patients have greater control over their health information, with the ability to grant or revoke access to specific parties through cryptographic keys.            </Paragraph>
         </article>
     </section>
 }

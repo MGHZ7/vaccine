@@ -9,14 +9,11 @@ export function MetaverseHealth() {
         <Image className="mx-auto" alt="meta Health" {...image} />
 
         <article>
-            <p className="text-xs text-primary">Lorem ipsum dolor</p>
+            <p className="text-xs text-primary">Virtual Health Assistance Around the World</p>
             <h2 className="text-3xl text-on-primary font-bold mb-8">VAC Meta Health </h2>
 
-            <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <br />
-                <br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <Paragraph className="max-h-96 overflow-auto">
+                Step into the Health Metaverse, where the boundaries of traditional healthcare dissolve, and possibilities expand beyond imagination. In this immersive digital realm, individuals transcend physical limitations to access a universe of wellness and medical care. Imagine consultations with specialists from around the globe, virtual wellness retreats in breathtaking landscapes, and personalized health interventions tailored to your unique needs—all within a vibrant, interconnected virtual space. From preventive care to cutting-edge treatments, the Health Metaverse offers a seamless fusion of technology and humanity, empowering individuals to take control of their health journey like never before. With its promise of accessibility, innovation, and boundless potential, the Health Metaverse heralds a new era of healthcare, where wellness knows no bounds.
             </Paragraph>
         </article>
     </section>

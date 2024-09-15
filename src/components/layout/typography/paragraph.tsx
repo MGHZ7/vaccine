@@ -25,7 +25,7 @@ export function Paragraph(props: HTMLAttributes<HTMLParagraphElement>) {
         <p
             ref={ref}
             {...props}
-            className={`text-sm font-extralight ${props.className ?? ''}`} />
+            className={`text-sm font-extralight scroll-indicator-hide ${props.className ?? ''}`} />
         {isScrollable() && <div className="absolute -bottom-12 -translate-x-1/2 left-1/2">
             <ScrollAnimation />
         </div>}
