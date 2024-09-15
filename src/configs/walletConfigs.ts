@@ -24,5 +24,6 @@ createWeb3Modal({
   metadata: wagmiMetadata,
   wagmiConfig: wagmiConfigs,
   projectId: wagmiProjectId,
+  themeMode: "light",
   enableAnalytics: true,
 });
