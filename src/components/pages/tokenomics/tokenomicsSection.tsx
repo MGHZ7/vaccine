@@ -9,10 +9,8 @@ export function TokenomicsSection({ isVisible }: ElementVisibilityCheckerCompone
         <article className="p-8">
             <h2 className="text-3xl text-on-primary font-bold">Tokenomics</h2>
             <p className="text-xs text-primary">The Financial Infrastructure </p>
-            <Paragraph className="mt-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ocia deserunt mollit anim id est laborum.
+            <Paragraph className="mt-8 max-h-60 overflow-auto">
+                In the realm of healthcare, tokenomics emerges as a transformative force, reshaping the dynamics of medical ecosystems and patient care. By integrating blockchain technology and cryptocurrency tokens, medical tokenomics offers a novel approach to incentivize collaboration, innovation, and value creation across the healthcare landscape. These tokens can facilitate secure and transparent transactions, streamline medical data management, and incentivize patient engagement in preventive care and wellness activities. Moreover, tokenomics models within the medical sector can incentivize research and development of new treatments, improve access to healthcare services in underserved communities, and promote data sharing for medical research while ensuring patient privacy. As the healthcare industry continues to evolve, the implementation of tokenomics holds immense promise in revolutionizing patient-centric care delivery and fostering innovation to address the most pressing healthcare challenges of our time.
             </Paragraph>
         </article>
 
