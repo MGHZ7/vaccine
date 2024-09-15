@@ -19,7 +19,7 @@ export function ConnectWalletButton() {
 
     const toggleConnect = async () => {
         setIsLoading(true);
-        await (isConnected ? disconnectAsync() : open());
+        await (isConnected ? disconnectAsync() : openWalletModal());
         setIsLoading(false);
     }
 
