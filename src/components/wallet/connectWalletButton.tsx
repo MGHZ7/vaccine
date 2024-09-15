@@ -3,18 +3,23 @@
 import { useState } from "react";
 import { VaccineButtonLink } from "../layout/link/vaccineButtonLink";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { useAccount, useDisconnect } from "wagmi";
 
 
 export function ConnectWalletButton() {
 
-    const { open, close } = useWeb3Modal();
+    const { open } = useWeb3Modal();
+    const { isConnected } = useAccount()
+    const { disconnectAsync } = useDisconnect();
     const [isLoading, setIsLoading] = useState(false);
-    console.log("🚀 ~ ConnectWalletButton ~ isLoading:", isLoading);
-
 
     const openWalletModal = async () => {
-        setIsLoading(true);
         await open();
+    }
+
+    const toggleConnect = async () => {
+        setIsLoading(true);
+        await (isConnected ? disconnectAsync() : open());
         setIsLoading(false);
     }
 
@@ -22,9 +27,9 @@ export function ConnectWalletButton() {
         size="sm"
         elementType="button"
         styleType="dark"
-        onClick={openWalletModal}
+        onClick={toggleConnect}
         isLoading={isLoading}>
-        Connect Wallet
+        {isConnected ? 'Disconnect Wallet' : 'Connect Wallet'}
     </VaccineButtonLink>
 
 }
