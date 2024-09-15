@@ -20,7 +20,7 @@ export function TokenInfo() {
     }
 
     return isConnected ? <article className={`fixed flex top-1/2 right-0 z-40 bg-black bg-opacity-10 
-        border-l border-t border-b border-primary backdrop-blur-xl rounded-l-xl h-52 
+        border-l border-t border-b border-primary backdrop-blur-xl rounded-l-xl h-56 
         transition ${isOpen ? 'translate-x-0' : 'translate-x-[300px]'}`}>
         <div className="relative h-full py-4 cursor-pointer" onClick={toggleOpen}>
             <Image alt="Logo" {...logo} width={50} height={50} />
@@ -40,7 +40,7 @@ export function TokenInfo() {
                 </div>
                 <div>
                     <h6 className="text-sm text-primary font-light">Smart contract address</h6>
-                    <p className="text-sm text-on-primary font-light break-words">{address}
+                    <p className="text-xs text-on-primary font-light break-words">{address}
                         {address
                             ? <button onClick={() => copyToClipboard(address!)}>
                                 <span className="material-symbols-outlined mx-2">
