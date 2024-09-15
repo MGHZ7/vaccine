@@ -3,9 +3,10 @@ import Image from "next/image";
 import image from "./assets/vac-nodes.png";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { Divider } from "@/components/layout/divider/divider";
+import { ElementVisibilityCheckerComponentProps, } from "@/components/common/elementInViewPort";
 
-export function VacNodesSection() {
-    return <section >
+export function VacNodesSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
+    return <section className={`${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <div>
             <h2 className="text-3xl">Vac Nodes</h2>
             <Divider className="max-w-md mt-2" />
