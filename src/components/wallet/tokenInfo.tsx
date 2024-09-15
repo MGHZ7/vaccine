@@ -25,7 +25,8 @@ export function TokenInfo() {
         <div className="relative h-full py-4 cursor-pointer" onClick={toggleOpen}>
             <Image alt="Logo" {...logo} width={50} height={50} />
             <h5 className="absolute top-24 -left-2 rotate-90 text-xs text-primary whitespace-nowrap">Token Info</h5>
-            <span className="absolute material-symbols-outlined top-36 left-2 text-primary drop-shadow-lg">
+            <span className={`absolute material-symbols-outlined top-36 left-2 text-primary drop-shadow-lg
+                transition ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
                 chevron_left
             </span>
         </div>
