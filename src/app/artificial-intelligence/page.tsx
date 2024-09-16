@@ -1,15 +1,11 @@
 'use client';
 
 import ElementVisibilityChecker from "@/components/common/elementInViewPort";
-import { MetaverseDescriptionSection } from "@/components/pages/project/metaverse/metaverseDescription";
-import { MetaverseGallery } from "@/components/pages/project/metaverse/metaverseGallary";
-import { MetaverseHealth } from "@/components/pages/project/metaverse/metaverseHealth";
-import { MetaverseLandingSection } from "@/components/pages/project/metaverse/metaverseHeroSection";
 import { MetaverseNFTSection } from "@/components/pages/project/metaverse/nft/metaverseNFT";
-import { MetaverseVac } from "@/components/pages/project/metaverse/metaverseVac";
 import { useEffect } from "react";
 import { AILandingSection } from "@/components/pages/artificial-intelligence/AILanding";
 import { AIVicky } from "@/components/pages/artificial-intelligence/aiVicky";
+import { AIViruses } from "@/components/pages/artificial-intelligence/aiViruses";
 
 
 export default function ProjectMetaversePage() {
@@ -28,9 +24,7 @@ export default function ProjectMetaversePage() {
 
       <section className="container mx-auto space-y-16 px-4 lg:px-8">
         <ElementVisibilityChecker ComponentToShow={AIVicky} props={{}} />
-        <ElementVisibilityChecker ComponentToShow={MetaverseHealth} props={{}} />
-        <ElementVisibilityChecker ComponentToShow={MetaverseVac} props={{}} />
-        <ElementVisibilityChecker ComponentToShow={MetaverseGallery} props={{}} />
+        <ElementVisibilityChecker ComponentToShow={AIViruses} props={{}} />
         <MetaverseNFTSection />
       </section>
     </main>
