@@ -2,11 +2,11 @@
 
 import { Badge } from "@/components/layout/badg/badge";
 import { Divider } from "@/components/layout/divider/divider";
+import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 
 import Image from "next/image";
-
 import roadmapImage from "./assets/roadmap/roadmap.svg";
-import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
+import mobileRoadmapImage from "./assets/roadmap/roadmap-mobile.png";
 
 export function RoadMapSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
@@ -27,7 +27,8 @@ export function RoadMapSection({ isVisible }: ElementVisibilityCheckerComponentP
         </article>
 
         <article className="">
-            <Image alt="Vaccine Roadmap" {...roadmapImage} />
+            <Image className="hidden md:block" alt="Vaccine Roadmap" {...roadmapImage} />
+            <Image className="block md:hidden max-w-xs mx-auto" alt="Vaccine Roadmap" {...mobileRoadmapImage} />
         </article>
     </ section>
 }
