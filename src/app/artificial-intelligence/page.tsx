@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { AILandingSection } from "@/components/pages/artificial-intelligence/AILanding";
 import { AIVicky } from "@/components/pages/artificial-intelligence/aiVicky";
 import { AIViruses } from "@/components/pages/artificial-intelligence/aiViruses";
+import { PredictiveVaccine } from "@/components/pages/artificial-intelligence/predictiveVaccine";
 
 
 export default function ProjectMetaversePage() {
@@ -25,7 +26,7 @@ export default function ProjectMetaversePage() {
       <section className="container mx-auto space-y-16 px-4 lg:px-8">
         <ElementVisibilityChecker ComponentToShow={AIVicky} props={{}} />
         <ElementVisibilityChecker ComponentToShow={AIViruses} props={{}} />
-        <MetaverseNFTSection />
+        <ElementVisibilityChecker ComponentToShow={PredictiveVaccine} props={{}} />
       </section>
     </main>
   );

@@ -21,7 +21,7 @@ export function AIVicky({ isVisible }: ElementVisibilityCheckerComponentProps) {
             </div>
         </article>
         <article className="">
-            <Paragraph className="mt-8 lg:max-h-96 overflow-auto scroll-indicator-hide">
+            <Paragraph className="mt-8 overflow-auto scroll-indicator-hide">
                 <span className="text-primary">Vicky</span> is your assistance, here to assist patients, physicians, and other users in the VAC Metaverse, where she will organize services, and venues, and make recommendations depending on your requirements and needs.
                 <br />
                 <br />
