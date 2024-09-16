@@ -11,8 +11,6 @@ export function OurAdvisorSection({ isVisible }: ElementVisibilityCheckerCompone
 
     const [advisorIndex, setAdvisorIndex] = useState(0);
     const [advisorBanner, setAdvisorBanner] = useState<number>();
-    console.log("🚀 ~ OurAdvisorSection ~ advisorBanner:", advisorBanner);
-
 
     const handleAdvisorLeave = (index: number) => {
         console.log("🚀 ~ handleAdvisorLeave ~ index:", index);
