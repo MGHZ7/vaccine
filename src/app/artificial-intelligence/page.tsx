@@ -7,6 +7,9 @@ import { AILandingSection } from "@/components/pages/artificial-intelligence/AIL
 import { AIVicky } from "@/components/pages/artificial-intelligence/aiVicky";
 import { AIViruses } from "@/components/pages/artificial-intelligence/aiViruses";
 import { PredictiveVaccine } from "@/components/pages/artificial-intelligence/predictiveVaccine";
+import { VirusMutation } from "@/components/pages/artificial-intelligence/aiVickyMutation";
+import { AIImageAnalyzer } from "@/components/pages/artificial-intelligence/aiImageAnalyzer";
+import { AIMedicalLaboratories } from "@/components/pages/artificial-intelligence/aiMedicalLaboratories";
 
 
 export default function ProjectMetaversePage() {
@@ -27,6 +30,9 @@ export default function ProjectMetaversePage() {
         <ElementVisibilityChecker ComponentToShow={AIVicky} props={{}} />
         <ElementVisibilityChecker ComponentToShow={AIViruses} props={{}} />
         <ElementVisibilityChecker ComponentToShow={PredictiveVaccine} props={{}} />
+        <ElementVisibilityChecker ComponentToShow={VirusMutation} props={{}} />
+        <ElementVisibilityChecker ComponentToShow={AIImageAnalyzer} props={{}} />
+        <ElementVisibilityChecker ComponentToShow={AIMedicalLaboratories} props={{}} />
       </section>
     </main>
   );
