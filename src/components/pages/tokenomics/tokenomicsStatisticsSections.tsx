@@ -34,7 +34,7 @@ const data = [{
 
 export function TokenomicsStatisticsSections({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
-    return <section className={`relative ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+    return <section id="fund-allocation" className={`relative ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <div className="absolute hidden md:block bottom-0">
             <Image alt="Background" {...bg} />
         </div>
