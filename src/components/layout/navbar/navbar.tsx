@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import { VaccineLink } from "../link/vaccineLink"
-import { VaccineButtonLink } from "../link/vaccineButtonLink"
 import Hamburger from 'hamburger-react'
 import { MouseEventHandler, useState } from "react"
 import { NavbarLinkProps, navLinks } from "./navLinks";

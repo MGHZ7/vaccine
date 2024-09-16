@@ -4,7 +4,7 @@ import { TransparentCard } from "@/components/layout/card/transparentCard";
 
 export function TokenDistributionSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
-    return <TransparentCard className={`p-4 overflow-visible ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+    return <TransparentCard id="token-distribution" className={`p-4 overflow-visible ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <h2 className="text-xl ms:text-3xl font-bold">TOKEN DISTRIBUTION</h2>
 
         <ElementVisibilityChecker ComponentToShow={PercentageLine} props={{

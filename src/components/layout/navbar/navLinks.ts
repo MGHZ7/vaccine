@@ -97,7 +97,29 @@ export const navLinks: NavbarLinkProps[] = [
   {
     title: "Tokenomics",
     link: "/tokenomics",
-    columns: [],
+    columns: [
+      {
+        head: {
+          title: "How to Buy",
+          link: "/tokenomics#how-to-buy",
+        },
+        sublinks: [],
+      },
+      {
+        head: {
+          title: "Token Distribution",
+          link: "/tokenomics#token-distribution",
+        },
+        sublinks: [],
+      },
+      {
+        head: {
+          title: "Fund Allocation",
+          link: "/tokenomics#fund-allocation",
+        },
+        sublinks: [],
+      },
+    ],
   },
   {
     title: "Litepaper",
@@ -105,9 +127,24 @@ export const navLinks: NavbarLinkProps[] = [
     columns: [],
   },
   {
-    title: "Career",
-    link: "/career",
-    columns: [],
+    title: "About Us",
+    link: "/about",
+    columns: [
+      {
+        head: {
+          title: "About Us",
+          link: "/about#about-us",
+        },
+        sublinks: [],
+      },
+      {
+        head: {
+          title: "Career",
+          link: "/about#career",
+        },
+        sublinks: [],
+      },
+    ],
   },
   {
     title: "Help",
@@ -118,7 +155,14 @@ export const navLinks: NavbarLinkProps[] = [
           title: "FAQs",
           link: "/help#FAQs",
         },
-        sublinks: [{ title: "Get In Touch", link: "/help#get-in-touch" }],
+        sublinks: [],
+      },
+      {
+        head: {
+          title: "Get In Touch",
+          link: "/help#get-in-touch",
+        },
+        sublinks: [],
       },
     ],
   },
