@@ -32,6 +32,8 @@ export const RoadMap = forwardRef<RoadMapRef, RoadMapProps>(({ className = '' },
 
     const movePointTo = (point: PathPointInfoDto) => {
         lastInterval.current ? clearInterval(lastInterval.current) : undefined;
+        if (point.totalLength === lastPointLength.current) return;
+
         const prevPointLength = lastPointLength.current;
         const currentPointLength = point.totalLength;
 
@@ -47,6 +49,7 @@ export const RoadMap = forwardRef<RoadMapRef, RoadMapProps>(({ className = '' },
 
             if ((from > to && lastPointLength.current <= to) || (from < to && lastPointLength.current >= to)) {
                 lastInterval.current ? clearInterval(lastInterval.current) : undefined;
+                lastPointLength.current = to;
                 return;
             };
 
