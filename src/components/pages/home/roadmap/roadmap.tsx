@@ -1,5 +1,10 @@
 import { useRef } from "react";
 
+export interface PathPointInfoDto {
+    x: number;
+    y: number;
+    totalLength: number;
+}
 export interface RoadMapProps {
     className?: string;
 }
@@ -8,23 +13,24 @@ export const RoadMap = ({ className = '' }: RoadMapProps) => {
     const svgRef = useRef<SVGSVGElement>(null);
     const pathRef = useRef<SVGPathElement>(null);
     const circleRef = useRef<SVGCircleElement>(null);
+    const lastPointLength = useRef(0);
+    const lastInterval = useRef<NodeJS.Timeout | null>(null);
 
-    const handleMove = (point: { x: number, y: number }) => {
+    const handleMove = (point: PathPointInfoDto) => {
+        movePointTo(point);
+        return;
+
         const svg = svgRef.current!;
         const path = pathRef.current!;
         const circle = circleRef.current!;
-        const svgRect = svg!.getBoundingClientRect();
 
         const { x, y } = point;
-
-        const svgWidth = svgRect.width;
-        const svgHeight = svgRect.height;
 
         const pathLength = path.getTotalLength();
 
         let closestPoint: DOMPoint | undefined = undefined, closestDistance = Infinity;
 
-        for (let i = 0; i < pathLength; i += 1) { // Adjust the increment for precision
+        for (let i = 0; i < pathLength; i += 50) { // Adjust the increment for precision
             const point = path.getPointAtLength(i);
             const distance = Math.hypot(point.x - x, point.y - y);
 
@@ -35,9 +41,42 @@ export const RoadMap = ({ className = '' }: RoadMapProps) => {
         }
 
         if (closestPoint) {
+            console.log("🚀 ~ handleMove ~ closestPoint:", closestPoint);
+
             circle.setAttribute('cx', closestPoint.x.toString());
             circle.setAttribute('cy', closestPoint.y.toString());
         }
+    }
+
+    const movePointTo = (point: PathPointInfoDto) => {
+        lastInterval.current ? clearInterval(lastInterval.current) : undefined;
+        const prevPointLength = lastPointLength.current;
+        const currentPointLength = point.totalLength;
+
+        animatePointMotion(prevPointLength, currentPointLength)
+    }
+
+    const animatePointMotion = (from: number, to: number) => {
+        const path = pathRef.current!;
+        const circle = circleRef.current!;
+        const step = 20;
+
+        lastInterval.current = setInterval(() => {
+
+            if ((from > to && lastPointLength.current <= to) || (from < to && lastPointLength.current >= to)) {
+                lastInterval.current ? clearInterval(lastInterval.current) : undefined;
+                return;
+            };
+
+            const newLength = from > to ? lastPointLength.current - step : lastPointLength.current + step;
+            lastPointLength.current = newLength;
+
+            const point = path.getPointAtLength(newLength);
+
+            circle.setAttribute('cx', point.x.toString());
+            circle.setAttribute('cy', point.y.toString());
+
+        }, 20)
     }
 
     return <svg
@@ -5727,12 +5766,12 @@ export const RoadMap = ({ className = '' }: RoadMapProps) => {
     </svg>
 }
 
-const points = {
-    websiteLaunch: { x: 81, y: 1274 },
-    publicSale: { x: -12.355414390563965, y: 1452.970458984375 },
-    mobileApps: { x: 455.6326904296875, y: 1313.122314453125 },
-    storage: { x: 70.2257308959961, y: 1685.6248779296875 },
-    clientPlatform: { x: 754.5462036132812, y: 1407.0960693359375 },
-    salesLaunching: { x: 408.36444091796875, y: 1808.34619140625 },
-    salesPhaseTwo: { x: 911, y: 1581 },
+const points: Record<string, PathPointInfoDto> = {
+    websiteLaunch: { x: 81, y: 1274, totalLength: 306 },
+    publicSale: { x: -12.355414390563965, y: 1452.970458984375, totalLength: 571 },
+    mobileApps: { x: 455.6326904296875, y: 1313.122314453125, totalLength: 1115 },
+    storage: { x: 70.2257308959961, y: 1685.6248779296875, totalLength: 1708 },
+    clientPlatform: { x: 754.5462036132812, y: 1407.0960693359375, totalLength: 2516 },
+    salesLaunching: { x: 408.36444091796875, y: 1808.34619140625, totalLength: 3191 },
+    salesPhaseTwo: { x: 914.626220703125, y: 1586.5517578125, totalLength: 3773 },
 }
