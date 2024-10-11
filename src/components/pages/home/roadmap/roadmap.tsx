@@ -16,38 +16,6 @@ export const RoadMap = ({ className = '' }: RoadMapProps) => {
     const lastPointLength = useRef(0);
     const lastInterval = useRef<NodeJS.Timeout | null>(null);
 
-    const handleMove = (point: PathPointInfoDto) => {
-        movePointTo(point);
-        return;
-
-        const svg = svgRef.current!;
-        const path = pathRef.current!;
-        const circle = circleRef.current!;
-
-        const { x, y } = point;
-
-        const pathLength = path.getTotalLength();
-
-        let closestPoint: DOMPoint | undefined = undefined, closestDistance = Infinity;
-
-        for (let i = 0; i < pathLength; i += 50) { // Adjust the increment for precision
-            const point = path.getPointAtLength(i);
-            const distance = Math.hypot(point.x - x, point.y - y);
-
-            if (distance < closestDistance) {
-                closestDistance = distance;
-                closestPoint = point;
-            }
-        }
-
-        if (closestPoint) {
-            console.log("🚀 ~ handleMove ~ closestPoint:", closestPoint);
-
-            circle.setAttribute('cx', closestPoint.x.toString());
-            circle.setAttribute('cy', closestPoint.y.toString());
-        }
-    }
-
     const movePointTo = (point: PathPointInfoDto) => {
         lastInterval.current ? clearInterval(lastInterval.current) : undefined;
         const prevPointLength = lastPointLength.current;
@@ -154,7 +122,7 @@ export const RoadMap = ({ className = '' }: RoadMapProps) => {
                 strokeMiterlimit={10}
                 strokeWidth={2}
             />
-            <g id="Public_Sale" data-name="Public Sale" onMouseOver={() => handleMove(points.publicSale)}>
+            <g id="Public_Sale" data-name="Public Sale" onMouseOver={() => movePointTo(points.publicSale)}>
                 <g id="Group_612" data-name="Group 612">
                     <path
                         id="Path_1086"
@@ -773,7 +741,7 @@ export const RoadMap = ({ className = '' }: RoadMapProps) => {
                     </text>
                 </g>
             </g>
-            <g id="Mobile_apps" data-name="Mobile apps" onMouseOver={() => handleMove(points.mobileApps)}>
+            <g id="Mobile_apps" data-name="Mobile apps" onMouseOver={() => movePointTo(points.mobileApps)}>
                 <g id="Group_649" data-name="Group 649">
                     <path
                         id="Path_1164"
@@ -1729,7 +1697,7 @@ export const RoadMap = ({ className = '' }: RoadMapProps) => {
                     strokeDasharray="0 3.162"
                 />
             </g>
-            <g id="Vac_Storage" data-name="Vac Storage" onMouseOver={() => handleMove(points.storage)}>
+            <g id="Vac_Storage" data-name="Vac Storage" onMouseOver={() => movePointTo(points.storage)}>
                 <g id="Group_72852" data-name="Group 72852">
                     <line
                         id="Line_49"
@@ -2195,7 +2163,7 @@ export const RoadMap = ({ className = '' }: RoadMapProps) => {
                     </text>
                 </g>
             </g>
-            <g id="Launching_sales" data-name="Launching sales" onMouseOver={() => handleMove(points.salesLaunching)}>
+            <g id="Launching_sales" data-name="Launching sales" onMouseOver={() => movePointTo(points.salesLaunching)}>
                 <text
                     id="Launching_sales_phase_one_Hospitals_and_health_organizations_Enlarge_the_VAC_storage_capability_"
                     data-name="Launching sales phase one  (Hospitals and health organizations)  Enlarge the VAC storage capability   "
@@ -2986,7 +2954,7 @@ export const RoadMap = ({ className = '' }: RoadMapProps) => {
                     </text>
                 </g>
             </g>
-            <g id="Sales_phase" data-name="Sales phase" onMouseOver={() => handleMove(points.salesPhaseTwo)}>
+            <g id="Sales_phase" data-name="Sales phase" onMouseOver={() => movePointTo(points.salesPhaseTwo)}>
                 <text
                     id="Sales_Phase_two_Governments_Ministries_of_health_Launch_new_reward_program_for_community_"
                     data-name="Sales Phase two (Governments, Ministries of health)  Launch new reward program for community  "
@@ -3818,7 +3786,7 @@ export const RoadMap = ({ className = '' }: RoadMapProps) => {
                     </text>
                 </g>
             </g>
-            <g id="Client_development" data-name="Client development" onMouseOver={() => handleMove(points.clientPlatform)}>
+            <g id="Client_development" data-name="Client development" onMouseOver={() => movePointTo(points.clientPlatform)}>
                 <g id="Group_705" data-name="Group 705">
                     <path
                         id="Path_1355"
@@ -5407,7 +5375,7 @@ export const RoadMap = ({ className = '' }: RoadMapProps) => {
                     </text>
                 </g>
             </g>
-            <g id="website_launch" data-name="website launch" onMouseOver={() => handleMove(points.websiteLaunch)}>
+            <g id="website_launch" data-name="website launch" onMouseOver={() => movePointTo(points.websiteLaunch)}>
                 <g id="Group_570" data-name="Group 570">
                     <path
                         id="Path_1053"
