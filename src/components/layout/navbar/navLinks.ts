@@ -149,8 +149,8 @@ export const navLinks: NavbarLinkProps[] = [
     ],
   },
   {
-    title: "Litepaper",
-    link: "/litepaper",
+    title: "Whitepaper",
+    link: "/vaccine cmnts web.pdf",
     columns: [],
   },
   {
