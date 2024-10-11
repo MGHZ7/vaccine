@@ -41,7 +41,7 @@ export const RoadMap = forwardRef<RoadMapRef, RoadMapProps>(({ className = '' },
     const animatePointMotion = (from: number, to: number) => {
         const path = pathRef.current!;
         const circle = circleRef.current!;
-        const step = 20;
+        const step = 10;
 
         lastInterval.current = setInterval(() => {
 
@@ -58,7 +58,7 @@ export const RoadMap = forwardRef<RoadMapRef, RoadMapProps>(({ className = '' },
             circle.setAttribute('cx', point.x.toString());
             circle.setAttribute('cy', point.y.toString());
 
-        }, 20)
+        }, 10)
     }
 
     return <svg
