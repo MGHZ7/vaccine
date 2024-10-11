@@ -13,10 +13,10 @@ import { useEffect } from "react";
 export default function ProjectMetaversePage() {
 
   useEffect(() => {
-    document.body.classList.add('bg-metaverse');
+    document.body.classList.add('bg-project');
 
     return () => {
-      document.body.classList.remove('bg-metaverse');
+      document.body.classList.remove('bg-project');
     }
   });
 

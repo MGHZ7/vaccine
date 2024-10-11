@@ -11,10 +11,10 @@ import { useEffect } from "react";
 export default function TokenomicsPage() {
 
     useEffect(() => {
-        document.body.classList.add('bg-bg-tokenomics');
+        document.body.classList.add('bg-tokenomics');
 
         return () => {
-            document.body.classList.remove('bg-bg-tokenomics');
+            document.body.classList.remove('bg-tokenomics');
         }
     });
 

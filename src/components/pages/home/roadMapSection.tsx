@@ -27,7 +27,7 @@ export function RoadMapSection({ isVisible }: ElementVisibilityCheckerComponentP
         </article>
 
         <article className="">
-            <RoadMap />
+            <RoadMap className="hidden md:block" />
             <Image className="block md:hidden max-w-xs mx-auto" alt="Vaccine Roadmap" {...mobileRoadmapImage} />
         </article>
     </ section>

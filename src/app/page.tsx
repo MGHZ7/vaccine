@@ -31,7 +31,7 @@ export default function Home() {
         <ElementVisibilityChecker ComponentToShow={OverviewSection} props={{}} />
         <ElementVisibilityChecker ComponentToShow={SolutionsSection} props={{}} />
         <ElementVisibilityChecker ComponentToShow={EasyToUseSolutionSection} props={{}} />
-        <ElementVisibilityChecker ComponentToShow={RoadMapSection} props={{}} />
+        <ElementVisibilityChecker threshold={0.1} ComponentToShow={RoadMapSection} props={{}} />
         <ElementVisibilityChecker ComponentToShow={OurTeamSection} props={{}} />
         <ElementVisibilityChecker ComponentToShow={OurAdvisorSection} props={{}} />
       </div>

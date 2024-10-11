@@ -1,7 +1,10 @@
-import { throttle } from "@/libs/performance";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
-export const RoadMap = () => {
+export interface RoadMapProps {
+    className?: string;
+}
+
+export const RoadMap = ({ className = '' }: RoadMapProps) => {
     const svgRef = useRef<SVGSVGElement>(null);
     const pathRef = useRef<SVGPathElement>(null);
     const circleRef = useRef<SVGCircleElement>(null);
@@ -38,7 +41,7 @@ export const RoadMap = () => {
     }
 
     return <svg
-        className="max-w-full"
+        className={`max-w-full ${className}`}
         ref={svgRef}
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
