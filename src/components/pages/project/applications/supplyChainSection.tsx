@@ -8,13 +8,13 @@ import { Paragraph } from "@/components/layout/typography/paragraph";
 import { Divider } from "@/components/layout/divider/divider";
 
 export function SupplyChainSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
-    return <section className={`grid justify-center ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+    return <section className={`grid gap-8 justify-center ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article>
             <div className="">
                 <Image alt="Vaccine Supply Chain" {...image} />
             </div>
         </article>
-        <article className="p-8 max-w-xl space-y-2">
+        <article className="md:p-8 max-w-xl space-y-2">
             <h2 className="text-3xl text-on-primary font-bold">VAC Supply Chain </h2>
             <p className="text-xs text-primary">Streamlining Supply Chains, Powering Progress</p>
             <Divider type="ltr" />

@@ -13,7 +13,7 @@ export function WebPlatformSection({ isVisible }: ElementVisibilityCheckerCompon
                 <Image alt="Vaccine Webplatform" {...image} />
             </div>
         </article>
-        <article className="p-8">
+        <article className="md:p-8">
             <h2 className="text-3xl text-on-primary font-bold">VAC Webplatform</h2>
             <p className="text-xs text-primary">VAC Platform pioneers a revolutionary healthcare platform, merging AI, VR, and blockchain for secure, decentralized patient care and medical innovation.</p>
             <Paragraph className="mt-8 max-h-40 overflow-auto">
