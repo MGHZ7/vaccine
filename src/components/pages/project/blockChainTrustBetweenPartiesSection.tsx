@@ -4,7 +4,7 @@ import image from "./assets/blockchain-trust-between-parties.svg";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 
 export function BlockChainTrustBetweenPartiesSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
-    return <section className={`grid lg:grid-cols-2 gap-8 justify-items-center items-center px-28
+    return <section className={`grid lg:grid-cols-2 gap-8 justify-items-center items-center md:px-28
         ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <Image className="w-56 animate-moving-around" alt="Blockchain trust between parties" {...image} />
 

@@ -13,7 +13,7 @@ export function BlockchainTechnologySection({ isVisible }: ElementVisibilityChec
                 <Image alt="Vaccine overview" {...image} />
             </div>
         </article>
-        <article className="p-8">
+        <article className="md:p-8">
             <p className="text-xs text-primary">VAC Blockchain</p>
             <h2 className="text-3xl text-on-primary font-bold">VAC Blockchain Technology</h2>
             <Paragraph className="mt-8 max-h-60 overflow-auto">
