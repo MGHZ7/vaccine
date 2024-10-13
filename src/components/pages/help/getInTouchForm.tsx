@@ -17,12 +17,12 @@ export function GetInTouchForm({ }: GetInTouchFormProps) {
         <FormField label={"Subject:"} input={{
             name: "subject",
         }} />
-        <label className="flex justify-between gap-12">
+        <label className="flex flex-col md:flex-row justify-between md:gap-12">
             <span className="text-primary w-20">Message:</span>
             <textarea className="flex-1" rows={5}></textarea>
         </label>
 
-        <label className="flex justify-between gap-12">
+        <label className="flex justify-between gap-4 md:gap-12">
             <span className="w-20">
                 <input type="checkbox" />
             </span>
@@ -41,7 +41,7 @@ interface FormFieldProps {
 }
 
 function FormField({ label, input }: FormFieldProps) {
-    return <label className="flex justify-between items-center gap-12">
+    return <label className="flex flex-col md:flex-row justify-between md:items-center md:gap-12">
         <span className="text-primary w-20">{label}</span>
         <input className="flex-1" {...input} />
     </label>
