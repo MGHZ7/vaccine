@@ -124,29 +124,7 @@ export const navLinks: NavbarLinkProps[] = [
   {
     title: "Artificial Intelligence",
     link: "/artificial-intelligence",
-    columns: [
-      {
-        head: {
-          title: "How to Buy",
-          link: "/tokenomics#how-to-buy",
-        },
-        sublinks: [],
-      },
-      {
-        head: {
-          title: "Token Distribution",
-          link: "/tokenomics#token-distribution",
-        },
-        sublinks: [],
-      },
-      {
-        head: {
-          title: "Fund Allocation",
-          link: "/tokenomics#fund-allocation",
-        },
-        sublinks: [],
-      },
-    ],
+    columns: [],
   },
   {
     title: "Whitepaper",

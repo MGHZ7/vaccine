@@ -23,7 +23,7 @@ export default function Home() {
   });
 
   return (
-    <main className=" min-h-screen py-28 bg-home-img">
+    <main className=" min-h-screen pb-28 bg-home-img">
       <ElementVisibilityChecker ComponentToShow={HomeHeroSection} props={{}} />
 
       <div className="px-8 md:px-24 flex flex-col items-center justify-between space-y-24 mt-24">

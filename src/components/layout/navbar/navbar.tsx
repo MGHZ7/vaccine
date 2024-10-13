@@ -69,8 +69,8 @@ function NavbarLgScreenLink({ link, title, columns, show, onMouseEnter }:
             href={link}>{title}
         </VaccineLink>
         {columns.length && show
-            ? <div className="absolute left-0 top-20 right-0 bg-secondary bg-opacity-20 
-                flex justify-center gap-8 p-4 animate-fade-in">
+            ? <div className="absolute left-0 top-20 right-0 bg-secondary bg-opacity-60 
+                flex justify-center gap-8 p-4 animate-fade-in z-50">
                 {columns.map((col, i) => <div key={i}>
                     <Link href={col.head.link}>{col.head.title}</Link>
 
