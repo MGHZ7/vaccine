@@ -45,14 +45,14 @@ function LinkMenu({ link, onClose }: { link: NavbarLinkProps, onClose?: () => vo
     overflow-hidden transition-all ${isOpen ? 'max-h-[1000px]' : 'max-h-8'}`}>
         <div className="relative mb-1.5">
             <VaccineLink
-                className="block px-0 w-48 text-center"
+                className="block px-0 w-72 text-center"
                 size="lg"
                 href={link.link}
                 onClick={onClose}>{link.title}</VaccineLink>
-            <AnimatedPlusMinusButton
+            {link.columns.length ? <AnimatedPlusMinusButton
                 isOpen={isOpen}
                 onClick={() => setIsOpen(prev => !prev)}
-                className="absolute top-0 right-1" />
+                className="absolute top-0 right-1" /> : null}
         </div>
         {link.columns.map(subLink => <VaccineLink
             className="mt-1"

@@ -19,7 +19,7 @@ export default function TokenomicsPage() {
     });
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between px-4 md:px-24 py-28 space-y-24">
+        <main className="flex min-h-screen flex-col items-center justify-between px-4 md:px-24 py-8 md:py-28 space-y-24">
             <ElementVisibilityChecker ComponentToShow={TokenomicsSection} props={{}} />
             <ElementVisibilityChecker ComponentToShow={TokenomicsVideo} props={{}} />
             <ElementVisibilityChecker ComponentToShow={TokenDistributionSection} props={{}} className="w-full overflow-hidden" />

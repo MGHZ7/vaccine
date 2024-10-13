@@ -6,7 +6,7 @@ import { ElementVisibilityCheckerComponentProps } from '@/components/common/elem
 export function TokenomicsSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
     return <section className={`grid lg:grid-cols-2 gap-8 justify-center items-center ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
-        <article className="p-8">
+        <article className="md:p-8">
             <h2 className="text-3xl text-on-primary font-bold">Tokenomics</h2>
             <p className="text-xs text-primary">The Financial Infrastructure </p>
             <Paragraph className="mt-8 max-h-60 overflow-auto">

@@ -15,7 +15,7 @@ export function CareerAboutUsSection({ isVisible }: ElementVisibilityCheckerComp
                 <Image className="animate-glow" alt="Vaccine overview" {...image} />
             </div>
         </article>
-        <article className="p-8">
+        <article className="md:p-8">
             <p className="text-xs text-primary">VACCINE</p>
             <h2 className="text-3xl text-on-primary font-bold">About Us</h2>
             <Paragraph className="mt-8 lg:max-h-96 overflow-auto scroll-indicator-hide">

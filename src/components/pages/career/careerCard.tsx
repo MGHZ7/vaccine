@@ -16,7 +16,7 @@ export interface CareerCard extends ElementVisibilityCheckerComponentProps {
 export function CareerCard({ career, isVisible }: CareerCard) {
     return <TransparentCard
         className={`p-4 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
-        <div className="flex">
+        <div className="flex gap-4 flex-col md:flex-row">
             <div className="space-y-4">
                 <h2 className="text-lg text-on-primary font-bold col-span-2">{career.title}</h2>
                 <div className="inline-flex gap-2 items-start">
