@@ -24,7 +24,7 @@ export function TransparentCard({ children, showLightingPoint = false, className
             ref={animationRef}
             width={containerRef.current?.offsetWidth}
             height={containerRef.current?.offsetHeight}
-            className="absolute -top-1 -right-1 -bottom-1 -left-1" />}
+            className="absolute -top-1 -right-1 -bottom-3 -left-1" />}
         {children}
     </article>
 }

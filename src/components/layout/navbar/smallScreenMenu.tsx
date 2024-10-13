@@ -44,8 +44,15 @@ function LinkMenu({ link, onClose }: { link: NavbarLinkProps, onClose?: () => vo
     return <li key={link.link} className={`flex flex-col items-center 
     overflow-hidden transition-all ${isOpen ? 'max-h-[1000px]' : 'max-h-8'}`}>
         <div className="relative mb-1.5">
-            <VaccineLink className="block px-0 w-48 text-center" size="lg" href={link.link} onClick={onClose}>{link.title}</VaccineLink>
-            <AnimatedPlusMinusButton isOpen={isOpen} onClick={() => setIsOpen(prev => !prev)} className="absolute top-0 right-1" />
+            <VaccineLink
+                className="block px-0 w-48 text-center"
+                size="lg"
+                href={link.link}
+                onClick={onClose}>{link.title}</VaccineLink>
+            <AnimatedPlusMinusButton
+                isOpen={isOpen}
+                onClick={() => setIsOpen(prev => !prev)}
+                className="absolute top-0 right-1" />
         </div>
         {link.columns.map(subLink => <VaccineLink
             className="mt-1"

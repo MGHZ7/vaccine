@@ -81,7 +81,7 @@ export const AnimatedMovingBorder = forwardRef<AnimatedMovingBorderRef, Animated
     }));
 
     return <div className={`rounded-lg pointer-events-none ${className}`} ref={container}>
-        <svg id="wormSvg" className="" viewBox={`0 0 ${containerWidth} ${containerHeight}`}>
+        <svg id="wormSvg" className="w-full h-full" viewBox={`0 0 ${containerWidth} ${containerHeight}`}>
             <path id="wormPath" d="" fill="none" stroke="none" stroke-width="4" ref={path} />
             <g className="pointer-events-none" id="svg-group" ref={svgGroup}>
                 <circle
