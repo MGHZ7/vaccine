@@ -20,7 +20,7 @@ export function TeamMemberCard({ imageSrc, name, title }: TeamMemberCardProps) {
 
             <Image alt={name} src={imageSrc} fill />
 
-            <Divider className="absolute top-52 left-4 " type="rtl" />
+            <Divider className="absolute top-40 md:top-52 left-1 md:left-4 " type="rtl" />
         </div>
 
         <div className="transition-all text-center group-hover:translate-y-4">
