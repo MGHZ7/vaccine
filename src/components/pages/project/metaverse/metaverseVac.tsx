@@ -6,10 +6,10 @@ import { Divider } from "@/components/layout/divider/divider";
 
 export function MetaverseVac() {
 
-    return <section className="grid lg:grid-cols-2 items-center mx-auto px-12">
+    return <section className="grid lg:grid-cols-2 items-center mx-auto px-4 md:px-12">
 
         <article>
-            <div className="flex items-center gap-2 mb-8">
+            <div className="md:flex items-center gap-2 mb-8">
                 <h2 className="text-3xl text-on-primary font-bold whitespace-nowrap">VAC Meta Hospital</h2>
                 <Divider />
             </div>
