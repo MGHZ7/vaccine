@@ -19,7 +19,7 @@ export const AnimatedMovingBorder = forwardRef<AnimatedMovingBorderRef, Animated
     const svgGroup = useRef<SVGGElement>(null);
     const rectArray = useRef<SVGRectElement[]>([]);
 
-    const padding = 8;
+    const padding = 6;
     const containerWidth = width + padding * 2; // Add the padding value of the two sides from the overall width
     const containerHeight = height + padding * 2; // Add the padding value of the two sides from the overall height
     const borderRadius = container.current ? parseFloat(getComputedStyle(container.current).borderRadius) : 0;
@@ -31,7 +31,7 @@ export const AnimatedMovingBorder = forwardRef<AnimatedMovingBorderRef, Animated
             if (r.lastChild) r.removeChild(r.lastChild);
             const animation = animateMotion.cloneNode() as SVGAnimateMotionElement;
             r.setAttribute("x", (-wormHead.r.baseVal.value - i).toString());
-            r.setAttribute("y", (padding - 13).toString());
+            r.setAttribute("y", (-padding / 2).toString());
             animation.setAttribute("begin", `0.${0.01 * i + 1}s`);
             r.append(animation);
             animation.beginElement();
@@ -82,7 +82,7 @@ export const AnimatedMovingBorder = forwardRef<AnimatedMovingBorderRef, Animated
 
     return <div className={`rounded-lg pointer-events-none ${className}`} ref={container}>
         <svg id="wormSvg" className="w-full h-full" viewBox={`0 0 ${containerWidth} ${containerHeight}`}>
-            <path id="wormPath" d="" fill="none" stroke="none" stroke-width="4" ref={path} />
+            <path id="wormPath" d="" fill="none" stroke="none" stroke-width={padding / 2} ref={path} />
             <g className="pointer-events-none" id="svg-group" ref={svgGroup}>
                 <circle
                     ref={wormHead}
@@ -123,7 +123,7 @@ function createRectArray({ rectCount, wormHeadR, wormHeadStartX, wormHeadStartY 
         const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
         rect.setAttribute("x", (wormHeadStartX - 2 + wormHeadR + i).toString());
         rect.setAttribute("y", (wormHeadStartY - wormHeadR / 2).toString());
-        rect.setAttribute("height", "10");
+        rect.setAttribute("height", wormHeadR.toString());
         rect.setAttribute("width", "2");
         rect.setAttribute("fill", `rgba(24, 219, 213, ${opacityIndicator})`);
         rectArray.push(rect);
