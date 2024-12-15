@@ -6,8 +6,8 @@ import Image from "next/image";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { TransparentCard } from "@/components/layout/card/transparentCard";
 import { CareerDto } from "@/core/dto/career";
-import { VaccineLink } from "@/components/layout/link/vaccineLink";
-import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
+import { VaccineLink } from "@/components/common/link/vaccineLink";
+import { VaccineButtonLink } from "@/components/common/link/vaccineButtonLink";
 
 export interface CareerCard extends ElementVisibilityCheckerComponentProps {
     career: CareerDto;

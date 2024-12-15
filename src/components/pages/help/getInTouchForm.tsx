@@ -1,4 +1,4 @@
-import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
+import { VaccineButtonLink } from "@/components/common/link/vaccineButtonLink";
 import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 
 export interface GetInTouchFormProps {

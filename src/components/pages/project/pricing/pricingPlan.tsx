@@ -1,4 +1,4 @@
-import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
+import { VaccineButtonLink } from "@/components/common/link/vaccineButtonLink";
 
 export interface PricingPlanProps {
     title: string;

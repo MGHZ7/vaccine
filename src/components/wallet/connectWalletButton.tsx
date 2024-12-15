@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { VaccineButtonLink } from "../layout/link/vaccineButtonLink";
+import { VaccineButtonLink } from "../common/link/vaccineButtonLink";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useAccount, useDisconnect } from "wagmi";
 

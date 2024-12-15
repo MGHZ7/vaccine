@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { VaccineLink } from "../link/vaccineLink";
+import { VaccineLink } from "../../common/link/vaccineLink";
 
 export interface FooterColumnsProps {
     items: FooterLinkProps[]

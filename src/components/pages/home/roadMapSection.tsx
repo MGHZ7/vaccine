@@ -1,13 +1,14 @@
 'use client'
 
-import { Badge } from "@/components/layout/badg/badge";
+import { Badge } from "@/components/common/badg/badge";
 import { Divider } from "@/components/layout/divider/divider";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 
 import Image from "next/image";
 import mobileRoadmapImage from "./assets/roadmap/roadmap-mobile.png";
-import { RoadMap, RoadMapRef } from "./roadmap/roadmap";
+import { RoadMap } from "./roadmap/roadmap";
 import { useRef } from "react";
+import { RoadMapRef } from "./roadmap/roadmapSvg";
 
 export function RoadMapSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 

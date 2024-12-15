@@ -3,7 +3,7 @@
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Counter } from "@/components/counter/counter";
 import { TransparentCard } from "@/components/layout/card/transparentCard";
-import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
+import { VaccineButtonLink } from "@/components/common/link/vaccineButtonLink";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { DateTime } from "luxon";
 

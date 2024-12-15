@@ -1,10 +1,10 @@
 import Image from "next/image"
 import { NavbarLinkProps, navLinks } from "./navLinks"
-import { VaccineLink } from "../link/vaccineLink"
-import { VaccineButtonLink } from "../link/vaccineButtonLink"
+import { VaccineLink } from "../../common/link/vaccineLink"
+import { VaccineButtonLink } from "../../common/link/vaccineButtonLink"
 import { useState } from "react"
 import { ConnectWalletButton } from "@/components/wallet/connectWalletButton"
-import { AnimatedPlusMinusButton } from "../animation/plusMinus/animatedPlusMinusButton"
+import { AnimatedPlusMinusButton } from "../../common/animation/plusMinus/animatedPlusMinusButton"
 
 export interface SmallScreenMenuProps {
     onClose?: () => void

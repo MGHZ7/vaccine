@@ -1,5 +1,5 @@
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
-import { AnimatedPlusMinusButton } from "@/components/layout/animation/plusMinus/animatedPlusMinusButton";
+import { AnimatedPlusMinusButton } from "@/components/common/animation/plusMinus/animatedPlusMinusButton";
 import { TransparentCard } from "@/components/layout/card/transparentCard";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { useLayoutEffect, useRef, useState } from "react";

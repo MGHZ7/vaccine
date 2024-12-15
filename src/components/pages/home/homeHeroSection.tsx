@@ -1,6 +1,6 @@
 'use client';
 
-import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
+import { VaccineButtonLink } from "@/components/common/link/vaccineButtonLink";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { VideoPlayer } from "@/components/common/videoPlayer/videoPlayer";
@@ -15,9 +15,9 @@ export function HomeHeroSection({ isVisible }: ElementVisibilityCheckerComponent
         </div>
 
         <article className="px-8 md:px-24 grid lg:grid-cols-2 place-content-center items-center">
-            <div className="max-w-lg lg:leading-10">
+            <div className="max-w-sm xl:max-w-md lg:leading-10">
                 <p className={"text-primary text-sm font-light md:wide-letter-spacing"}>Always Caring . Always Here</p>
-                <h1 className="md:text-6xl font-bold text-balance text-on-primary main-header md:mb-4 md:mt-2">Vaccine is a
+                <h1 className="md:text-5xl font-bold text-balance text-on-primary main-header md:mb-4 md:mt-2">Vaccine is a
                     Decentralized Medical Ecosystem</h1>
                 <Paragraph className="max-w-72">
                     VAC is the revolution in the medical industry and will lead the digital transformation

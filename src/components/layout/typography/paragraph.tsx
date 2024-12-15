@@ -1,5 +1,5 @@
 import { HTMLAttributes, useRef } from "react";
-import { ScrollAnimation } from "../animation/scrollAnimation/scrollAnimation";
+import { ScrollAnimation } from "../../common/animation/scrollAnimation/scrollAnimation";
 
 export function Paragraph(props: HTMLAttributes<HTMLParagraphElement>) {
 

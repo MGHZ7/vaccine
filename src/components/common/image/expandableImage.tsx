@@ -1,4 +1,4 @@
-import { Modal } from "@/components/layout/modal";
+import { Modal } from "@/components/common/modal";
 import Image, { ImageProps } from "next/image";
 import { useState } from "react";
 

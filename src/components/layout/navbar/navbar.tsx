@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image"
-import { VaccineLink } from "../link/vaccineLink"
+import { VaccineLink } from "../../common/link/vaccineLink"
 import Hamburger from 'hamburger-react'
 import { MouseEventHandler, useState } from "react"
 import { NavbarLinkProps, navLinks } from "./navLinks";

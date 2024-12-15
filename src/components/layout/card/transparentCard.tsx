@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes, ReactNode, useRef } from "react";
-import { AnimatedMovingBorder, AnimatedMovingBorderRef } from "../animation/animatedMovingBorder";
+import { AnimatedMovingBorder, AnimatedMovingBorderRef } from "../../common/animation/animatedMovingBorder";
 import { debounce } from "chart.js/helpers";
 import { throttle } from "@/libs/performance";
 

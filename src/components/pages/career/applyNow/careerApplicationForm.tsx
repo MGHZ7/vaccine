@@ -1,6 +1,6 @@
 import { TransparentCard } from "@/components/layout/card/transparentCard";
-import { FileInput } from "@/components/layout/form/fileInput";
-import { VaccineButtonLink } from "@/components/layout/link/vaccineButtonLink";
+import { FileInput } from "@/components/common/form/fileInput";
+import { VaccineButtonLink } from "@/components/common/link/vaccineButtonLink";
 
 import image from "./assets/apply.png";
 import Image from "next/image";

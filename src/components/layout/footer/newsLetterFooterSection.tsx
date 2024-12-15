@@ -1,4 +1,4 @@
-import { VaccineButtonLink } from "../link/vaccineButtonLink";
+import { VaccineButtonLink } from "../../common/link/vaccineButtonLink";
 
 export function NewsLetterFooterSection() {
 
