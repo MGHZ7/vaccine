@@ -3,6 +3,7 @@
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { TransparentCard } from "@/components/layout/card/transparentCard";
 import { Divider } from "@/components/layout/divider/divider";
+import { Heading } from "@/components/layout/header/heading";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { AdvisorsSlider } from "@/components/team/advisor/slider/advisorsSlider";
 import { useState } from "react";
@@ -24,10 +25,7 @@ export function OurAdvisorSection({ isVisible }: ElementVisibilityCheckerCompone
         id="our-advisors"
         className={`w-full space-y-16 p-4 md:p-8 pb-16 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="max-w-lg space-y-4 self-start">
-            <div className="flex items-center gap-4">
-                <h2 className="text-3xl text-on-primary font-bold">Our Advisors</h2>
-                <Divider className="hidden md:block flex-1 max-w-lg" />
-            </div>
+            <Heading showDivider>Our Advisors</Heading>
             <p className="text-xs text-on-primary font-extralight">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>

@@ -8,7 +8,7 @@ export interface FeaturedSlideProps {
 
 export function FeaturedSlide({ name, imageSrc }: FeaturedSlideProps) {
 
-    return <article className="min-w-[300px] inline-flex justify-center items-center w-full">
+    return <article className="min-w-[220px] inline-flex justify-center items-center w-full">
         <Image className="md:me-auto" alt={name} src={imageSrc} width={120} height={100} />
     </article>
 }

@@ -23,7 +23,7 @@ export function TeamMemberCard({ imageSrc, name, title }: TeamMemberCardProps) {
             <Divider className="absolute top-40 md:top-52 left-1 md:left-4 " type="rtl" />
         </div>
 
-        <div className="transition-all text-center group-hover:translate-y-4">
+        <div className="transition-all text-center group-hover:translate-y-4 mt-2">
             <h4 className="text-primary font-bold">{name}</h4>
             <h6 className="text-xs font-extralight">{title}</h6>
         </div>

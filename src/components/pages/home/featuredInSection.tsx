@@ -2,13 +2,16 @@
 
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Marquee } from "@/components/common/marquee";
-import FeaturedSlider from "@/components/featured/featuredSlider";
 import { FeaturedSlide, FeaturedSlideProps } from "@/components/featured/featureSlide";
+import { Heading } from "@/components/layout/header/heading";
 
 export function FeaturedInSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
     return <section className={`w-full ${isVisible ? 'animate-fade-in' : 'animate-fade-in'}`}>
-        <h2 className="text-3xl text-on-primary font-bold text-center">Featured In</h2>
+
+        <div className="container mx-auto">
+            <Heading className="text-5xl text-center">Featured In</Heading>
+        </div>
 
         <div className="mt-8 p-8 w-full overflow-hidden">
             <Marquee>
