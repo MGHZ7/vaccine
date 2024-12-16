@@ -7,7 +7,7 @@ import { ElementVisibilityCheckerComponentProps } from "@/components/common/elem
 import { Paragraph } from "@/components/layout/typography/paragraph";
 
 export function MobileAppSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
-    return <section className={`grid lg:grid-cols-2 gap-8 justify-center items-end ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+    return <section className={`grid lg:grid-cols-2 gap-8 justify-center items-center ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="md:p-8">
             <h2 className="text-3xl text-on-primary font-bold">VAC Mobile Apps</h2>
             <p className="text-xs text-primary">VAC mobile app delivers seamless doctor-patient interactions and personalized medical solutions through AI, VR, and blockchain integration.</p>

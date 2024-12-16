@@ -123,6 +123,20 @@ body {
     }
   }
 
+  .btn-dark-gradient {
+    background: linear-gradient(
+      60deg,
+      var(--light-btn-end-color),
+      #080563 50%,
+      var(--light-btn-end-color)
+    );
+    background-size: 200%;
+
+    &:hover {
+      background-position: 100%;
+    }
+  }
+
   .main-header {
     line-height: 4.7rem !important;
   }
@@ -133,6 +147,10 @@ body {
 
   .divider-gradient-ltr {
     background: linear-gradient(-90deg, #18dbd5ff, #18dbd500);
+  }
+
+  .divider-gradient-vertical {
+    background: linear-gradient(#18dbd500, #18dbd522, #18dbd500);
   }
 
   .team-member-white-gradient {
