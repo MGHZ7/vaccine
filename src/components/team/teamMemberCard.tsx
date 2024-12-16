@@ -24,8 +24,8 @@ export function TeamMemberCard({ imageSrc, name, title }: TeamMemberCardProps) {
         </div>
 
         <div className="transition-all text-center group-hover:translate-y-4 mt-2">
-            <h4 className="text-primary font-bold">{name}</h4>
-            <h6 className="text-xs font-extralight">{title}</h6>
+            <h4 className="text-lg text-primary font-bold">{name}</h4>
+            <h6 className="font-extralight">{title}</h6>
         </div>
     </article>
 }

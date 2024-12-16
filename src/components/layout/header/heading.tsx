@@ -14,13 +14,19 @@ export function Heading({ subtitle, headingType = 'h2', showDivider = false, con
     return <div className={`space-y-4 ${containerClassName}`}>
         {headingType === 'h1'
             ? null : headingType === 'h2'
-                ? <H2 {...props} /> : null
+                ? <H2 {...props} /> :
+                headingType === 'h3'
+                    ? <H3 {...props} /> : null
         }
-        {subtitle ? <p className="text-xs text-primary">Vaccine is a decentralized ecosystem that empowers</p> : null}
+        {subtitle ? <p className="text-xs text-primary">{subtitle}</p> : null}
         {showDivider ? <Divider {...props.divider} /> : null}
     </div>
 }
 
 function H2({ children, className = '', ...props }: DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>) {
     return <h2 {...props} className={`text-3xl text-on-primary font-bold ${className}`}>{children}</h2>
+}
+
+function H3({ children, className = '', ...props }: DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>) {
+    return <h3 {...props} className={`text-2xl text-on-primary font-bold ${className}`}>{children}</h3>
 }

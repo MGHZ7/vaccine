@@ -73,7 +73,7 @@ export const Modal = ({
       >
         {hasCloseButton && (
           <button
-            className={`absolute top-2 right-4 !p-0 flex items-center text-sm text-primary z-10`}
+            className={`absolute top-4 right-4 !p-0 flex items-center text-lg text-primary z-10`}
             onClick={onClose}
           >X</button>
         )}

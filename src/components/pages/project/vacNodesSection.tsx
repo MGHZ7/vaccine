@@ -4,12 +4,12 @@ import image from "./assets/vac-nodes.png";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { Divider } from "@/components/layout/divider/divider";
 import { ElementVisibilityCheckerComponentProps, } from "@/components/common/elementInViewPort";
+import { Heading } from "@/components/layout/header/heading";
 
 export function VacNodesSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
     return <section className={`${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
-        <div>
-            <h2 className="text-3xl">Vac Nodes</h2>
-            <Divider className="max-w-md mt-2" />
+        <div className="max-w-lg">
+            <Heading showDivider>Vac Nodes</Heading>
         </div>
 
         <article className="grid lg:grid-cols-2 gap-8 items-center sm:px-28 mt-8">

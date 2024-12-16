@@ -5,6 +5,7 @@ import Image from "next/image";
 import image from "../../../app/project/assets/public-cube.png";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Paragraph } from "@/components/layout/typography/paragraph";
+import { Heading } from "@/components/layout/header/heading";
 
 export function BlockchainTechnologySection({ isVisible }: ElementVisibilityCheckerComponentProps) {
     return <section className={`grid lg:grid-cols-2 gap-8 justify-center items-center ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
@@ -15,7 +16,7 @@ export function BlockchainTechnologySection({ isVisible }: ElementVisibilityChec
         </article>
         <article className="md:p-8">
             <p className="text-xs text-primary">VAC Blockchain</p>
-            <h2 className="text-3xl text-on-primary font-bold">VAC Blockchain Technology</h2>
+            <Heading>VAC Blockchain Technology</Heading>
             <Paragraph className="mt-8 max-h-60 overflow-auto">
                 The VAC blockchain is a network with a hybrid Architecture that incorporates the benefits of both private and public blockchains. It alternates between a private and a public state.
                 <br />
