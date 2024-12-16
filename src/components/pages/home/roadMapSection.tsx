@@ -9,6 +9,7 @@ import mobileRoadmapImage from "./assets/roadmap/roadmap-mobile.png";
 import { RoadMap } from "./roadmap/roadmap";
 import { useRef } from "react";
 import { RoadMapRef } from "./roadmap/roadmapSvg";
+import { Heading } from "@/components/layout/header/heading";
 
 export function RoadMapSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
@@ -19,10 +20,7 @@ export function RoadMapSection({ isVisible }: ElementVisibilityCheckerComponentP
         id="road-map"
         className={`w-full space-y-16 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="max-w-lg space-y-4 self-start p-8">
-            <div className="flex items-center gap-4">
-                <h2 className="text-3xl text-on-primary font-bold">Roadmap</h2>
-                <Divider className="flex-1 max-w-lg" />
-            </div>
+            <Heading showDivider>Roadmap</Heading>
         </article>
 
         <article className="flex items-center flex-wrap justify-center gap-8 w-full">

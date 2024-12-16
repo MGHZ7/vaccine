@@ -10,15 +10,18 @@ import nftIcon from "../../../app/assets/pages/home/solutions/vac-nft.svg";
 import insuranceIcon from "../../../app/assets/pages/home/solutions/vac-insurance.svg";
 import supplyChainIcon from "../../../app/assets/pages/home/solutions/vac-supply-chain.svg";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
+import { Heading } from "@/components/layout/header/heading";
 
 export function SolutionsSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
     return <section
         className={`w-full p-8 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <article className="max-w-lg self-start space-y-4">
-            <h2 className="text-3xl text-on-primary font-bold">Solutions</h2>
-            <p className="text-xs text-primary">Vaccine is a decentralized ecosystem that empowers</p>
-            <Divider />
+            <Heading
+                subtitle="Vaccine is a decentralized ecosystem that empowers"
+                showDivider>
+                Solutions
+            </Heading>
         </article>
 
         <section className="grid gap-8  grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-end mt-16">

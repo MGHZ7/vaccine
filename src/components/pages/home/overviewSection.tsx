@@ -5,6 +5,7 @@ import Image from "next/image";
 import image from "../../../app/assets/pages/home/overview.png"
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { Paragraph } from "@/components/layout/typography/paragraph";
+import { Heading } from "@/components/layout/header/heading";
 
 export function OverviewSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
     return <section
@@ -17,7 +18,7 @@ export function OverviewSection({ isVisible }: ElementVisibilityCheckerComponent
         </article>
         <article className="p-8">
             <p className="text-xs text-primary">About the project</p>
-            <h2 className="text-3xl text-on-primary font-bold">Overview</h2>
+            <Heading >Overview</Heading>
             <Paragraph className="mt-8 lg:max-h-96 overflow-auto scroll-indicator-hide">
                 Welcome to VAC
                 <br />

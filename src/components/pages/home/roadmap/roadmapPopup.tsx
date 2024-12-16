@@ -14,7 +14,7 @@ export interface RoadmapPopupProps {
 export function RoadmapPopup({ show, x, y, text, classname = '' }: RoadmapPopupProps) {
 
     return <AnimatedPopup show={show} x={x} y={y} className={`min-w-96 min-h-10 max-w-sm pointer-events-none ${classname}`} >
-        <TransparentCard className="py-1 px-2 w-full h-full">
+        <TransparentCard className="py-1 px-2 w-full h-full !bg-opacity-50">
             <Paragraph>
                 <WritingAnimation text={[text]} />
             </Paragraph>

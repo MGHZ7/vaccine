@@ -20,7 +20,7 @@ export function PrivateSaleCounter({ isVisible }: ElementVisibilityCheckerCompon
                 <div className="relative grid md:grid-cols-2 gap-12 py-4 z-10">
                     <div>
                         <p className="text-xs font-extralight">Discount for early investors</p>
-                        <Counter className="mt-6" targetedDate={DateTime.fromSQL('2024-12-12')} />
+                        <Counter className="mt-6" targetedDate={DateTime.fromSQL('2025-12-12')} />
                     </div>
                     <div className="ms-auto max-w-sm flex flex-col justify-between gap-4">
                         <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor</Paragraph>
