@@ -11,29 +11,29 @@ const data = [{
     label: 'Research\n and development',
     value: 25,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ',
-    color: 'rgba(0, 92, 163, 150)',
-    hoverColor: 'rgba(0, 92, 163, 255)',
+    color: 'rgb(0, 92, 163)',
+    hoverColor: 'rgba(40, 132, 203)',
 },
 {
     label: 'Marketing',
     value: 18,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ',
-    color: 'rgba(72, 179, 183, 255)',
-    hoverColor: 'rgba(72, 179, 183, 255)',
+    color: 'rgb(72, 179, 183)',
+    hoverColor: 'rgb(112, 219, 223)',
 },
 {
     label: 'Operation',
     value: 10,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ',
-    color: 'rgba(164, 216, 230, 255)',
-    hoverColor: 'rgba(164, 216, 230, 255)',
+    color: 'rgb(164, 216, 230)',
+    hoverColor: 'rgb(224, 255, 255)',
 },
 {
     label: 'Exchange\n listing',
     value: 47,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ',
-    color: 'rgba(49, 180, 220, 255)',
-    hoverColor: 'rgba(49, 180, 220, 255)',
+    color: 'rgb(49, 180, 220)',
+    hoverColor: 'rgb(89, 220, 255)',
 },]
 
 export function TokenomicsStatisticsSections({ isVisible }: ElementVisibilityCheckerComponentProps) {

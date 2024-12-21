@@ -49,6 +49,7 @@ export function DoughnutChart({ data, className = '' }: DoughnutChartProps) {
                     backgroundColor: data.map(d => d.color),
                     hoverBackgroundColor: data.map(d => d.hoverColor),
                     borderWidth: 0,
+                    hoverOffset: 20,
                     datalabels: {
                         anchor: 'end',
                         align: 'end',
@@ -100,6 +101,11 @@ export function DoughnutChart({ data, className = '' }: DoughnutChartProps) {
                         bottom: 100,
                         left: 100,
                     }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    intersect: false,
+                    includeInvisible: true
                 }
             },
             plugins: [grayCirclePlugin]
