@@ -16,7 +16,7 @@ export function PercentageLine({ points, isVisible }: PercentageLineProps) {
         return [...accumulated, accumulation];
     }, []);
 
-    return <div className={`transition-all delay-700 p-4 ${isVisible ? 'max-w-full opacity-100' : 'max-w-0 opacity-0'}`}>
+    return <div className={`transition-all delay-700 duration-700 p-4 ${isVisible ? 'max-w-full opacity-100' : 'max-w-0 opacity-0'}`}>
         <div className="relative bg-primary h-3 mb-16 mt-8 rounded-lg">
             {pointesAccumulated.map(point => {
                 return <PercentageLinePoint key={point.percentage} {...point} />;
