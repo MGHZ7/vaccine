@@ -11,25 +11,29 @@ const data = [{
     label: 'Research\n and development',
     value: 25,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ',
-    color: 'rgb(0, 92, 163)',
+    color: 'rgba(0, 92, 163, 150)',
+    hoverColor: 'rgba(0, 92, 163, 255)',
 },
 {
     label: 'Marketing',
     value: 18,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ',
-    color: 'rgb(72, 179, 183)',
+    color: 'rgba(72, 179, 183, 255)',
+    hoverColor: 'rgba(72, 179, 183, 255)',
 },
 {
     label: 'Operation',
     value: 10,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ',
-    color: 'rgb(164, 216, 230)',
+    color: 'rgba(164, 216, 230, 255)',
+    hoverColor: 'rgba(164, 216, 230, 255)',
 },
 {
     label: 'Exchange\n listing',
     value: 47,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ',
-    color: 'rgb(49, 180, 220)',
+    color: 'rgba(49, 180, 220, 255)',
+    hoverColor: 'rgba(49, 180, 220, 255)',
 },]
 
 export function TokenomicsStatisticsSections({ isVisible }: ElementVisibilityCheckerComponentProps) {
@@ -49,7 +53,7 @@ export function TokenomicsStatisticsSections({ isVisible }: ElementVisibilityChe
                 </div>
                 <div className="relative mt-8 lg:-me-16 flex justify-center md:h-[600px]">
                     {isVisible && <DoughnutChart className="min-w-0 sm:min-w-full" data={data} />}
-                    <div className="absolute top-1/4 right-1/4 bottom-1/4 left-1/4 animate-glow">
+                    <div className="absolute top-1/4 right-1/4 bottom-1/4 left-1/4 animate-glow pointer-events-none">
                         <Image alt="VAC Logo" src={logo.src} fill />
                     </div>
                 </div>

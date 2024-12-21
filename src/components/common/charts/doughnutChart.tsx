@@ -6,7 +6,7 @@ Chart.register(ChartDatalables);
 
 export interface DoughnutChartProps {
     className?: string;
-    data: { label: string, value: number, color: string }[];
+    data: { label: string, value: number, color: string, hoverColor: string }[];
 }
 
 const grayCirclePlugin = {
@@ -39,6 +39,7 @@ export function DoughnutChart({ data, className = '' }: DoughnutChartProps) {
     const ref = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
+
         const chart = new Chart(ref.current!, {
             type: 'doughnut',
             data: {
@@ -46,6 +47,7 @@ export function DoughnutChart({ data, className = '' }: DoughnutChartProps) {
                 datasets: [{
                     data: data.map(d => d.value),
                     backgroundColor: data.map(d => d.color),
+                    hoverBackgroundColor: data.map(d => d.hoverColor),
                     borderWidth: 0,
                     datalabels: {
                         anchor: 'end',
@@ -58,7 +60,19 @@ export function DoughnutChart({ data, className = '' }: DoughnutChartProps) {
                         },
                         color: '#FFFFFF',
                         clip: false,
-
+                        listeners: {
+                            enter: (context, event) => {
+                                const activeElement = {
+                                    datasetIndex: context.datasetIndex,
+                                    index: context.dataIndex
+                                };
+                                chart.tooltip?.setActiveElements([activeElement], {
+                                    x: event.x!,
+                                    y: event.y!
+                                })
+                                chart.update();
+                            }
+                        }
                     },
                 }]
             },
@@ -74,6 +88,10 @@ export function DoughnutChart({ data, className = '' }: DoughnutChartProps) {
                     title: {
                         display: false,
                     },
+                    tooltip: {
+                        mode: 'nearest',
+                        intersect: false
+                    }
                 },
                 layout: {
                     padding: {
@@ -82,11 +100,6 @@ export function DoughnutChart({ data, className = '' }: DoughnutChartProps) {
                         bottom: 100,
                         left: 100,
                     }
-                },
-                interaction: {
-                    mode: 'nearest',
-                    includeInvisible: true,
-                    intersect: false
                 }
             },
             plugins: [grayCirclePlugin]
