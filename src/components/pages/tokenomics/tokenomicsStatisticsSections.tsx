@@ -47,7 +47,7 @@ export function TokenomicsStatisticsSections({ isVisible }: ElementVisibilityChe
             <article className="pb-8 col-span-7">
                 <div className="max-w-sm px-8">
                     <h2 className="text-3xl text-on-primary font-bold">Fund Allocation</h2>
-                    <Paragraph className="max-w-xs text-gray-400">
+                    <Paragraph className="max-w-56 text-gray-400">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </Paragraph>
                 </div>
