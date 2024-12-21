@@ -1,10 +1,14 @@
 import { Paragraph } from "@/components/layout/typography/paragraph";
 
 import cardImage from "../../assets/cards/platinum-card.png";
+import background from "../assets/background.svg";
 import Image from "next/image";
 
-export function PlatinumCardSection() {
-    return <section className="grid lg:grid-cols-2 items-center gap-4 overflow-clip">
+export function MedicalCardBenifits() {
+    return <section className="relative grid lg:grid-cols-2 items-center gap-4  z-10 py-10 px-12">
+        <div className="absolute top-0 right-0 bottom-0 left-0 -z-10">
+            <Image alt="background" {...background} />
+        </div>
         <div className="space-y-4">
             <h2 className="text-3xl font-bold">Medical card Benefits</h2>
             <Paragraph>
@@ -19,7 +23,7 @@ export function PlatinumCardSection() {
             </ul>
         </div>
         <div className="overflow-visible">
-            <Image alt="Vac Platinum Card" {...cardImage} />
+            <Image className="lg:scale-150 lg:translate-x-1/3" alt="Vac Platinum Card" {...cardImage} />
         </div>
     </section>
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { PlatinumCardSection } from "./platinumCard";
+import { MedicalCardBenifits } from "./medicalCardBenifits";
 import { SelectedCardSection } from "./silverCardSection";
 
 import platinum from "../../assets/cards/platinum-card.png";
@@ -18,11 +18,11 @@ export function InsuranceCardsSection({ isVisible }: ElementVisibilityCheckerCom
 
 
 
-    return <section className={`space-y-8 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
-        <PlatinumCardSection />
+    return <section className={`space-y-8 max-w-5xl ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+        <MedicalCardBenifits />
         <SelectedCardSection {...selectedCard} />
 
-        <section className="grid sm:grid-cols-2 lg:grid-cols-4">
+        <section className="grid grid-cols-2 md:grid-cols-4">
             {cards.map((card, i) =>
                 <Image key={i} onMouseEnter={() => setSelectedCard(cards[i])} alt={card.title} {...card.image} />)}
         </section>

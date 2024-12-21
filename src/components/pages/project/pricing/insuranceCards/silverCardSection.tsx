@@ -25,9 +25,9 @@ export function SelectedCardSection({ title, description, image }: SelectedCardS
 
     return <section
         ref={containerRef}
-        className="grid lg:grid-cols-2 items-center gap-4 overflow-clip animate-fade-in">
+        className="grid lg:grid-cols-2 items-center gap-4 animate-fade-in">
         <div className="overflow-visible">
-            <Image alt="Vac Silver Card" {...image} />
+            <Image className="lg:scale-125" alt="Vac Silver Card" {...image} />
         </div>
 
         <div className="space-y-4">

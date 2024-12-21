@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1211" height="477" viewBox="0 0 1211 477">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#050223" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="1" x2="0.853" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#18dbd5"/>
+      <stop offset="1" stop-color="#18dbd5" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="background" transform="translate(-299.639 -2636.053)">
+    <rect id="Rectangle_34" data-name="Rectangle 34" width="1211" height="477" rx="15" transform="translate(1510.639 3113.053) rotate(180)" opacity="0.55" fill="url(#linear-gradient)" style="mix-blend-mode: soft-light;isolation: isolate"/>
+    <g id="Group_120" data-name="Group 120" transform="translate(-458.945 790.199) rotate(-7)">
+      <g id="Group_51" data-name="Group 51" transform="translate(1202.752 3707.196) rotate(-159)">
+        <rect id="Rectangle_9" data-name="Rectangle 9" width="411" height="6" transform="translate(365 1223)" fill="url(#linear-gradient-2)"/>
+        <circle id="Ellipse_21" data-name="Ellipse 21" cx="7.5" cy="7.5" r="7.5" transform="translate(358 1219)" fill="#18dbd5"/>
+        <circle id="Ellipse_22" data-name="Ellipse 22" cx="7.5" cy="7.5" r="7.5" transform="translate(358 1219)" fill="#18dbd5"/>
+      </g>
+      <g id="Group_52" data-name="Group 52" transform="translate(909.673 3645.173) rotate(-159)">
+        <rect id="Rectangle_9-2" data-name="Rectangle 9" width="154" height="6" transform="translate(365 1223)" fill="url(#linear-gradient-2)"/>
+        <circle id="Ellipse_21-2" data-name="Ellipse 21" cx="7.5" cy="7.5" r="7.5" transform="translate(358 1219)" fill="#18dbd5"/>
+        <circle id="Ellipse_22-2" data-name="Ellipse 22" cx="7.5" cy="7.5" r="7.5" transform="translate(358 1219)" fill="#18dbd5"/>
+      </g>
+      <g id="Group_53" data-name="Group 53" transform="translate(1149.486 3363.959) rotate(-159)">
+        <rect id="Rectangle_9-3" data-name="Rectangle 9" width="154" height="6" transform="translate(365 1223)" fill="url(#linear-gradient-2)"/>
+        <circle id="Ellipse_21-3" data-name="Ellipse 21" cx="7.5" cy="7.5" r="7.5" transform="translate(358 1219)" fill="#18dbd5"/>
+        <circle id="Ellipse_22-3" data-name="Ellipse 22" cx="7.5" cy="7.5" r="7.5" transform="translate(358 1219)" fill="#18dbd5"/>
+      </g>
+    </g>
+  </g>
+</svg>
