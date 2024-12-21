@@ -44,10 +44,10 @@ function PercentageLinePoint({ percentage, accumulation, prevAccumulation, title
             <div className={`relative z-10 bottom-1 w-5 h-5 bg-primary rounded-full 
             shadow-sm shadow-primary ${className}`}></div>
             <h4 className="relative transition-all -z-10 p-2
-        group-hover/point:bg-black group-hover/point:z-20 group-hover/point:bg-opacity-30 group-hover/point:shadow
+        group-hover/point:z-20 group-hover/point:bg-opacity-30 group-hover/point:shadow
         rounded -translate-x-1/2">
                 <span className="text-xl opacity-0 group-hover/point:opacity-100 lg:opacity-100">{percentage}%</span> <br />
-                <span className={`opacity-0 group-hover/point:opacity-100`}>{title}</span>
+                <span className={`opacity-0 group-hover/point:opacity-100 pt-3`}>{title}</span>
             </h4>
         </div>
     </>

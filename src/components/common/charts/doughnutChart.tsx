@@ -9,6 +9,29 @@ export interface DoughnutChartProps {
     data: { label: string, value: number, color: string }[];
 }
 
+const grayCirclePlugin = {
+    id: 'grayCircle',
+    afterDraw: (chart: any) => {
+        const { ctx, chartArea } = chart;
+        const { top, left, width, height } = chartArea;
+        const centerX = left + width / 2;
+        const centerY = top + height / 2;
+
+        const outerRadius = chart.getDatasetMeta(0).data[0].outerRadius; // Get outer radius of the first segment
+        const circleRadius = (outerRadius + 10);
+        const circleWidth = 1;
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, circleRadius, 0, 2 * Math.PI, false);
+        ctx.lineWidth = circleWidth;
+        ctx.strokeStyle = '#9ca3af'; // Color of the circle
+        ctx.stroke();
+        ctx.restore();
+    }
+};
+
+
 export function DoughnutChart({ data, className = '' }: DoughnutChartProps) {
 
     const id = useId();
@@ -23,22 +46,11 @@ export function DoughnutChart({ data, className = '' }: DoughnutChartProps) {
                 datasets: [{
                     data: data.map(d => d.value),
                     backgroundColor: data.map(d => d.color),
-                    hoverOffset: 4,
                     borderWidth: 0,
-                }]
-            },
-            options: {
-                cutout: '98%',
-                responsive: true,
-                maintainAspectRatio: true,
-                clip: false,
-                plugins: {
-                    legend: {
-                        display: false
-                    },
                     datalabels: {
                         anchor: 'end',
                         align: 'end',
+                        padding: 20,
                         formatter: function (value, context) {
                             const label = context.chart.data.labels?.[context.dataIndex];
 
@@ -48,19 +60,36 @@ export function DoughnutChart({ data, className = '' }: DoughnutChartProps) {
                         clip: false,
 
                     },
+                }]
+            },
+            options: {
+                cutout: '96%',
+                responsive: true,
+                maintainAspectRatio: true,
+                clip: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
                     title: {
                         display: false,
                     },
                 },
                 layout: {
                     padding: {
-                        top: 75,
-                        right: 75,
-                        bottom: 75,
-                        left: 75,
+                        top: 100,
+                        right: 100,
+                        bottom: 100,
+                        left: 100,
                     }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    includeInvisible: true,
+                    intersect: false
                 }
             },
+            plugins: [grayCirclePlugin]
         })
 
         return () => {

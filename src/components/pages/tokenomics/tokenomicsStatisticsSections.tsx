@@ -39,11 +39,11 @@ export function TokenomicsStatisticsSections({ isVisible }: ElementVisibilityChe
             <Image alt="Background" {...bg} />
         </div>
 
-        <div className="relative z-10 grid lg:grid-cols-2 p-2">
-            <article className="pb-8">
+        <div className="relative z-10 grid lg:grid-cols-12 p-2">
+            <article className="pb-8 col-span-7">
                 <div className="max-w-sm px-8">
                     <h2 className="text-3xl text-on-primary font-bold">Fund Allocation</h2>
-                    <Paragraph>
+                    <Paragraph className="max-w-xs text-gray-400">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </Paragraph>
                 </div>
@@ -54,8 +54,8 @@ export function TokenomicsStatisticsSections({ isVisible }: ElementVisibilityChe
                     </div>
                 </div>
             </article>
-            <article className="pb-10 ps-4 lg:ps-20 pe-4 space-y-4 w-full min-w-0">
-                {data.sort((a, b) => b.value - a.value).map(data => <BadgedCard key={data.label} color={data.color}><div>
+            <article className="pb-10 ps-4 lg:ps-20 pe-4 space-y-4 w-full min-w-0 col-span-5">
+                {[...data].sort((a, b) => b.value - a.value).map(data => <BadgedCard key={data.label} color={data.color}><div>
                     <h2 className="text-lg font-light">
                         <span className="me-2" style={{ color: data.color }}>{data.value}%</span>
                         {data.label}
