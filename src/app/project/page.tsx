@@ -20,7 +20,7 @@ export default function ProjectPage() {
   });
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-8 md:px-24 py-28 space-y-24">
+    <main className="flex min-h-screen flex-col items-center justify-between px-8 md:px-24 py-12 md:py-28 space-y-24">
       <ElementVisibilityChecker ComponentToShow={BlockchainTechnologySection} props={{}} />
       <ElementVisibilityChecker ComponentToShow={PrivacyAndSecuritySection} props={{}} />
       <ElementVisibilityChecker ComponentToShow={BlockChainTrustBetweenPartiesSection} props={{}} />
