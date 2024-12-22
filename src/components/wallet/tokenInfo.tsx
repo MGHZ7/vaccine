@@ -2,24 +2,22 @@
 
 import Image from "next/image";
 import logo from "../../app/logo.png";
-import { useWalletInfo } from "@web3modal/wagmi/react";
-import { useAccount, useBalance } from "wagmi";
 import { useState } from "react";
 import { copyToClipboard } from "@/libs/clipboard/clipboard";
 
 export function TokenInfo() {
 
-    const { address, isConnected } = useAccount();
-    const { data } = useBalance();
-    const { walletInfo } = useWalletInfo();
-
     const [isOpen, setIsOpen] = useState(false);
+
+    const address = '0x475bfaa1848591ae0e6ab69600f48d828f61a80e';
+    const decimals = 18;
+    const name = 'VAC';
 
     const toggleOpen = () => {
         setIsOpen(prev => !prev);
     }
 
-    return isConnected ? <article className={`fixed flex top-1/2 right-0 z-40 bg-black bg-opacity-10 
+    return <article className={`fixed flex top-1/2 right-0 z-40 bg-black bg-opacity-10 
         border-l border-t border-b border-primary backdrop-blur-xl rounded-l-xl h-56 
         transition ${isOpen ? 'translate-x-0' : 'translate-x-[300px]'}`}>
         <div className="relative h-full py-4 cursor-pointer" onClick={toggleOpen}>
@@ -36,13 +34,13 @@ export function TokenInfo() {
             <div className="mt-2 space-y-2">
                 <div>
                     <h6 className="text-sm text-primary font-light">Name</h6>
-                    <p className="text-sm text-on-primary font-light">{walletInfo?.name}</p>
+                    <p className="text-sm text-on-primary font-light">{name}</p>
                 </div>
                 <div>
                     <h6 className="text-sm text-primary font-light">Smart contract address</h6>
                     <p className="text-xs text-on-primary font-light break-words">{address}
                         {address
-                            ? <button onClick={() => copyToClipboard(address!)}>
+                            ? <button className="hover:scale-105 active:scale-90" onClick={() => copyToClipboard(address!)}>
                                 <span className="material-symbols-outlined mx-2">
                                     content_copy
                                 </span>
@@ -53,9 +51,9 @@ export function TokenInfo() {
                 </div>
                 <div>
                     <h6 className="text-sm text-primary font-light">Decimals</h6>
-                    <p className="text-sm text-on-primary font-light">{data?.decimals ?? 0}</p>
+                    <p className="text-sm text-on-primary font-light">{decimals}</p>
                 </div>
             </div>
         </div>
-    </article> : null
+    </article>
 }
