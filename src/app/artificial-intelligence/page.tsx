@@ -23,7 +23,7 @@ export default function ProjectMetaversePage() {
   });
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between py-28 space-y-16">
+    <main className="flex min-h-screen flex-col items-center justify-between py-8 md:py-28 space-y-16">
       <ElementVisibilityChecker ComponentToShow={AILandingSection} props={{}} />
 
       <section className="container mx-auto space-y-16 px-4 lg:px-8">

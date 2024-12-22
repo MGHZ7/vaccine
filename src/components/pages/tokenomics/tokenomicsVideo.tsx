@@ -7,7 +7,13 @@ export function TokenomicsVideo() {
     return <section id="how-to-buy">
         <h2 className="text-3xl font-bold mb-4">How To Buy</h2>
         <div className="aspect-video">
-            <VideoPlayer width={'100%'} height={'100%'} url={videoUrl} playing controls />
+            <VideoPlayer width={'100%'} height={'100%'} url={videoUrl} playing controls config={{
+                file: {
+                    attributes: {
+                        controlsList: "nodownload nofullscreen noremoteplayback",
+                    },
+                },
+            }} />
         </div>
     </section>
 }

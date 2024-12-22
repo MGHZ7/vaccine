@@ -4,7 +4,7 @@ import { ElementVisibilityCheckerComponentProps } from "@/components/common/elem
 
 export function AILandingSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
-    return <section className={`px-8 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
+    return <section className={`${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
         <Image alt="AI Hero section" {...image} />
     </section>
 }
