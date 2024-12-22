@@ -39,8 +39,8 @@ export function AdvisorsSlider({ advisors, onActiveCardChange, onAdvisorHover, o
                 navigation
                 modules={[Navigation, EffectCoverflow]}
                 effect='coverflow'
-                className="w-full max-w-28 sm:max-w-sm lg:max-w-xl"
-                coverflowEffect={screenSize >= 600 ? {
+                className="w-full max-w-64 sm:max-w-sm lg:max-w-xl"
+                coverflowEffect={screenSize >= 650 ? {
                     rotate: -5,
                     stretch: 1,
                     depth: 500,
@@ -53,7 +53,7 @@ export function AdvisorsSlider({ advisors, onActiveCardChange, onAdvisorHover, o
                         slidesPerView: 1
                     },
 
-                    600: {
+                    650: {
                         slidesPerView: 3
                     }
                 }}

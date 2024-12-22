@@ -1,5 +1,6 @@
 .advisor-slider {
   .swiper-slide {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +22,7 @@
     opacity: 1;
   }
 
-  @media (min-width: 500px) {
+  @media (min-width: 650px) {
     .swiper-slide-fully-visible:not(.swiper-slide-next):not(.swiper-slide-prev),
     .swiper-slide-visible:not(.swiper-slide-next):not(.swiper-slide-prev) {
       opacity: 0.5;
@@ -39,19 +40,8 @@
     transition: all 0.1s linear;
     z-index: 1;
   }
-
-  @media (min-width: 500px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: var(--primary);
-    }
-  }
-
-  @media (max-width: 500px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: hidden !important;
-      opacity: 0;
-    }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--primary);
   }
 }

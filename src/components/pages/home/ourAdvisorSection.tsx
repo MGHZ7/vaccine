@@ -2,7 +2,6 @@
 
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { TransparentCard } from "@/components/layout/card/transparentCard";
-import { Divider } from "@/components/layout/divider/divider";
 import { Heading } from "@/components/layout/header/heading";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { AdvisorsSlider } from "@/components/team/advisor/slider/advisorsSlider";
@@ -14,8 +13,6 @@ export function OurAdvisorSection({ isVisible }: ElementVisibilityCheckerCompone
     const [advisorBanner, setAdvisorBanner] = useState<number>();
 
     const handleAdvisorLeave = (index: number) => {
-        console.log("🚀 ~ handleAdvisorLeave ~ index:", index);
-
         setAdvisorBanner(prev => {
             return prev === index ? undefined : prev;
         })
