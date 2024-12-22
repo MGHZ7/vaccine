@@ -18,7 +18,7 @@ export function CareerAboutUsSection({ isVisible }: ElementVisibilityCheckerComp
         <article className="md:p-8">
             <p className="text-xs text-primary">VACCINE</p>
             <h2 className="text-3xl text-on-primary font-bold">About Us</h2>
-            <Paragraph className="mt-8 lg:max-h-96 overflow-auto scroll-indicator-hide">
+            <Paragraph className="mt-8 max-h-96 overflow-auto scroll-indicator-hide">
                 Welcome to VAC,
                 <br /><br />
                 where innovation meets integrity in healthcare. We are pioneering a new era of medical technology, leveraging artificial intelligence, virtual reality, and blockchain to revolutionize patient care and medical solutions.

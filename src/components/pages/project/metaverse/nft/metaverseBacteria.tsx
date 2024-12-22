@@ -12,7 +12,7 @@ export function MetaverseBacteriaSection({ isVisible }: ElementVisibilityChecker
             </div>
         </article>
         <article className="self-start order-1 lg:order-none">
-            <Paragraph className="mt-8 lg:max-h-56 overflow-auto scroll-indicator-hide">
+            <Paragraph className="mt-8 max-h-56 overflow-auto scroll-indicator-hide">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </Paragraph>
         </article>

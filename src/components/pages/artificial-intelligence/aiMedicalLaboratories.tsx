@@ -25,7 +25,7 @@ export function AIMedicalLaboratories({ isVisible }: ElementVisibilityCheckerCom
             </article>
 
             <article className="">
-                <Paragraph className="lg:max-h-[500px] overflow-auto scroll-indicator-hide">
+                <Paragraph className="max-h-[500px] overflow-auto scroll-indicator-hide">
                     Medical laboratories have a great opportunity to benefit from VACLAB artificial intelligence techniques, emerging techniques, and significant medical and technical development. Hospitals will have the privilege to adopt fully automated medical laboratories to analyze various medical cases. One of the benefits of artificial intelligence in this field is its ability to integrate a lot of data, analyze them, and detect accurate patterns, which contributes to alerting doctors about the physiological changes in the patient’s body and dealing with them.
                 </Paragraph>
             </article>

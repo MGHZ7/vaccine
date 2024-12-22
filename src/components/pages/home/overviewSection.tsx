@@ -19,7 +19,7 @@ export function OverviewSection({ isVisible }: ElementVisibilityCheckerComponent
         <article className="p-8">
             <p className="text-xs text-primary">About the project</p>
             <Heading >Overview</Heading>
-            <Paragraph className="mt-8 lg:max-h-96 overflow-auto scroll-indicator-hide">
+            <Paragraph className="mt-8 max-h-96 overflow-auto scroll-indicator-hide">
                 Welcome to VAC
                 <br />
                 <br />
