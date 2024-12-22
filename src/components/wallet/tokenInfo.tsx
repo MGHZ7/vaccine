@@ -19,7 +19,7 @@ export function TokenInfo() {
 
     return <article className={`fixed flex top-1/2 right-0 z-40 bg-black bg-opacity-10 
         border-l border-t border-b border-primary backdrop-blur-xl rounded-l-xl h-56 
-        transition ${isOpen ? 'translate-x-0' : 'translate-x-[300px]'}`}>
+        transition ${isOpen ? 'translate-x-0' : 'translate-x-[200px] sm:translate-x-[300px]'}`}>
         <div className="relative h-full py-4 cursor-pointer" onClick={toggleOpen}>
             <Image alt="Logo" {...logo} width={50} height={50} />
             <h5 className="absolute top-24 -left-2 rotate-90 text-xs text-primary whitespace-nowrap">Token Info</h5>
@@ -29,7 +29,7 @@ export function TokenInfo() {
             </span>
         </div>
 
-        <div className="p-4 max-w-[300px]">
+        <div className="p-4 max-w-[200px] sm:max-w-[300px]">
             <p className="text-xl text-on-primary">Token Info</p>
             <div className="mt-2 space-y-2">
                 <div>
