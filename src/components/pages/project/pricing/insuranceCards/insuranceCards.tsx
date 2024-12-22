@@ -27,7 +27,7 @@ export function InsuranceCardsSection({ isVisible }: ElementVisibilityCheckerCom
                 <Image key={i} onMouseEnter={() => setSelectedCard(cards[i])} alt={card.title} {...card.image} />)}
         </section>
 
-        <article className="max-w-md space-y-4">
+        <article className="max-w-md space-y-4 px-12">
             <Paragraph>This plan may suit your needs...... <span className="text-primary">Coming Soon</span></Paragraph>
             <Paragraph>Here’s a rundown of ve reasons why it’s important to seek on purchasing our VAC medical insurance plan, VAC insurance card will provide you with:
             </Paragraph>

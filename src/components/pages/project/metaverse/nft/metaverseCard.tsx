@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export function MetaverseCardSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
     return <div className={`grid lg:grid-cols-2 gap-8 ${isVisible ? 'animate-fade-in' : 'animate-fade-out'}`}>
-        <article className={`p-8`}>
+        <article className={``}>
             <h2 className="text-3xl text-on-primary font-bold">VAC NFT</h2>
             <p className="text-xs text-primary">Unlocking Health&apos;s Future: Your Medical Journey, Now NFT-Enabled</p>
             <Paragraph className="mt-8 lg:max-h-56 overflow-auto scroll-indicator-hide">

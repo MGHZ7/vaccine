@@ -5,7 +5,7 @@ export function Paragraph(props: HTMLAttributes<HTMLParagraphElement>) {
 
     const ref = useRef<HTMLParagraphElement>(null)
 
-    const isScrollable = () => {
+    const isScrollable = (() => {
         if (!ref.current) return false;
 
         // Compare the height to see if the element has scrollable content
@@ -19,14 +19,14 @@ export function Paragraph(props: HTMLAttributes<HTMLParagraphElement>) {
         const isOverflowHidden = overflowYStyle.indexOf('hidden') !== -1;
 
         return hasScrollableContent && !isOverflowHidden;
-    };
+    })();
 
     return <div className="relative">
         <p
             ref={ref}
             {...props}
-            className={`text-sm font-extralight scroll-indicator-hide ${props.className ?? ''}`} />
-        {isScrollable() && <div className="absolute -bottom-12 -translate-x-1/2 left-1/2">
+            className={`text-sm font-extralight scroll-indicator-hide ${isScrollable ? 'mb-12' : ''} ${props.className ?? ''}`} />
+        {isScrollable && <div className="absolute -bottom-12 -translate-x-1/2 left-1/2">
             <ScrollAnimation />
         </div>}
     </div>

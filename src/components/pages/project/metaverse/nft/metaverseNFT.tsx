@@ -8,13 +8,13 @@ import { MetaverseVickySection } from "./metaverseVicky";
 export function MetaverseNFTSection() {
     return <section
         id="about-the-project"
-        className={`flex-col justify-center items-center animate-fade-in`}>
+        className={`flex-col justify-center items-center animate-fade-in px-4 md:px-12`}>
 
         <ElementVisibilityChecker ComponentToShow={MetaverseCardSection} props={{}} />
         <ElementVisibilityChecker ComponentToShow={MetaverseVirusSection} props={{}} />
         <ElementVisibilityChecker ComponentToShow={MetaverseCellSection} props={{}} />
         <ElementVisibilityChecker ComponentToShow={MetaverseBacteriaSection} props={{}} />
-        <ElementVisibilityChecker ComponentToShow={MetaverseVickySection} props={{}} />
+        {/* <ElementVisibilityChecker ComponentToShow={MetaverseVickySection} props={{}} /> */}
 
     </section>
 }

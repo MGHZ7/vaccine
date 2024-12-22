@@ -12,7 +12,7 @@ export function VacNodesSection({ isVisible }: ElementVisibilityCheckerComponent
             <Heading showDivider>Vac Nodes</Heading>
         </div>
 
-        <article className="grid lg:grid-cols-2 gap-14 items-center sm:px-24 mt-8">
+        <article className="grid lg:grid-cols-2 gap-14 items-center sm:pl-24 sm:pr-8 mt-8">
             <Image alt="VAC Nodes" {...image} />
             <div>
                 <h3 className="text-3xl mb-8">How It Works</h3>
