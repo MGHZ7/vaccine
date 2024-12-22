@@ -37,7 +37,7 @@ export function AIVicky({ isVisible }: ElementVisibilityCheckerComponentProps) {
                 <br />
             </Paragraph>
 
-            <ul className="list-disc text-sm font-extralight">
+            <ul className="list-inside list-disc text-sm font-extralight">
                 <li className="list-item">
                     Guiding the patient to the proper doctor with a custom recommendation.
                 </li>

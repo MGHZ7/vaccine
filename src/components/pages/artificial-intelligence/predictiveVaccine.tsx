@@ -22,7 +22,7 @@ export function PredictiveVaccine({ isVisible }: ElementVisibilityCheckerCompone
                     <Image alt="Vaccine overview" {...image} />
                 </div>
             </article>
-            <article className="p-8">
+            <article className="">
                 <Paragraph className="lg:max-h-[500px] overflow-auto scroll-indicator-hide">
                     With VAC the Vaccine development is a data-intensive process as one needs to understand the virus itself and how the immune system will react to it. Using the advance in Machine learning and Artificial Intelligence algorithms which can analyze large datasets to identify which targets of a virus are most likely to provoke an immune response. After obtaining a list of targets, scientists design matching vaccines.
                     <br />

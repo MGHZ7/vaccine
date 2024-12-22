@@ -17,16 +17,18 @@ export function AIMedicalLaboratories({ isVisible }: ElementVisibilityCheckerCom
             <Divider type="ltr" />
         </div>
 
-        <article>
-            <div className="max-w-lg mx-auto">
-                <Image alt="Vaccine overview" {...image} />
-            </div>
-        </article>
+        <div className="grid lg:grid-cols-2 gap-8 justify-center items-center">
+            <article>
+                <div className="max-w-lg mx-auto">
+                    <Image alt="Vaccine overview" {...image} />
+                </div>
+            </article>
 
-        <article className="">
-            <Paragraph className="lg:max-h-[500px] overflow-auto scroll-indicator-hide">
-                Medical laboratories have a great opportunity to benefit from VACLAB artificial intelligence techniques, emerging techniques, and significant medical and technical development. Hospitals will have the privilege to adopt fully automated medical laboratories to analyze various medical cases. One of the benefits of artificial intelligence in this field is its ability to integrate a lot of data, analyze them, and detect accurate patterns, which contributes to alerting doctors about the physiological changes in the patient’s body and dealing with them.
-            </Paragraph>
-        </article>
+            <article className="">
+                <Paragraph className="lg:max-h-[500px] overflow-auto scroll-indicator-hide">
+                    Medical laboratories have a great opportunity to benefit from VACLAB artificial intelligence techniques, emerging techniques, and significant medical and technical development. Hospitals will have the privilege to adopt fully automated medical laboratories to analyze various medical cases. One of the benefits of artificial intelligence in this field is its ability to integrate a lot of data, analyze them, and detect accurate patterns, which contributes to alerting doctors about the physiological changes in the patient’s body and dealing with them.
+                </Paragraph>
+            </article>
+        </div>
     </section>
 }
