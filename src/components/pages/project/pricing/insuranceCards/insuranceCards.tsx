@@ -11,6 +11,7 @@ import Image from "next/image";
 import { Paragraph } from "@/components/layout/typography/paragraph";
 import { ElementVisibilityCheckerComponentProps } from "@/components/common/elementInViewPort";
 import { useState } from "react";
+import Link from "next/link";
 
 export function InsuranceCardsSection({ isVisible }: ElementVisibilityCheckerComponentProps) {
 
@@ -24,7 +25,9 @@ export function InsuranceCardsSection({ isVisible }: ElementVisibilityCheckerCom
 
         <section className="grid grid-cols-2 md:grid-cols-4">
             {cards.map((card, i) =>
-                <Image key={i} onMouseEnter={() => setSelectedCard(cards[i])} alt={card.title} {...card.image} />)}
+                <Link key={i} href={'#card-view'}>
+                    <Image onMouseEnter={() => setSelectedCard(cards[i])} alt={card.title} {...card.image} />
+                </Link>)}
         </section>
 
         <article className="max-w-md space-y-4 px-12">

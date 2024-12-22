@@ -1,8 +1,7 @@
 import { Paragraph } from "@/components/layout/typography/paragraph";
 
-import cardImage from "../assets/cards/silver-card.png";
 import Image, { StaticImageData } from "next/image";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 export interface SelectedCardSectionProps {
     title: string;
@@ -24,6 +23,7 @@ export function SelectedCardSection({ title, description, image }: SelectedCardS
     }, [title]);
 
     return <section
+        id="card-view"
         ref={containerRef}
         className="grid lg:grid-cols-2 items-center gap-4 animate-fade-in">
         <div className="overflow-visible order-1 lg:order-0">
