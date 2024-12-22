@@ -28,7 +28,7 @@ export function Navbar() {
     }
 
     return <nav className={`relative`} onMouseLeave={hideAllNavLinkPanels}>
-        <div className="container mx-auto p-8 flex gap-12">
+        <div className="container mx-auto p-2 xl:p-8 flex gap-12">
             <div>
                 <Image alt="Vaccine Logo" src={'/logo.png'} width={120} height={64} />
             </div>

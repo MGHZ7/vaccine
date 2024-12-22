@@ -76,12 +76,12 @@ const columns: FooterColumnsProps[] = [
         },
         {
             title: 'Team',
-            link: '/#team',
+            link: '/#our-team',
             type: 'sm'
         },
         {
             title: 'Advisors',
-            link: '/#advisors',
+            link: '/#our-advisors',
             type: 'sm'
         },
         {
@@ -98,103 +98,83 @@ const columns: FooterColumnsProps[] = [
         },
         {
             title: 'VAC Blockchain',
-            link: '/#blockchain',
-            type: 'sm'
-        },
-        {
-            title: 'VAC Storage',
-            link: '/#storage',
-            type: 'sm'
-        },
-        {
-            title: 'Decentralized Storage',
-            link: '/#decentralized-storage',
-            type: 'sm'
-        },
-        {
-            title: 'Advisors',
-            link: '/#advisors',
+            link: '/project',
             type: 'sm'
         },
         {
             title: 'VACx Applications',
-            link: '/#applications',
+            link: '/project/applications',
             type: 'sm'
         },
         {
             title: 'Metaverse',
-            link: '/#metaverse',
+            link: '/project/metaverse',
             type: 'sm'
         },
         {
             title: 'VAC Token Utility',
-            link: '/#token-utility',
+            link: '/project/pricing',
             type: 'sm'
         }],
     },
     {
         items: [{
             title: 'Tokenomics',
-            link: '/',
+            link: '/tokenomics',
             type: 'lg'
         },
         {
             title: 'How to Buy',
-            link: '/#how-to-buy',
+            link: '/tokenomics/#how-to-buy',
             type: 'sm'
         },
         {
             title: 'Token Distribution',
-            link: '/#token-distribution',
+            link: '/tokenomics/#token-distribution',
             type: 'sm'
         },
         {
             title: 'Fund Allocation',
-            link: '/#fund-allocation',
+            link: '/tokenomics/#fund-allocation',
             type: 'sm'
         }],
     },
     {
         items: [{
-            title: 'Litepaper',
-            link: '/',
+            title: 'Whitepaper',
+            link: '/vaccine cmnts web.pdf',
             type: 'lg'
         },
         {
             title: 'Career',
-            link: '/',
+            link: '/about#career',
             type: 'lg'
         },
         {
             title: 'About Us',
-            link: '/#about-us',
+            link: '/about',
             type: 'sm'
         },
         {
             title: 'Career',
-            link: '/#career',
-            type: 'sm'
-        },
-        {
-            title: 'Apply Now',
-            link: '/#apply-now',
+            link: '/about#career',
             type: 'sm'
         }],
     },
     {
         items: [{
             title: 'Help',
-            link: '/',
+            link: '/help',
             type: 'lg'
         },
         {
             title: 'FAQ',
-            link: '/#faq',
+            link: '/help#FAQs',
             type: 'sm'
         },
         {
             title: 'Get in Touch',
-            link: '/#get-in-touch',
+            link: '/help#get-in-touch',
             type: 'sm'
         }],
     }
@@ -204,13 +184,13 @@ const contactUsColumn: FooterColumnsProps = {
     items: [{
         title: 'Contact Us',
         link: '/',
-        type: 'xl'
+        type: 'xl',
+        prefix: <Image alt="email" {...emailLogo} />
     },
     {
         title: 'Sales@vaclab.net',
         link: '/',
-        type: 'sm',
-        prefix: <Image alt="email" {...emailLogo} />
+        type: 'sm'
     },
     {
         title: 'Support@vaclab.net',

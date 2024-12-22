@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 import Image from "next/image";
-import vickyImage from "../assets/vicky/vicky-faqs.png";
+import vickyImage from "../assets/vicky/vicky.png";
 import { FAQQuestions } from "@/components/pages/help/faq/faqQuestion";
 import ElementVisibilityChecker, { ElementVisibilityCheckerComponentProps, ElementVisibilityCheckerProps } from "@/components/common/elementInViewPort";
 import { GetInTouchFormSection } from "@/components/pages/help/getInTouchFormSection";
