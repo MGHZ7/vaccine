@@ -26,11 +26,11 @@ export function SelectedCardSection({ title, description, image }: SelectedCardS
     return <section
         ref={containerRef}
         className="grid lg:grid-cols-2 items-center gap-4 animate-fade-in">
-        <div className="overflow-visible">
+        <div className="overflow-visible order-1 lg:order-0">
             <Image className="" alt="Vac Silver Card" {...image} />
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 order-0 lg:order-1">
             <h2 className="text-3xl font-bold">{title}</h2>
             <Paragraph className="text-gray-400">
                 {description}
