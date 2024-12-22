@@ -29,9 +29,9 @@ export function Navbar() {
 
     return <nav className={`relative`} onMouseLeave={hideAllNavLinkPanels}>
         <div className="container mx-auto p-2 xl:p-8 flex gap-12">
-            <div>
+            <Link href="/">
                 <Image alt="Vaccine Logo" src={'/logo.png'} width={120} height={64} />
-            </div>
+            </Link>
 
             <div className={`hidden lg:flex justify-center items-center gap-6`}>
                 {navLinks.map((link, i) => <NavbarLgScreenLink

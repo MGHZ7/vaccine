@@ -5,7 +5,7 @@ import background from "../assets/background.svg";
 import Image from "next/image";
 
 export function MedicalCardBenifits() {
-    return <section className="relative grid lg:grid-cols-2 items-center gap-4  z-10 py-10 px-12">
+    return <section className="relative grid lg:grid-cols-2 items-center gap-4  z-10 pb-10 px-12">
         <div className="absolute top-0 right-0 bottom-0 left-0 -z-10 hidden lg:block">
             <Image alt="background" {...background} />
         </div>

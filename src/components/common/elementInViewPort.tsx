@@ -1,5 +1,7 @@
 'use client';
 
+import { ScreenSizes } from '@/hooks/screen/screenSize';
+import { useScreenSize } from '@/hooks/screen/screenSize.hook';
 import React, { useRef, useEffect, useState, FC } from 'react';
 
 export interface ElementVisibilityCheckerComponentProps {
@@ -13,9 +15,11 @@ export interface ElementVisibilityCheckerProps<T extends ElementVisibilityChecke
     threshold?: number
 }
 
-const ElementVisibilityChecker = <T extends ElementVisibilityCheckerComponentProps>({ ComponentToShow, threshold = 0.3, props, className = '' }: ElementVisibilityCheckerProps<T>) => {
+const ElementVisibilityChecker = <T extends ElementVisibilityCheckerComponentProps>({ ComponentToShow, threshold, props, className = '' }: ElementVisibilityCheckerProps<T>) => {
     const [isVisible, setIsVisible] = useState(false);
     const targetRef = useRef(null);
+
+    const width = useScreenSize();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -25,7 +29,7 @@ const ElementVisibilityChecker = <T extends ElementVisibilityCheckerComponentPro
             {
                 root: window.document, // viewport
                 rootMargin: '0px', // no margin
-                threshold // 50% of target visible
+                threshold: threshold ?? width >= ScreenSizes.lg ? 0.3 : 0.1
             }
         );
 
